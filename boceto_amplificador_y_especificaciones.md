@@ -1,4 +1,4 @@
-#Boceto de amplificador seleccionado y sus especificaciones
+# Boceto de amplificador seleccionado y sus especificaciones
 
 ## Caracteristicas generales del amplificador
  - Clase G
@@ -8,7 +8,7 @@
 ## Esquema
 El siguiente esquema pertenece a la página 307 del libro "Audio Power Amplifier Handbook" de Douglas Self.
 
-![](http://https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/master/esquema_amplificador_clase_g_douglas_self.png)
+![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/esquema_amplificador_clase_g_douglas_self.png)
 
 Algunas posibles mejoras a dicho esquema sería utilizar pares Sziklai en la etapa de salida para favorecer la estabilidad del punto de reposo y reducir el TDH, o utilizar pares cascode a la entrada para disminuir la sensibilidad a las variaciones de alimentación negativa.
 
