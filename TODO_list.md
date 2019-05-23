@@ -8,4 +8,4 @@
 - [x] Especificaciones tentativas amplificador G
 - [x] Especificaciones fuente de alimentacion
 - [x] Eleccion circuito switching
-- [ ] Simulacion basica fuente alimentacion
+- [x] Simulacion basica fuente alimentacion
