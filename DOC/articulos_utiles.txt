@@ -1,2 +1,7 @@
-Artículos útiles:
+﻿Artículos útiles:
 -> Clases G y H en general: http://sound.whsites.net/articles/class-g.htm
+
+Tensión pico de salida de un jack 3.5mm de un celular:
+--> https://geoffthegreygeek.com/audio-levels/
+--> https://en.wikipedia.org/wiki/Line_level
+--> https://www.kfs.oeaw.ac.at/manual/3.8/html/userguide/461.htm
