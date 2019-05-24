@@ -1,6 +1,6 @@
-# Diseño fuente de alimentación
+﻿# Diseño fuente de alimentación
 ---
-En base a las especificaciones del diseño del amplificador clase G, se extraen especificaciones para la fuente de alimentación para alimentarlo:
+En base a las especificaciones del diseño del amplificador clase G, se extraen especificaciones para la fuente de alimentación:
 
 ## Caracteristicas clase G:
 * **Potencia:** 100W para 4 ohm. De este valor se sabe que se exige a la fuente una tensión de 28V (RMS) y una corriente de 7A (RMS). La alimentación se puede lograr con las fuentes lineales disponibles en el laboratorio de electrónica de la FIUBA. Estas fuentes son capaces de 32V a 10A. Como la fuente es partida (+-28V), es necesario utilizar dos de estas fuentes. Entonces, el diseño a realizar es para la fuente de alimenteación de menor tensión del clase G. Esta fuente tiene que ser capaz de entregar la misma corriente (7A), con una tensión menor, de aproximadamente 8V. Como este último valor no está fijado aún, la fuente debe ser capaz de ser ajustable de 3V hasta 28V aproximadamente.
@@ -18,7 +18,7 @@ Sin embargo vale aclarar las siguientes desventajas:
 * Mayor costo
 ---
 ## Opciones de controladores switching
-Luego de investigar la amplia oferta de controladores swithching por distintos fabricantes, se reduce las opciones a las ofertas de ***Linear Technology*** (actualmente Analog Devices). Este fabricante ofrece muchas opciones viables, hojas de datos bien documentadas (diseño de PCB, aplicaciones típicas) y modelos de *SPICE* de alta calidad (mejor proceso de simulación). La elección se realiza en base al catalogo de *High Performance DC/DC Controllers* ( [lineartech-highperformancedccdcontrollers.pdf](https://github.com) ).
+Luego de investigar la amplia oferta de controladores swithching por distintos fabricantes, se reduce las opciones a las ofertas de ***Linear Technology*** (actualmente Analog Devices). Este fabricante ofrece muchas opciones viables, hojas de datos bien documentadas (diseño de PCB, aplicaciones típicas) y modelos de *SPICE* de alta calidad (mejor proceso de simulación). La elección se realiza en base al catalogo de *High Performance DC/DC Controllers* ( [lineartech-highperformancedccdcontrollers.pdf](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/lineartech-highperformancedccdcontrollers.pdf) ).
 Entre los parámetros a elegir para reducir las opciones, se prioriza:
 * Salida única
 * Corriente de salida máxima de 10A
@@ -39,3 +39,31 @@ Luego de evaluar las opciones, se elige el controlador *switching* ***LTC1775CS*
 * Sin resistencia de sensado
 * Eficiencia mayor al 90%
 * *Double MOSFET synchronous drive*
+
+
+---
+## Circuito
+A partir del [datasheet](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/datasheet_1775f.pdf) se extrae la topología que funciona con las características requeridas:
+![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/sch_LTC1775.PNG)
+Para la elección de los componentes se acude a la sección de diseño del *datasheet* (pag.9).
+### MOSFETs
+El *gate drive* includio en el controlador tiene una tension de salida de 5.2V. Por lo tanto, el V_GS_th debe ser menor a este valor.....
+El controlador ***LTC1775CS***  no utiliza una resisistencia de sensado de corriente. En cambio, fija la corriente acorde a la R(DS_on) de los MOSFETs de canal N.  La corriente máxima promedio IO(max) es igual al pico de corriente del inductor menos la mitad de la corriente de pico a pico de riple en el inductor ∆IL. Para el cáclulo del R(DSon) se utiliza la siguiente fórmula:
+![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/rdson.PNG)
+Donde phi_t normaliza el termino que hace que la R(DS_on) dependa de la temperatura. Utilizando  phi_t=0.4, una corriente IO(max)=10A se tiene que R(DS_on)< 60mΩ.
+Luego para calcular la potencia que debe disipar el transistor en condiciones de corriente continua es:
+![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/IDSmax.PNG)
+Con esta formula verificamos que el transitor elegido sea capaz de entregar la corriente de *drain* necesaria. 
+Luego es necesario comprobar que la tension V_DS que soporte el MOSFET sea mayor que la tensión de entrada del regulador.
+Por último hay que tener en cuenta la inductancia de los pines asociada con el *package* del MOSFET. La *datasheet* ofrece valores estandar, que se muestra a continuación:
+
+| *Package* | Inductancia de pines |
+| --- | --- |
+| TO-220 | 4nH a 12nH |
+| DDPAK | 4nH |
+| DPAK | 1.5nH |
+| SO-8 | 1nH |
+
+### Inductor
+### Diodos
+### Capacitores
