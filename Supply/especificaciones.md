@@ -1,4 +1,4 @@
-﻿# Diseño fuente de alimentación
+# Diseño fuente de alimentación
 ---
 En base a las especificaciones del diseño del amplificador clase G, se extraen especificaciones para la fuente de alimentación:
 
@@ -47,12 +47,11 @@ A partir del [datasheet](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FI
 ![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/sch_LTC1775.PNG)
 Para la elección de los componentes se acude a la sección de diseño del *datasheet* (pag.9).
 ### MOSFETs
-El *gate drive* includio en el controlador tiene una tension de salida de 5.2V. Por lo tanto, el V_GS_th debe ser menor a este valor.....
 El controlador ***LTC1775CS***  no utiliza una resisistencia de sensado de corriente. En cambio, fija la corriente acorde a la R(DS_on) de los MOSFETs de canal N.  La corriente máxima promedio IO(max) es igual al pico de corriente del inductor menos la mitad de la corriente de pico a pico de riple en el inductor ∆IL. Para el cáclulo del R(DSon) se utiliza la siguiente fórmula:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/rdson.PNG)
-Donde phi_t normaliza el termino que hace que la R(DS_on) dependa de la temperatura. Utilizando  phi_t=0.4, una corriente IO(max)=10A se tiene que R(DS_on)< 60mΩ.
+![](https://latex.codecogs.com/gif.latex?R_%7BDS_%7BON%7D%28max%29%7D%20%5Csimeq%20%5Cfrac%7B240mV%7D%7BI_%7BO%7D%28max%29%5Crho_T%7D)
+Donde rho_t normaliza el termino que hace que la R(DS_on) dependa de la temperatura. Utilizando  rho_t=0.4, una corriente IO(max)=10A se tiene que R(DS_on)< 60mΩ.
 Luego para calcular la potencia que debe disipar el transistor en condiciones de corriente continua es:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/IDSmax.PNG)
+![](https://latex.codecogs.com/gif.latex?I_%7BDS%7D%28MAX%29%3D%5Csqrt%7B%5Cfrac%7BP%7D%7BR_%7BDS_%7BON%7D%7D%7D%7D%3D%5Csqrt%20%5Cfrac%7BT_%7BJ%7D%28max%29-T_A%7D%7B%5Ctheta_%7BJA%7D%5Ccdot%20R_%7BDS_%7BON%7D%7D%5Ccdot%20%5Crho_%7BTJ%28MAX%29%7D%7D)
 Con esta formula verificamos que el transitor elegido sea capaz de entregar la corriente de *drain* necesaria. 
 Luego es necesario comprobar que la tension V_DS que soporte el MOSFET sea mayor que la tensión de entrada del regulador.
 Por último hay que tener en cuenta la inductancia de los pines asociada con el *package* del MOSFET. La *datasheet* ofrece valores estandar, que se muestra a continuación:
@@ -63,6 +62,17 @@ Por último hay que tener en cuenta la inductancia de los pines asociada con el 
 | DDPAK | 4nH |
 | DPAK | 1.5nH |
 | SO-8 | 1nH |
+
+En base a estas reglas, se deside por el transistor ***IRLR3915***. Sus caracteristicas se ven en su [datasheet](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/datasheet_IRLU3915.pdf) y son:
+* VDSS=55 V
+* R(DS_on) = 14 mΩ
+* Id=30 A
+* DPAK
+
+Con los valores extraidos  y la formual de I_DS(max) se obtiene que la corriente maxima es de 10A. Entonces, este MOSFET cumple con todas las caracteristicas requeridas.
+
+
+
 
 ### Inductor
 ### Diodos
