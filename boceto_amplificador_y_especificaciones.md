@@ -13,44 +13,37 @@ El siguiente esquema pertenece a la página 307 del libro "Audio Power Amplifier
 Algunas posibles mejoras a dicho esquema sería utilizar pares Sziklai en la etapa de salida para favorecer la estabilidad del punto de reposo y reducir el TDH, o utilizar pares cascode a la entrada para disminuir la sensibilidad a las variaciones de alimentación negativa.
 
 ## Especificaciones para el amplificador
- - Corriente máxima a la carga: 
- 	- I_out_max = 4,5 A.
-    - Limitación de corriente para este valor.
-<br/>
-<br/>
+ - Corriente máxima a la carga (carga de 4ohm): I_out_max = 6,9 A.
+ - Limitación de corriente en 10 A.
  - Tensiones de alimentación:
-	- V1 = 28 V (el máximo entregable por la fuente es 30 V, se elige este valor para obtener un margen de seguridad).
-	- V2 = 8,4 V (se elige un valor en torno al 30% del máximo para priorizar la eficiencia a bajas potencias, pero faltaría corroborar este valor).
-	- En consecuencia, se utilizará una fuente conmutada reductora.
-<br/>
-<br/>	
- - Potencia maxima para distintas cargas:
-	- 4ohm --> Pmax = 41 W (por limitación de corriente, Imax = 4,5 A).
-	- 8ohm --> Pmax = 49 W (por limitacion de tension, Vmax = 28 V).
-<br/>
-<br/>	
- - Factor de amortiguación: 400 para una carga de 4ohm. Si bien lo usual es 200, se desea obtener un valor mayor a este debido a que la impedancia de salida total que ve el amplificador se verá incrementada por el inductor de la red de compensación para la carga.
-<br/>
-<br/>
- - Resistencia de entrada:
-	- R_i = 50 kohm.
-<br/>
-<br/>
- - Ancho de banda:
-	- Por lo menos f_i = 10Hz, f_h = 100KHz.
-<br/>
-<br/>	
- - Ancho de banda de potencia:
-	- Por lo menos 20kHz.
-	- Para obtener un margen de seguridad, el primer objetivo será conseguir 40kHz.
-<br/>
-<br/>	
+	- V1 = 30 V.
+	- V2 = 8,4 V (se elige un valor en torno al 30% del máximo para priorizar la eficiencia a bajas potencias, pero faltaría corroborar este valor). En consecuencia, se utilizará una fuente conmutada reductora.
+ - Potencia nominal para distintas cargas:
+    - 4ohm --> Pnom = 45 W
+    - 8ohm --> Pnom = 85 W
+ - Factor de amortiguación: 200 para una carga de 4ohm.
+ - Resistencia de entrada: R_i = 50 kohm.
+ - Ancho de banda: f_i = 10Hz, f_h = 100KHz.	
+ - Ancho de banda de potencia: 100kHz
  - TDH:
 	- Al menos 0.01% a 1Khz 40W (para cumplir con los valores típicos, pero se podrían utilizar algunas técnicas propuestas en el Douglas Self para reducirla aun más).
-<br/>
-<br/>
  - PSNR:
 	- Al menos -40dB mínimo para el rango de frecuencias audibles.
-	- Dicho mínimo podría bajarse utilizando un par diferencial cascode a la entrada. Según Douglas Self (pag. 257) esto permitiría llevar la PSNR con respecto a la alimenatación negativa hasta  -70dB aprox.
-<br/>
-<br/>	  
+	- Dicho mínimo podría bajarse utilizando un par diferencial cascode a la entrada. Según Douglas Self (pag. 257) esto permitiría llevar la PSNR con respecto a la alimenatación negativa hasta  -70dB aprox.	  
+
+## Características del amplificador
+
+Las máximas entregables a la carga en simulación sin filtrado de la alimentación son: 
+
+- 4 ohm --> Vout_max = 27, 4 V
+- 8 ohm --> Vout_max = 28, V 
+
+De modo que:	
+
+- 4ohm --> Pmax = 49 W
+- 8ohm --> Pmax = 94 W	
+
+$$
+a^2
+$$
+
