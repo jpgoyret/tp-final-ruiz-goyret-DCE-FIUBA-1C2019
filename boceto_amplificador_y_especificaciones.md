@@ -1,6 +1,6 @@
 # Boceto de amplificador seleccionado y sus especificaciones
 
-## Caracteristicas generales del amplificador
+## Características generales del amplificador
  - Clase G
  - Preparado para recibir señal por medio de un celular o reproductor de música.
  - Carga de 4 u 8ohm (aunque especificado para tolerar cargas de 3 y 9 ohm por seguridad)
@@ -21,15 +21,30 @@ Algunas posibles mejoras a dicho esquema sería utilizar pares Sziklai en la eta
  - Potencia nominal para distintas cargas:
     - 4ohm --> Pnom = 45 W
     - 8ohm --> Pnom = 85 W
- - Factor de amortiguación: 200 para una carga de 4ohm.
+ - Factor de amortiguación: 200 para una carga de 4ohm de 20Hz a 20kHz.
  - Resistencia de entrada: R_i = 50 kohm.
  - Ancho de banda: f_i = 10Hz, f_h = 100KHz.	
- - Ancho de banda de potencia: 100kHz
+ - Ancho de banda de potencia: 60kHz
  - TDH:
-	- Al menos 0.01% a 1Khz 40W (para cumplir con los valores típicos, pero se podrían utilizar algunas técnicas propuestas en el Douglas Self para reducirla aun más).
- - PSNR:
-	- Al menos -40dB mínimo para el rango de frecuencias audibles.
-	- Dicho mínimo podría bajarse utilizando un par diferencial cascode a la entrada. Según Douglas Self (pag. 257) esto permitiría llevar la PSNR con respecto a la alimenatación negativa hasta  -70dB aprox.	  
+	- 8ohm y 1kHz:
+	  - 90% pot. nominal: 0,01%
+	  - 50% pot. nominal: 0.02%
+	  - 10% pot. nominal: 0.04%
+	- 8ohm y 10kHz:
+	  - 90% pot. nominal: 0,02%
+	  - 50% pot. nominal: 0,04%
+	  - 10% pot. nominal: 0,08%
+	- 4ohm y 1kHz:
+	  - 90% pot. nominal: 0,02%
+	  - 50% pot. nominal: 0.04%
+	  - 10% pot. nominal: 0.08%
+	- 4ohm y 10kHz:
+	  - 90% pot. nominal: 0,04%
+	  - 50% pot. nominal: 0.08%
+	  - 10% pot. nominal: 0.16 %
+	- 4 u 8 ohm entre 20Hz y 20kHz:  max. THD 0.2% 
+ - Distorsión por intermodulación: 0,05 % a 1W/8ohm
+ - PSNR: al menos -40dB mínimo para el rango de frecuencias audibles
 
 ## Características del amplificador
 
@@ -42,8 +57,4 @@ De modo que:
 
 - 4ohm --> Pmax = 49 W
 - 8ohm --> Pmax = 94 W	
-
-$$
-a^2
-$$
 
