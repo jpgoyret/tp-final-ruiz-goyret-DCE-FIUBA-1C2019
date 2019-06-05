@@ -2,9 +2,9 @@
 
 ## General
 
-- [x] Especificaciones fuente de alimentacion
-- [x] Eleccion circuito switching
-- [x] Simulacion basica fuente alimentacion
+- [x] Especificaciones fuente de alimentación
+- [x] Elección circuito switching
+- [x] Simulación básica fuente alimentación
 - [ ] Definir la tensión de alimentación inferior.
 - [ ] Determinar transistores MOSFET de conmutación.
 - [ ] Definir la topología elegida para la llave de conmutación en base a los valores obtenidos de TDH.
