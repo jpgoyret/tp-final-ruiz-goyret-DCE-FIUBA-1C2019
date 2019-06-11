@@ -17,14 +17,14 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
  - Ganancia a lazo cerrado: 22.
  - Consumo sin señal: 0.25 W
  - Corriente máxima a la carga (carga de 4ohm): I_out_max = 6,9 A.
- - Limitación de corriente en 10 A.
+ - Limitación de corriente en función de la excursión de salida.
  - Tensiones de alimentación:
 	- V1 = 30 V
 	- V2 = 12 V
  - Potencia nominal para distintas cargas:
     - 4ohm --> Pnom = 45 W
     - 8ohm --> Pnom = 85 W
- - Eficiencia máxima (simulada):  (resta definir la tensión de alimentación inferior)
+ - Eficiencia máxima: (RESTA SIMULAR)
  - Factor de amortiguación: 
      - 200 para 4 y 8ohm de 20Hz a 20kHz. (valores simulados: máx. 400 para 8ohm, máx. 220 para 4 ohm)
  - Resistencia de entrada: al menos R_i = 20 kohm para frecuencias entre 20Hz y 20kHz.
@@ -32,24 +32,24 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
  - Ancho de banda de potencia: 170kHz  (valor simulado: al menos mayor a 100kHz. No es posible determinarlo con precisión por análisis de la FFT porque antes se presenta la distorsión por la conmutación de la etapa de salida)
  - TDH: valores simulados entre paréntesis. La simulaciones se realizaron con una corriente de colector de la etapa de salida Ic = 10mA y fueron llevadas a cabo quitando el cascode en la etapa diferencial para garantizar que el LTSpice convergiera y pudiera realizarse la simulación. Se utilizaron los primeros 9 armónicos de 5 periodos consecutivos de la señal de salida.
 	- 8ohm y 1kHz:
-	  - 90% pot. nominal (V_i = 1.16V): 0,002% (0.001376%)
-	  - 50% pot. nominal (V_i = 860mV): 0.004% (0.001993%) 
-	  - 10% pot. nominal (V_i = 385mV): 0,003% (0.0009%) 
+	  - 90% pot. nominal (V_i = 1.16V): 0,005% (0.001376%)
+	  - 50% pot. nominal (V_i = 860mV): 0.005% (0.001993%) 
+	  - 10% pot. nominal (V_i = 385mV): 0,005% (0.0009%) 
 	- 8ohm y 10kHz:
 	  - 90% pot. nominal (V_i = 1.16V): 0,04% (0.018602%) 
 	  - 50% pot. nominal (V_i = 860mV): 0,06% (0.029549%) 
-	  - 10% pot. nominal  (V_i = 385mV): 0,02% (0.008930%) 
+	  - 10% pot. nominal (V_i = 385mV): 0,02% (0.008930%) 
 	- 4ohm y 1kHz:
-	  - 90% pot. nominal (V_i = 1.12V): 0,003% (0.001620%) 
-	  - 50% pot. nominal (V_i = 840mV): 0.004% (0.002193%) 
-	  - 10% pot. nominal  (V_i = 375mV): 0.003 % (0.001492%) 
+	  - 90% pot. nominal (V_i = 1.12V): 0,005% (0.001620%) 
+	  - 50% pot. nominal (V_i = 840mV): 0.005% (0.002193%) 
+	  - 10% pot. nominal (V_i = 375mV): 0.005% (0.001492%) 
 	- 4ohm y 10kHz:
-	  - 90% pot. nominal (V_i = 1.12V):  0.04% (0.021863) 
+	  - 90% pot. nominal (V_i = 1.12V): 0.04% (0.021863) 
 	  - 50% pot. nominal (V_i = 840mV): 0.06%  (0.033729%) 
-	  - 10% pot. nominal  (V_i = 375mV): 0.03%  (0.014913%) 
+	  - 10% pot. nominal (V_i = 375mV): 0.03%  (0.014913%) 
 	- 4 ohm u 8ohm entre 20Hz y 20kHz:  max. THD ??? (Revisar como especificar este parámetro)
  - Distorsión por intermodulación: 0,02 % a 1W/8ohm (valor medido: 0.0092% ; señales de prueba de 100Hz-182 mV y 5kHz-46mV)
- - PSNR: al menos -90dB con respecto a todas las fuentes de alimentación para el rango de frecuencias audibles.
+ - PSNR: al menos -90dB con respecto a todas las fuentes de alimentación para el rango de frecuencias audibles. (REVISAR ESTA ESPECIFICACIÓN PORQUE NO SE CUMPLE CON RESPECTO A -VCC_MAX)
 
 ## Características del amplificador
 
