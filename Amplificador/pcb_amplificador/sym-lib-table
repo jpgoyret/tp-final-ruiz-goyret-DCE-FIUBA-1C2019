@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name amplificador_transistores)(type Legacy)(uri "C:/Users/Juan Pablo/Box/PC/UBA/Fiuba/Diseno de circuitos electronicos/TPs/TP Final/pcb_amplificador/amplificador_transistores.lib")(options "")(descr ""))
+  (lib (name dk_Transistors-Bipolar-BJT-Single)(type Legacy)(uri "C:/Users/Juan Pablo/Box/PC/UBA/Fiuba/Diseno de circuitos electronicos/TPs/TP Final/pcb_amplificador/dk_Transistors-Bipolar-BJT-Single.lib")(options "")(descr ""))
+)

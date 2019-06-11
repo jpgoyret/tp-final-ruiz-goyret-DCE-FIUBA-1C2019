@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP 2SAR514P5
+D 1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126
+K Low Voltage Transistor
+F http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf
+$ENDCMP
+#
+$CMP 2SCR514P5
+D 800mA Ic, 50V Vce, NPN Transistor, TO-39
+K NPN Transistor
+F http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF
+$ENDCMP
+#
+#End Doc Library
