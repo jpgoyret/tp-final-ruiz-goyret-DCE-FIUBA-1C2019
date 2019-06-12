@@ -9,7 +9,7 @@ $ENDCMP
 $CMP 2SCR514P5
 D 800mA Ic, 50V Vce, NPN Transistor, TO-39
 K NPN Transistor
-F http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF
+F https://www.rohm.de/datasheet/2SCR514P5/2scr514p5t100-e
 $ENDCMP
 #
 #End Doc Library
