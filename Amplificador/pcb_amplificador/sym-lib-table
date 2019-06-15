@@ -6,4 +6,5 @@
   (lib (name dk_Power-Relays-Over-2-Amps)(type Legacy)(uri ${KIPRJMOD}/librerias/simbolos/digikey-symbols/dk_Power-Relays-Over-2-Amps.lib)(options "")(descr ""))
   (lib (name dk_Automotive-Relays)(type Legacy)(uri ${KIPRJMOD}/librerias/simbolos/digikey-symbols/dk_Automotive-Relays.lib)(options "")(descr ""))
   (lib (name dk_Transistors-Bipolar-BJT-Single)(type Legacy)(uri ${KIPRJMOD}/librerias/simbolos/digikey-symbols/dk_Transistors-Bipolar-BJT-Single.lib)(options "")(descr ""))
+  (lib (name dk_Banana-and-Tip-Connectors-Jacks-Plugs)(type Legacy)(uri ${KIPRJMOD}/librerias/simbolos/digikey-symbols/dk_Banana-and-Tip-Connectors-Jacks-Plugs.lib)(options "")(descr ""))
 )

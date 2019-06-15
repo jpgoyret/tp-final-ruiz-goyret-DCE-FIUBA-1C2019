@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pcb_amplificador-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -418,9 +418,9 @@ F 3 "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF" H 4050 5450 50  000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 4100 2400 5450
+	2400 4100 2400 4600
 Wire Wire Line
-	1800 4100 1800 5200
+	1800 4100 1800 4600
 Connection ~ 1800 5200
 Wire Wire Line
 	1800 5200 1800 5500
@@ -984,7 +984,7 @@ U 1 1 5D1287F5
 P 8350 2750
 F 0 "R27" H 8420 2796 50  0000 L CNN
 F 1 "0.1" H 8420 2705 50  0000 L CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 8280 2750 50  0001 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 8280 2750 50  0001 C CNN
 F 3 "~" H 8350 2750 50  0001 C CNN
 	1    8350 2750
 	1    0    0    -1  
@@ -1203,7 +1203,7 @@ U 1 1 5D2431D1
 P 8350 4250
 F 0 "R28" H 8281 4204 50  0000 R CNN
 F 1 "0.1" H 8281 4295 50  0000 R CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 8280 4250 50  0001 C CNN
+F 2 "Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder" V 8280 4250 50  0001 C CNN
 F 3 "~" H 8350 4250 50  0001 C CNN
 	1    8350 4250
 	1    0    0    1   
@@ -1800,12 +1800,12 @@ $EndComp
 $Comp
 L Device:CP C1
 U 1 1 5D8B3046
-P 1250 2500
-F 0 "C1" V 1400 2450 50  0000 L CNN
-F 1 "47u" V 1500 2450 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_5x5.4" H 1288 2350 50  0001 C CNN
-F 3 "~" H 1250 2500 50  0001 C CNN
-	1    1250 2500
+P 1250 2900
+F 0 "C1" V 1400 2850 50  0000 L CNN
+F 1 "47u" V 1500 2850 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.4" H 1288 2750 50  0001 C CNN
+F 3 "~" H 1250 2900 50  0001 C CNN
+	1    1250 2900
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -2187,45 +2187,19 @@ Wire Wire Line
 	10300 4150 10300 4100
 Wire Wire Line
 	1250 4000 1250 3950
-$Comp
-L dk_Barrel-Audio-Connectors:SJ-3523-SMT-TR CON1
-U 1 1 5D4FCBB5
-P 850 2050
-F 0 "CON1" H 906 2437 60  0000 C CNN
-F 1 "SJ-3523-SMT-TR" H 906 2331 60  0000 C CNN
-F 2 "digikey-footprints:Switch_Slide_11.6x4mm_SJ-3523-SMT" H 1050 2250 60  0001 L CNN
-F 3 "https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf" H 1050 2350 60  0001 L CNN
-F 4 "CP-3523SJCT-ND" H 1050 2450 60  0001 L CNN "Digi-Key_PN"
-F 5 "SJ-3523-SMT-TR" H 1050 2550 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 1050 2650 60  0001 L CNN "Category"
-F 7 "Barrel - Audio Connectors" H 1050 2750 60  0001 L CNN "Family"
-F 8 "https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf" H 1050 2850 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/cui-inc/SJ-3523-SMT-TR/CP-3523SJCT-ND/669704" H 1050 2950 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN JACK STEREO 3.5MM SMD R/A" H 1050 3050 60  0001 L CNN "Description"
-F 11 "CUI Inc." H 1050 3150 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 1050 3250 60  0001 L CNN "Status"
-	1    850  2050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1250 2350 1400 2350
-Wire Wire Line
-	1400 2350 1400 2050
-Wire Wire Line
-	1400 2050 1250 2050
+	1250 2750 1400 2750
 $Comp
 L power:Earth #PWR0120
 U 1 1 5D52A29D
-P 1250 2200
-F 0 "#PWR0120" H 1250 1950 50  0001 C CNN
-F 1 "Earth" H 1250 2050 50  0001 C CNN
-F 2 "" H 1250 2200 50  0001 C CNN
-F 3 "~" H 1250 2200 50  0001 C CNN
-	1    1250 2200
+P 1250 2600
+F 0 "#PWR0120" H 1250 2350 50  0001 C CNN
+F 1 "Earth" H 1250 2450 50  0001 C CNN
+F 2 "" H 1250 2600 50  0001 C CNN
+F 3 "~" H 1250 2600 50  0001 C CNN
+	1    1250 2600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 2200 1250 2150
 $Comp
 L Transistor_BJT:BD139 Q12
 U 1 1 5D5442B5
@@ -2277,89 +2251,35 @@ F 3 "http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_B
 $EndComp
 Wire Wire Line
 	2800 5200 2950 5200
-Wire Wire Line
-	1250 3150 1250 2650
 Connection ~ 1250 3150
 $Comp
 L Device:R R100
 U 1 1 5D602E61
-P 1550 2000
-F 0 "R100" H 1550 2200 50  0000 L CNN
-F 1 "680" H 1600 2300 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1480 2000 50  0001 C CNN
-F 3 "~" H 1550 2000 50  0001 C CNN
-	1    1550 2000
+P 1550 2400
+F 0 "R100" H 1550 2600 50  0000 L CNN
+F 1 "680" H 1600 2700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1480 2400 50  0001 C CNN
+F 3 "~" H 1550 2400 50  0001 C CNN
+	1    1550 2400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 1950 1350 1950
-Wire Wire Line
-	1350 1950 1350 1850
-Wire Wire Line
-	1350 1850 1550 1850
 $Comp
 L power:Earth #PWR0121
 U 1 1 5D61A75F
-P 1550 2200
-F 0 "#PWR0121" H 1550 1950 50  0001 C CNN
-F 1 "Earth" H 1550 2050 50  0001 C CNN
-F 2 "" H 1550 2200 50  0001 C CNN
-F 3 "~" H 1550 2200 50  0001 C CNN
-	1    1550 2200
+P 1550 2600
+F 0 "#PWR0121" H 1550 2350 50  0001 C CNN
+F 1 "Earth" H 1550 2450 50  0001 C CNN
+F 2 "" H 1550 2600 50  0001 C CNN
+F 3 "~" H 1550 2600 50  0001 C CNN
+	1    1550 2600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 2200 1550 2150
-$Comp
-L power:+12V #PWR0122
-U 1 1 5D64C838
-P 950 950
-F 0 "#PWR0122" H 950 800 50  0001 C CNN
-F 1 "+12V" H 965 1123 50  0000 C CNN
-F 2 "" H 950 950 50  0001 C CNN
-F 3 "" H 950 950 50  0001 C CNN
-	1    950  950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:-12V #PWR0123
-U 1 1 5D64C966
-P 1250 950
-F 0 "#PWR0123" H 1250 1050 50  0001 C CNN
-F 1 "-12V" H 1265 1123 50  0000 C CNN
-F 2 "" H 1250 950 50  0001 C CNN
-F 3 "" H 1250 950 50  0001 C CNN
-	1    1250 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0124
-U 1 1 5D64CEA7
-P 1550 950
-F 0 "#PWR0124" H 1550 800 50  0001 C CNN
-F 1 "VCC" H 1567 1123 50  0000 C CNN
-F 2 "" H 1550 950 50  0001 C CNN
-F 3 "" H 1550 950 50  0001 C CNN
-	1    1550 950 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VSS #PWR0125
-U 1 1 5D64D037
-P 1850 950
-F 0 "#PWR0125" H 1850 800 50  0001 C CNN
-F 1 "VSS" H 1867 1123 50  0000 C CNN
-F 2 "" H 1850 950 50  0001 C CNN
-F 3 "" H 1850 950 50  0001 C CNN
-	1    1850 950 
-	1    0    0    -1  
-$EndComp
+	1550 2600 1550 2550
 Wire Wire Line
-	1850 1100 1850 950 
+	1900 1000 1900 850 
 Wire Wire Line
-	1550 1100 1550 950 
-Wire Wire Line
-	1250 1100 1250 950 
+	1600 1000 1600 850 
 Text Label 800  4350 0    50   ~ 0
 Vmin
 Text Label 5650 7150 0    50   ~ 0
@@ -2393,11 +2313,11 @@ F 3 "~" H 4950 7050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4950 6950 4950 7050
-Text Label 1250 1100 0    50   ~ 0
+Text Label 1300 1000 0    50   ~ 0
 -Vmin
-Text Label 1550 1100 0    50   ~ 0
+Text Label 1600 1000 0    50   ~ 0
 Vmax
-Text Label 1850 1100 0    50   ~ 0
+Text Label 1900 1000 0    50   ~ 0
 -Vmax
 Text Label 5100 750  0    50   ~ 0
 Vmax
@@ -2407,7 +2327,7 @@ U 1 1 5D70AEE0
 P 10950 2550
 F 0 "J1" H 11030 2542 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 11030 2451 50  0000 L CNN
-F 2 "" H 10950 2550 50  0001 C CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical" H 10950 2550 50  0001 C CNN
 F 3 "~" H 10950 2550 50  0001 C CNN
 	1    10950 2550
 	1    0    0    -1  
@@ -2438,63 +2358,194 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5D75A46C
-P 950 1100
-F 0 "#FLG0101" H 950 1175 50  0001 C CNN
-F 1 "PWR_FLAG" V 950 1228 50  0000 L CNN
-F 2 "" H 950 1100 50  0001 C CNN
-F 3 "~" H 950 1100 50  0001 C CNN
-	1    950  1100
+P 1000 1000
+F 0 "#FLG0101" H 1000 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 1000 1128 50  0000 L CNN
+F 2 "" H 1000 1000 50  0001 C CNN
+F 3 "~" H 1000 1000 50  0001 C CNN
+	1    1000 1000
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5D78E617
-P 1250 1100
-F 0 "#FLG0102" H 1250 1175 50  0001 C CNN
-F 1 "PWR_FLAG" V 1250 1228 50  0000 L CNN
-F 2 "" H 1250 1100 50  0001 C CNN
-F 3 "~" H 1250 1100 50  0001 C CNN
-	1    1250 1100
+P 1300 1000
+F 0 "#FLG0102" H 1300 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 1300 1128 50  0000 L CNN
+F 2 "" H 1300 1000 50  0001 C CNN
+F 3 "~" H 1300 1000 50  0001 C CNN
+	1    1300 1000
 	-1   0    0    1   
 $EndComp
-Text Label 950  1100 0    50   ~ 0
+Text Label 1000 1000 0    50   ~ 0
 Vmin
 Wire Wire Line
-	950  950  950  1100
+	1000 850  1000 1000
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5D78E9FB
-P 1550 1100
-F 0 "#FLG0103" H 1550 1175 50  0001 C CNN
-F 1 "PWR_FLAG" V 1550 1228 50  0000 L CNN
-F 2 "" H 1550 1100 50  0001 C CNN
-F 3 "~" H 1550 1100 50  0001 C CNN
-	1    1550 1100
+P 1600 1000
+F 0 "#FLG0103" H 1600 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 1600 1128 50  0000 L CNN
+F 2 "" H 1600 1000 50  0001 C CNN
+F 3 "~" H 1600 1000 50  0001 C CNN
+	1    1600 1000
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 5D78EAF8
-P 1850 1100
-F 0 "#FLG0104" H 1850 1175 50  0001 C CNN
-F 1 "PWR_FLAG" V 1850 1228 50  0000 L CNN
-F 2 "" H 1850 1100 50  0001 C CNN
-F 3 "~" H 1850 1100 50  0001 C CNN
-	1    1850 1100
+P 1900 1000
+F 0 "#FLG0104" H 1900 1075 50  0001 C CNN
+F 1 "PWR_FLAG" V 1900 1128 50  0000 L CNN
+F 2 "" H 1900 1000 50  0001 C CNN
+F 3 "~" H 1900 1000 50  0001 C CNN
+	1    1900 1000
 	-1   0    0    1   
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0105
 U 1 1 5D790411
-P 1550 2150
-F 0 "#FLG0105" H 1550 2225 50  0001 C CNN
-F 1 "PWR_FLAG" V 1550 2278 50  0000 L CNN
-F 2 "" H 1550 2150 50  0001 C CNN
-F 3 "~" H 1550 2150 50  0001 C CNN
-	1    1550 2150
+P 1550 2550
+F 0 "#FLG0105" H 1550 2625 50  0001 C CNN
+F 1 "PWR_FLAG" V 1550 2678 50  0000 L CNN
+F 2 "" H 1550 2550 50  0001 C CNN
+F 3 "~" H 1550 2550 50  0001 C CNN
+	1    1550 2550
 	0    1    1    0   
 $EndComp
-Connection ~ 1550 2150
+Connection ~ 1550 2550
 Text Label 6850 5500 0    50   ~ 0
 Vmax
+$Comp
+L Device:R Rp1
+U 1 1 5D0DFFA7
+P 1800 4750
+F 0 "Rp1" H 1550 4800 50  0000 L CNN
+F 1 "0" H 1550 4700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1730 4750 50  0001 C CNN
+F 3 "~" H 1800 4750 50  0001 C CNN
+	1    1800 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 4900 1800 5200
+$Comp
+L Device:R Rp2
+U 1 1 5D0E0897
+P 2400 4750
+F 0 "Rp2" H 2150 4800 50  0000 L CNN
+F 1 "0" H 2150 4700 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2330 4750 50  0001 C CNN
+F 3 "~" H 2400 4750 50  0001 C CNN
+	1    2400 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4900 2400 5450
+$Comp
+L Connector:Screw_Terminal_01x06 J3
+U 1 1 5D196BC0
+P 1400 550
+F 0 "J3" V 1364 162 50  0000 R CNN
+F 1 "Screw_Terminal_01x06" V 1273 162 50  0000 R CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_6-G-3.5_1x06_P3.50mm_Vertical" H 1400 550 50  0001 C CNN
+F 3 "~" H 1400 550 50  0001 C CNN
+	1    1400 550 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1000 850  1200 850 
+Wire Wire Line
+	1200 850  1200 750 
+Wire Wire Line
+	1300 750  1300 1000
+Wire Wire Line
+	1600 850  1400 850 
+Wire Wire Line
+	1400 850  1400 750 
+Wire Wire Line
+	1900 850  1650 850 
+Wire Wire Line
+	1650 850  1650 800 
+Wire Wire Line
+	1650 800  1500 800 
+Wire Wire Line
+	1500 800  1500 750 
+$Comp
+L power:Earth #PWR0122
+U 1 1 5D205E63
+P 1950 750
+F 0 "#PWR0122" H 1950 500 50  0001 C CNN
+F 1 "Earth" H 1950 600 50  0001 C CNN
+F 2 "" H 1950 750 50  0001 C CNN
+F 3 "~" H 1950 750 50  0001 C CNN
+	1    1950 750 
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1600 750  1700 750 
+Connection ~ 1700 750 
+Wire Wire Line
+	1700 750  1950 750 
+Wire Wire Line
+	1250 3150 1250 3050
+$Comp
+L dk_Barrel-Audio-Connectors:SJ-3523-SMT-TR CON1
+U 1 1 5D4FCBB5
+P 850 2000
+F 0 "CON1" H 906 2387 60  0000 C CNN
+F 1 "SJ-3523-SMT-TR" H 906 2281 60  0000 C CNN
+F 2 "digikey-footprints:Switch_Slide_11.6x4mm_SJ-3523-SMT" H 1050 2200 60  0001 L CNN
+F 3 "https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf" H 1050 2300 60  0001 L CNN
+F 4 "CP-3523SJCT-ND" H 1050 2400 60  0001 L CNN "Digi-Key_PN"
+F 5 "SJ-3523-SMT-TR" H 1050 2500 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 1050 2600 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 1050 2700 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf" H 1050 2800 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/SJ-3523-SMT-TR/CP-3523SJCT-ND/669704" H 1050 2900 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 3.5MM SMD R/A" H 1050 3000 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 1050 3100 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1050 3200 60  0001 L CNN "Status"
+	1    850  2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 1900 1550 1900
+Wire Wire Line
+	1550 1900 1550 2250
+Wire Wire Line
+	1250 2000 1400 2000
+Wire Wire Line
+	1400 2000 1400 2350
+Wire Wire Line
+	1250 2100 1250 2500
+Wire Wire Line
+	950  2950 950  2350
+Wire Wire Line
+	950  2350 1400 2350
+Connection ~ 1400 2350
+Wire Wire Line
+	1400 2350 1400 2750
+Wire Wire Line
+	1050 2500 1250 2500
+Connection ~ 1250 2500
+Wire Wire Line
+	1250 2500 1250 2600
+$Comp
+L Connector:Conn_01x03_Male J2
+U 1 1 5D0DEEDA
+P 750 3050
+F 0 "J2" H 858 3331 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 858 3240 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 750 3050 50  0001 C CNN
+F 3 "~" H 750 3050 50  0001 C CNN
+	1    750  3050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 950  3050
+Wire Wire Line
+	1050 3150 950  3150
+Wire Wire Line
+	1050 2500 1050 3150
 $EndSCHEMATC
