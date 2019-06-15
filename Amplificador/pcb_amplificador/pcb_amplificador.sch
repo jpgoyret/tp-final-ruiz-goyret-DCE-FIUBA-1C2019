@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pcb_amplificador-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -357,7 +357,7 @@ U 1 1 5D005219
 P 3100 2550
 F 0 "R21" H 3170 2596 50  0000 L CNN
 F 1 "10k" H 3170 2505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0815_2038Metric_Pad1.53x4.00mm_HandSolder" V 3030 2550 50  0001 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 3030 2550 50  0001 C CNN
 F 3 "~" H 3100 2550 50  0001 C CNN
 	1    3100 2550
 	1    0    0    -1  
@@ -1688,7 +1688,7 @@ Wire Wire Line
 	2800 4650 4150 4650
 Connection ~ 4150 4650
 Wire Wire Line
-	4150 4650 4150 5250
+	4150 4650 4150 4800
 Wire Wire Line
 	2800 5100 2800 5200
 Wire Wire Line
@@ -2032,7 +2032,7 @@ F 3 "~" H 10600 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Relay:SANYOU_SRD_Form_B K1
+L pcb_amplificador-rescue:SANYOU_SRD_Form_B-Relay K1
 U 1 1 5D0A74B1
 P 10200 2500
 F 0 "K1" H 10200 2800 50  0000 L CNN
@@ -2548,4 +2548,17 @@ Wire Wire Line
 	1050 3150 950  3150
 Wire Wire Line
 	1050 2500 1050 3150
+$Comp
+L Device:R R9
+U 1 1 5D09C039
+P 4150 4950
+F 0 "R9" H 4220 4996 50  0000 L CNN
+F 1 "0" H 4220 4905 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4080 4950 50  0001 C CNN
+F 3 "~" H 4150 4950 50  0001 C CNN
+	1    4150 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5100 4150 5250
 $EndSCHEMATC
