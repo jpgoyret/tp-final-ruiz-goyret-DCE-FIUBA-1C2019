@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:pcb_amplificador-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -599,7 +599,7 @@ U 1 1 5D030FF2
 P 3800 3700
 F 0 "RV1" H 3700 3700 50  0000 R CNN
 F 1 "R_POT" H 3700 3800 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 3800 3700 50  0001 C CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical" H 3800 3700 50  0001 C CNN
 F 3 "~" H 3800 3700 50  0001 C CNN
 	1    3800 3700
 	-1   0    0    1   
@@ -616,7 +616,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 2300 3800 2300
 Wire Wire Line
-	4150 3950 4150 4650
+	4150 3950 4150 4300
 $Comp
 L Device:R R11
 U 1 1 5D047F12
@@ -884,26 +884,6 @@ F 1 "1k" H 7220 2105 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 7080 2150 50  0001 C CNN
 F 3 "~" H 7150 2150 50  0001 C CNN
 	1    7150 2150
-	1    0    0    -1  
-$EndComp
-$Comp
-L dk_Transistors-Bipolar-BJT-Single:2SC5200-O_Q Q16
-U 1 1 5D0EB999
-P 8250 1950
-F 0 "Q16" H 8000 2150 60  0000 L CNN
-F 1 "2SC5200-O_Q" H 8000 2250 60  0000 L CNN
-F 2 "digikey-footprints:TO-3P-5" H 8450 2150 60  0001 L CNN
-F 3 "http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&prodName=2SC5200" H 8450 2250 60  0001 L CNN
-F 4 "2SC5200-OQ-ND" H 8450 2350 60  0001 L CNN "Digi-Key_PN"
-F 5 "2SC5200-O(Q)" H 8450 2450 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 8450 2550 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 8450 2650 60  0001 L CNN "Family"
-F 8 "http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&prodName=2SC5200" H 8450 2750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/toshiba-semiconductor-and-storage/2SC5200-O(Q)/2SC5200-OQ-ND/871387" H 8450 2850 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 230V 15A TO-3PL" H 8450 2950 60  0001 L CNN "Description"
-F 11 "Toshiba Semiconductor and Storage" H 8450 3050 60  0001 L CNN "Manufacturer"
-F 12 "Active NonStock" H 8450 3150 60  0001 L CNN "Status"
-	1    8250 1950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1688,8 +1668,6 @@ Wire Wire Line
 	2800 4650 4150 4650
 Connection ~ 4150 4650
 Wire Wire Line
-	4150 4650 4150 4800
-Wire Wire Line
 	2800 5100 2800 5200
 Wire Wire Line
 	3800 2300 3800 2600
@@ -2120,30 +2098,7 @@ Wire Wire Line
 	10000 2950 10000 2800
 Wire Wire Line
 	9350 3200 9350 2200
-Wire Wire Line
-	9350 2200 9600 2200
 Connection ~ 9350 3200
-$Comp
-L Device:R R49
-U 1 1 5D1D232E
-P 9600 2500
-F 0 "R49" H 9550 2250 50  0000 R CNN
-F 1 "600" H 9550 2150 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 9530 2500 50  0001 C CNN
-F 3 "~" H 9600 2500 50  0001 C CNN
-	1    9600 2500
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	9600 2200 9600 2350
-Wire Wire Line
-	9600 2950 10000 2950
-Wire Wire Line
-	9600 2650 9600 2950
-Connection ~ 9600 2200
-Wire Wire Line
-	9600 2200 10000 2200
-Connection ~ 10000 2950
 Wire Wire Line
 	10000 2950 10900 2950
 Wire Wire Line
@@ -2551,14 +2506,48 @@ Wire Wire Line
 $Comp
 L Device:R R9
 U 1 1 5D09C039
-P 4150 4950
-F 0 "R9" H 4220 4996 50  0000 L CNN
-F 1 "0" H 4220 4905 50  0000 L CNN
-F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4080 4950 50  0001 C CNN
-F 3 "~" H 4150 4950 50  0001 C CNN
-	1    4150 4950
+P 4150 4450
+F 0 "R9" H 4220 4496 50  0000 L CNN
+F 1 "0" H 4220 4405 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4080 4450 50  0001 C CNN
+F 3 "~" H 4150 4450 50  0001 C CNN
+	1    4150 4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 5100 4150 5250
+	4150 4600 4150 4650
+Wire Wire Line
+	4150 4650 4150 5250
+Wire Wire Line
+	9350 2200 10000 2200
+Text Label 7850 3500 0    50   ~ 0
+VOUT
+Wire Notes Line width 12
+	4200 3300 6500 1750
+Wire Notes Line width 12
+	6500 1750 7950 1750
+Wire Notes Line width 12
+	7950 1750 8100 1850
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:2SC5200-O_Q Q16
+U 1 1 5D0EB999
+P 8250 1950
+F 0 "Q16" H 8000 2150 60  0000 L CNN
+F 1 "2SC5200-O_Q" H 8000 2250 60  0000 L CNN
+F 2 "digikey-footprints:TO-3P-5" H 8450 2150 60  0001 L CNN
+F 3 "http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&prodName=2SC5200" H 8450 2250 60  0001 L CNN
+F 4 "2SC5200-OQ-ND" H 8450 2350 60  0001 L CNN "Digi-Key_PN"
+F 5 "2SC5200-O(Q)" H 8450 2450 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 8450 2550 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 8450 2650 60  0001 L CNN "Family"
+F 8 "http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&prodName=2SC5200" H 8450 2750 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/toshiba-semiconductor-and-storage/2SC5200-O(Q)/2SC5200-OQ-ND/871387" H 8450 2850 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 230V 15A TO-3PL" H 8450 2950 60  0001 L CNN "Description"
+F 11 "Toshiba Semiconductor and Storage" H 8450 3050 60  0001 L CNN "Manufacturer"
+F 12 "Active NonStock" H 8450 3150 60  0001 L CNN "Status"
+	1    8250 1950
+	1    0    0    -1  
+$EndComp
+Text Notes 6500 1700 0    50   ~ 0
+Thermally Coupled\n
 $EndSCHEMATC
