@@ -28,7 +28,8 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
       - Limitación de corriente de salida en función de la tensión máxima de salida. Esto protege a los transistores de potencia.
       - Contra la componente de continua en el nodo de salida. Esto protege a la los parlantes de una eventual tensión de continua en dicho punto en caso de una falla del amplificador. Tensión de DC a a partir de la cual actúa el limitador: aproximadamente 0.6 V. Velocidad de respuesta del limitador según simulación: al menos 100ms. A continuación se muestra un esquema de dicha protección, la cual se conecta al nodo de salida del amplificador:
 
-     ![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/esquema_protección_DC.png)
+
+![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/esquema_proteccion_DC.png)
 
  - Tensiones de alimentación:
 	- V1 = 30 V
@@ -41,7 +42,7 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
  - Eficiencia máxima (carga de 4ohm): 73% (simulada = 75%).
 
  - Factor de amortiguación: 
-     
+   
      - 200 para 4 y 8ohm de 20Hz a 20kHz. (valores simulados: máx. 400 para 8ohm, máx. 220 para 4 ohm).
      
  - Resistencia de entrada: al menos R_i = 20 kohm para frecuencias entre 20Hz y 20kHz (se simuló y se obtuvo este resultado).
@@ -66,8 +67,7 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
 	- 4ohm y 10kHz:
 	  - 90% pot. nominal (V_i = 1.12V): 0.04% (0.021863) 
 	  - 50% pot. nominal (V_i = 840mV): 0.06%  (0.033729%) 
-	  - 10% pot. nominal (V_i = 375mV): 0.03%  (0.014913%) 
-	- 4 ohm u 8ohm entre 20Hz y 20kHz:  max. THD ??? (Revisar como especificar este parámetro)
+	  - 10% pot. nominal (V_i = 375mV): 0.03%  (0.014913%)
 	
  - Distorsión por intermodulación: 0,02 % a 1W/8ohm (valor medido: 0.0092% ; señales de prueba de 100Hz-182 mV y 5kHz-46mV)
 
