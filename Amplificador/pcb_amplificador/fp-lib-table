@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name digikey-footprints)(type KiCad)(uri ${KIPRJMOD}/librerias/footprints/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name disipadores)(type KiCad)(uri ${KIPRJMOD}/librerias/footprints/disipadores.pretty)(options "")(descr ""))
 )
