@@ -1,6 +1,6 @@
 ## Mediciones de la tensión pico de salida de un celular a máximo volumen
 
-Las siguientes mediciones fueron realizadas con el fin de determinar la ganancia a lazo cerrado del amplificador partiendo de la especificación de una tensión de alimentación máxima de 30V (habiendo entonces una excursión máxima de 28V aproximadamente). Si bien se consultaron fuentes que se pueden ver en el archivo [referencias.md](../DOC/referencias.md).
+Las siguientes mediciones fueron realizadas con el fin de determinar la ganancia a lazo cerrado del amplificador partiendo de la especificación de una tensión de alimentación máxima de 30V (habiendo entonces una excursión máxima de 28V aproximadamente). Si bien se consultaron fuentes que se pueden ver en el archivo [referencias.md](../DOC/Referencias.md).
 
 Se realizaron mediciones con dos modelos distintos de celular:
 

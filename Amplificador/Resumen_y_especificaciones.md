@@ -8,16 +8,16 @@
 ## Esquema
 Se ha utilizado como punto de partida el amplificador clase G perteneciente a la página 307 del libro "Audio Power Amplifier Handbook" de Douglas Self.
 
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Amplificador/imagenes/esquema_amplificador_clase_g_douglas_self.png)
+![](imagenes_amplificador/esquema_amplificador_clase_g_douglas_self.png)
 
 En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G por una etapa clase H con los transistores que operan en alta y baja potencia en paralelo. También se modificó al etapa diferencial y se la hizo cascode para mejorar la PSRR con respecto a la fuente de alimentación de -30V  (-Vmax en la imagen) .  El diagrama del amplificador diseñado se presenta a continuación (sin añadir la protección de DC, ni colocar la carga en el nodo de salida Vout):
 
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Amplificador/imagenesesquema_amplificador_sin_protección_DC.png)
+![](imagenes_amplificador/esquema_amplificador_sin_protección_DC.png)
 
 ## Especificaciones del amplificador
- - Máxima entrada de tensión: 1Vrms. Se estima que la salida de audio de un celular tiene dicho valor RMS máximo. Para realizar esta estimación se usaron las referencias en [5], [6] , [7] y [8] en el archivo [Referencias.md](../DOC/referencias.md) y las mediciones en [Mediciones_salida_audio_celular.md](Mediciones_salida_audio_celular.md).
+ - Máxima entrada de tensión: 1.2V. Se estima que la salida de audio máxima de un celular tiene un valor de 1V rms. Para realizar esta estimación se usaron las referencias en [5], [6] , [7] y [8] en el archivo [Referencias.md](../DOC/Referencias.md) y las mediciones en [Mediciones_salida_audio_celular.md](Mediciones_salida_audio_celular.md). En función de estos datos se decidió que el amplificador tendría una ganancia a lazo cerrado mayor a la necesaria para tener máxima excursión con 1Vrms a la entrada debido a la posibilidad de que algunos celulares no sean capaces de alcanzar este valor (ver el caso del Samsung Galaxy Note 4 en [Mediciones_salida_audio_celular.md](Mediciones_salida_audio_celular.md)).
 
- - Ganancia a lazo cerrado: 22.
+ - Ganancia a lazo cerrado: 22.8.
 
  - Consumo sin señal: 0.25 W
 
@@ -27,7 +27,7 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
       - Contra la componente de continua en el nodo de salida. Esto protege a la los parlantes de una eventual tensión de continua en dicho punto en caso de una falla del amplificador. Tensión de DC a a partir de la cual actúa el limitador: aproximadamente 0.6 V. Velocidad de respuesta del limitador según simulación: al menos 100ms. A continuación se muestra un esquema de dicha protección, la cual se conecta al nodo de salida del amplificador:
 
 
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Amplificador/imagenesesquema_proteccion_DC.png)
+![](imagenes_amplificador/esquema_proteccion_DC.png)
 
  - Tensiones de alimentación:
 	- V1 = 30 V
@@ -39,9 +39,10 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
     
  - Eficiencia máxima (carga de 4ohm): 73% (valor obtenido mediante simulación: 75%).
 
- - Factor de amortiguación: 
+ - Factor de amortiguación (de 20Hz a 20kHz): 
    
-     - 200 para 4 y 8ohm de 20Hz a 20kHz. (valores simulados: máx. 400 para 8ohm, máx. 220 para 4 ohm).
+     - 4ohm: 400 (valor simulado: 360)
+     - 8ohm: 200 (valor simulador: 180).
      
  - Resistencia de entrada: al menos R_i = 20 kohm para frecuencias entre 20Hz y 20kHz (se simuló y se obtuvo este resultado).
 
@@ -51,20 +52,20 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
 
  - TDH: valores simulados entre paréntesis. La simulaciones se realizaron con una corriente de colector de la etapa de salida Ic = 10mA. Se utilizaron los primeros 9 armónicos de 5 periodos consecutivos de la señal de salida.
 	- 8ohm y 1kHz:
-	  - 90% pot. nominal (V_i = 1.16V): 0,005% (0.001376%)
-	  - 50% pot. nominal (V_i = 860mV): 0.005% (0.001993%) 
+	  - 90% pot. nominal (V_i = 1.16V): 0,005% (0.001591%)
+	  - 50% pot. nominal (V_i = 860mV): 0.005% (0.002027%) 
 	  - 10% pot. nominal (V_i = 385mV): 0,005% (0.0009%) 
 	- 8ohm y 10kHz:
-	  - 90% pot. nominal (V_i = 1.16V): 0,04% (0.018602%) 
-	  - 50% pot. nominal (V_i = 860mV): 0,06% (0.029549%) 
+	  - 90% pot. nominal (V_i = 1.16V): 0,04% (0.021011%) 
+	  - 50% pot. nominal (V_i = 860mV): 0,06% (0.030388%) 
 	  - 10% pot. nominal (V_i = 385mV): 0,02% (0.008930%) 
 	- 4ohm y 1kHz:
-	  - 90% pot. nominal (V_i = 1.12V): 0,005% (0.001620%) 
-	  - 50% pot. nominal (V_i = 840mV): 0.005% (0.002193%) 
+	  - 90% pot. nominal (V_i = 1.12V): 0,005% (0.001918%) 
+	  - 50% pot. nominal (V_i = 840mV): 0.005% (0.002363%) 
 	  - 10% pot. nominal (V_i = 375mV): 0.005% (0.001492%) 
 	- 4ohm y 10kHz:
-	  - 90% pot. nominal (V_i = 1.12V): 0.04% (0.021863) 
-	  - 50% pot. nominal (V_i = 840mV): 0.06%  (0.033729%) 
+	  - 90% pot. nominal (V_i = 1.12V): 0.05% (0.027886%) 
+	  - 50% pot. nominal (V_i = 840mV): 0.08%  (0.039084%) 
 	  - 10% pot. nominal (V_i = 375mV): 0.03%  (0.014913%)
 	
  - Distorsión por intermodulación: 0,02 % a 1W/8ohm (valor medido: 0.0092% ; señales de prueba de 100Hz-182 mV y 5kHz-46mV)
@@ -75,13 +76,13 @@ En base a dicho amplificador se ha reemplazado la etapa de salida serie clase G 
 
 Las máximas tensiones entregables a la carga en simulación sin filtrado de la alimentación son: 
 
-- 4 ohm --> Vout_max = 26, 4 V
-- 8 ohm --> Vout_max = 28, V 
+- 4 ohm --> Vout_max = 27.1 V
+- 8 ohm --> Vout_max = 27.8 V 
 
 De modo que:	
 
-- 4ohm --> Pmax = 49 W
-- 8ohm --> Pmax = 87 W	
+- 4ohm --> Pmax = 91 W
+- 8ohm --> Pmax = 48 W	
 
 Corriente máxima a la carga en modo de operación normal (carga de 4ohm): I_out_max = 6,9 A.
 
