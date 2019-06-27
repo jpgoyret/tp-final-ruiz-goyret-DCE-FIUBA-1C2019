@@ -1,10 +1,10 @@
-# Diseño fuente de alimentación
+﻿# Diseño fuente de alimentación
 ---
 En base a las especificaciones del diseño del amplificador clase G, se extraen especificaciones para la fuente de alimentación:
 
 ## Caracteristicas clase G:
-* **Potencia:** 100W para 4 ohm. De este valor se sabe que se exige a la fuente una tensión de 28V (RMS) y una corriente de 7A (RMS). La alimentación se puede lograr con las fuentes lineales disponibles en el laboratorio de electrónica de la FIUBA. Estas fuentes son capaces de 32V a 10A. Como la fuente es partida (+-28V), es necesario utilizar dos de estas fuentes. Entonces, el diseño a realizar es para la fuente de alimenteación de menor tensión del clase G. Esta fuente tiene que ser capaz de entregar la misma corriente (7A), con una tensión menor, de aproximadamente 8V. Como este último valor no está fijado aún, la fuente debe ser capaz de ser ajustable de 3V hasta 28V aproximadamente.
-* **PSNR** Entendiendo que el diseño alimentará a un amplificador de audio, se busca que el ripple en la salida sea el menor posible.
+* **Potencia:** 100W para 4 ohm. De este valor se sabe que se exige a la fuente una tensión de 28V (RMS) y una corriente de 7A (RMS). La alimentación se puede lograr con las fuentes lineales disponibles en el laboratorio de electrónica de la FIUBA. Estas fuentes son capaces de 32V a 10A. Como la fuente es partida (+-28V), es necesario utilizar dos de estas fuentes. Entonces, el diseño a realizar es para la fuente de alimenteación de menor tensión del clase G. Esta fuente tiene que ser capaz de entregar una tensión menor, de aproximadamente 8V. Como este último valor no está fijado aún, la fuente debe ser capaz de ser ajustable de 3V hasta 15V aproximadamente. Entonces la corriente a entregar debe ser  de 15V/4Ω=3.75A. 
+* **PSNR** Entendiendo que el diseño alimentará a un amplificador de audio, se busca que el ripple en la salida sea el menor posible, preferentemente menor de 50mV para la carga de 4ohm. 
 * **Espacio** Se buscara lograr un diseño que ocupe poco espacio fisico, debiendo conseguir un alta eficiencia (>90%) para reducir el tamaño de los componentes disipativos.
 
 A partir de las caracteristicas se opta por una fuente de tipo *switching* por los siguientes motivos:
@@ -18,62 +18,77 @@ Sin embargo vale aclarar las siguientes desventajas:
 * Mayor costo
 ---
 ## Opciones de controladores switching
-Luego de investigar la amplia oferta de controladores swithching por distintos fabricantes, se reduce las opciones a las ofertas de ***Linear Technology*** (actualmente Analog Devices). Este fabricante ofrece muchas opciones viables, hojas de datos bien documentadas (diseño de PCB, aplicaciones típicas) y modelos de *SPICE* de alta calidad (mejor proceso de simulación). La elección se realiza en base al catalogo de *High Performance DC/DC Controllers* ( [lineartech-highperformancedccdcontrollers.pdf](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/lineartech-highperformancedccdcontrollers.pdf) ).
+Luego de investigar la amplia oferta de controladores swithching por distintos fabricantes, se reduce las opciones a las ofertas de ***Linear Technology*** (actualmente Analog Devices). Este fabricante ofrece muchas opciones viables, hojas de datos bien documentadas (diseño de PCB, aplicaciones típicas) y modelos de *SPICE* de alta calidad (mejor proceso de simulación). La elección se realiza en base al catalogo  [*High Performance DC/DC Controllers*](https://www.analog.com/media/en/news-marketing-collateral/solutions-bulletins-brochures/linear_highperformancedc-dc_controllers_2015.pdf) .
 Entre los parámetros a elegir para reducir las opciones, se prioriza:
 * Salida única
-* Corriente de salida máxima de 10A
+* Corriente de salida máxima de 5A
 * Tensión de entrada de al menos 32V
-* Tensión de salida de al menos de 3V hasta 25V
+* Tensión de salida de al menos de 3V hasta 15V
 * Encapsulado fácil de soldar: *SO*, *SSOP*, etc de bajo *count-pin*
 
-Luego de evaluar las opciones, se elige el controlador *switching* ***LTC1775CS***.
-### Caracteristicas LTC1775CS:
-* Configuracion *BUCK-BOOST*
+Luego de evaluar las opciones, se elige el controlador *switching* ***LTC3864***.
+### Caracteristicas LTC3864
+* Controlador *BUCK*
 * Salida positiva y negativa
-* Vin de 4V a 36V
-* Vout de 1.2V a Vin
-* Frecuencia *switching* de 150kHz
-* 16-SOIC
+* Vin de 3.5V a 60V
+* Vout de 0.8 a Vin
+* Frecuencia *switching* de 50kHz hasta 850Khz
+* 12-MSOP
 * Soft-start programable
-* Proteccion de sobretension
-* Sin resistencia de sensado
+* Protección de sobretensión
+* Resistencia de sensado para protección por sobrecorriente
+* Protección por tensión de entrada baja
 * Eficiencia mayor al 90%
-* *Double MOSFET synchronous drive*
-
 
 ---
 ## Circuito
-A partir del [datasheet](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/datasheet_1775f.pdf) se extrae la topología que funciona con las características requeridas:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/sch_LTC1775.PNG)
-Para la elección de los componentes se acude a la sección de diseño del *datasheet* (pag.9).
-### MOSFETs
-El controlador ***LTC1775CS***  no utiliza una resisistencia de sensado de corriente. En cambio, fija la corriente acorde a la R(DS_on) de los MOSFETs de canal N.  La corriente máxima promedio IO(max) es igual al pico de corriente del inductor menos la mitad de la corriente de pico a pico de riple en el inductor ∆IL. Para el cáclulo del R(DSon) se utiliza la siguiente fórmula:
-![](https://latex.codecogs.com/gif.latex?R_%7BDS_%7BON%7D%28max%29%7D%20%5Csimeq%20%5Cfrac%7B240mV%7D%7BI_%7BO%7D%28max%29%5Crho_T%7D)
-Donde rho_t normaliza el termino que hace que la R(DS_on) dependa de la temperatura. Utilizando  rho_t=0.4, una corriente IO(max)=10A se tiene que R(DS_on)< 60mΩ.
-Luego para calcular la potencia que debe disipar el transistor en condiciones de corriente continua es:
-![](https://latex.codecogs.com/gif.latex?I_%7BDS%7D%28MAX%29%3D%5Csqrt%7B%5Cfrac%7BP%7D%7BR_%7BDS_%7BON%7D%7D%7D%7D%3D%5Csqrt%20%5Cfrac%7BT_%7BJ%7D%28max%29-T_A%7D%7B%5Ctheta_%7BJA%7D%5Ccdot%20R_%7BDS_%7BON%7D%7D%5Ccdot%20%5Crho_%7BTJ%28MAX%29%7D%7D)
-Con esta formula verificamos que el transitor elegido sea capaz de entregar la corriente de *drain* necesaria. 
-Luego es necesario comprobar que la tension V_DS que soporte el MOSFET sea mayor que la tensión de entrada del regulador.
-Por último hay que tener en cuenta la inductancia de los pines asociada con el *package* del MOSFET. La *datasheet* ofrece valores estandar, que se muestra a continuación:
+A partir del [datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/3864fa.pdf) se extrae la topología que funciona con las características requeridas:
+![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/imagenes/sch_LTC3864.PNG)
+Para la elección de los componentes se acude a la sección de diseño del *datasheet* (pag.10). El diseño se realiza en base a las siguientes especificaciones:
+* Vin = 16V a 30V
+* Vout = 15V
+* Iout(max)=5A
+* f=350kHz
+
+La tension de salida se programa como:
+
+Por este motivo se elige RFB1=56K y RFB2=100K (variable). Entonces la tensión de salida es de 15.1V a 800mV.
+
+El pin FREQ se une a masa para configurarlo en f=350Khz, aunque se deja la posibilidad de cambiar el valor con una resistencia serie.
+Luego se selecciona el tamano del inductor segun la siguiente formula:
+
+Considerando un ripple maximo del 60% como peor caso se obtiene un valor de L1 de 7.1uH, el cual se lo lleva a 10uH ya que es un valor estandar. 
+La corriente de ripple maxima es entonces:
+
+Entonces ∆IL=2.7A.
+Luego se selecciona Rsense para que el controlador pueda entregar la maxima corriente de 5A considerando margen suficiente por la variacion de los componentes y considerando las peores condiciones de trabajo. Usando un margen de error del 15% y con la siguiente formula se obtiene que Rsense=13mΩ. La resistencia se lleva a Rsense=15mΩ por ser este ultimo un valor comercial, se recalcula la corriente maxima y se obtiene Ilimite=5.3A.
+
+El siguiente paso es hallar el transistor PMOS-FET correcto. Entre los parametros que se deben considerar esta la tension de ruptura BVDSs, corriente maxima de drain, la resistencia RDSon. Luego es necesario comprobar que la tension V_DS que soporte el MOSFET sea mayor que la tensión de entrada del regulador. Por último hay que tener en cuenta la inductancia de los pines asociada con el *package* del MOSFET. La *datasheet* ofrece valores estandar, que se muestra a continuación:
 
 | *Package* | Inductancia de pines |
 | --- | --- |
 | TO-220 | 4nH a 12nH |
-| DDPAK | 4nH |
+| D2PAK | 4nH |
 | DPAK | 1.5nH |
 | SO-8 | 1nH |
+ Luego de examinar entre la basta oferta de transistores se opto por ***FDS4685***, cuyas caracterisiticas son:
+* BVDSs = -40V
+* ID = 8.2A continuo, 50A pulsado
+* RDSon = 27mΩ
+* S0-8 Package
 
-En base a estas reglas, se deside por el transistor ***IRLR3915***. Sus caracteristicas se ven en su [datasheet](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/DOC/datasheet_IRLU3915.pdf) y son:
-* VDSS=55 V
-* R(DS_on) = 14 mΩ
-* Id=30 A
-* DPAK
+La potencia disipada esperada se calcula como:
 
-Con los valores extraidos  y la formual de I_DS(max) se obtiene que la corriente maxima es de 10A. Entonces, este MOSFET cumple con todas las caracteristicas requeridas.
+Como capacitancia se eligió una combinación de capacitor electrolítico y cerámico, en paralelo. Para la capacitancia de salida se utiliza el mismo diseño. En este caso, se observa que es vital la ESR del capacitor equivalente ya que definirá el ripple de la tensión de salida:
 
+
+Luego de realizar cálculos y simulaciones se llegó a que la mejor opción son dos capacitores electrolíticos de 47uF y uno cerámico. Si bien se sabe que el valor del ESR del cerámico es mucho más bajo, para elegir el valor de la capacitancia que debe tener dicho capacitor se investigó y se halló un [sitio](https://www.powerelectronictips.com/how-mixed-type-output-capacitors-affect-dcdc-converter-stability/) que investigo esta relación. Del mismo se extrae que la capacitancia del cerámico, para que se observe el fenómeno de baja del ripple de salida, debe ser de al menos del 20%, como se observa en el siguiente gráfico:
 
 
 
-### Inductor
-### Diodos
-### Capacitores
+Por eso es que se opta por un capacitor cerámico de 22uf.
+El controlador permite un arranque suave proporcional al capacitor conectado al pin SS (*soft-start*):
+
+
+Se elige un capacitor de 10nF.
+Luego se realiza un divisor resistivo de la tensión de alimentación, unido al pin RUN, el cual se utiliza como protección por tensión baja.
