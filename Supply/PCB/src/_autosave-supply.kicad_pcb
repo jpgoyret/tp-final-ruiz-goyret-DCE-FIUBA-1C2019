@@ -12,7 +12,7 @@
   (page A4)
   (layers
     (0 F.Cu signal)
-    (31 B.Cu signal hide)
+    (31 B.Cu signal)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -34,7 +34,7 @@
   )
 
   (setup
-    (last_trace_width 1.2)
+    (last_trace_width 0.25)
     (user_trace_width 0.3)
     (user_trace_width 0.4)
     (user_trace_width 0.5)
@@ -138,7 +138,6 @@
     (add_net "Net-(R10-Pad2)")
     (add_net "Net-(R4-Pad2)")
     (add_net "Net-(R5-Pad1)")
-    (add_net "Net-(U1-Pad7)")
     (add_net VDC)
   )
 

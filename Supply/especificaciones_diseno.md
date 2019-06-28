@@ -50,20 +50,28 @@ Para la elección de los componentes se acude a la sección de diseño del *data
 * Iout(max)=5A
 * f=350kHz
 
-La tension de salida se programa como:
+La tensión de salida se programa como:
+
+![](https://latex.codecogs.com/gif.latex?V_%7BOUT%7D%3D0.8V%5Ccdot%20%5Cleft%281&plus;%5Cfrac%7BR_%7BFB2%7D%7D%7BR_%7BFB1%7D%7D%20%5Cright%20%29)
 
 Por este motivo se elige RFB1=56K y RFB2=100K (variable). Entonces la tensión de salida es de 15.1V a 800mV.
 
 El pin FREQ se une a masa para configurarlo en f=350Khz, aunque se deja la posibilidad de cambiar el valor con una resistencia serie.
-Luego se selecciona el tamano del inductor segun la siguiente formula:
+Luego se selecciona el tamaño del inductor segun la siguiente fórmula:
 
-Considerando un ripple maximo del 60% como peor caso se obtiene un valor de L1 de 7.1uH, el cual se lo lleva a 10uH ya que es un valor estandar. 
-La corriente de ripple maxima es entonces:
+![](https://latex.codecogs.com/gif.latex?L%3D%5Cleft%28%20%5Cfrac%7BV_%7BOUT%7D%7D%7Bf%5Ccdot%20%5CDelta%20I_%7BL%28MAX%29%7D%7D%20%5Cright%20%29%20%5Cleft%281-%5Cfrac%7BV_%7BOUT%7D%7D%7BV_%7BIN%28MAX%29%7D%7D%20%5Cright%20%29)
+
+Considerando un ripple máximo del 60% como peor caso se obtiene un valor de L1 de 7.1uH, el cual se lo lleva a 10uH ya que es un valor estandar. 
+La corriente de ripple máxima es entonces:
+
+![](https://latex.codecogs.com/gif.latex?%5CDelta%20I_%7BL%7D%3D%5Cleft%28%20%5Cfrac%7BV_%7BOUT%7D%7D%7Bf%5Ccdot%20L%20%7D%20%5Cright%20%29%20%5Cleft%281-%5Cfrac%7BV_%7BOUT%7D%7D%7BV_%7BIN%7D%7D%20%5Cright%20%29)
 
 Entonces ∆IL=2.7A.
-Luego se selecciona Rsense para que el controlador pueda entregar la maxima corriente de 5A considerando margen suficiente por la variacion de los componentes y considerando las peores condiciones de trabajo. Usando un margen de error del 15% y con la siguiente formula se obtiene que Rsense=13mΩ. La resistencia se lleva a Rsense=15mΩ por ser este ultimo un valor comercial, se recalcula la corriente maxima y se obtiene Ilimite=5.3A.
+Luego se selecciona Rsense para que el controlador pueda entregar la maxima corriente de 5A considerando márgen suficiente por la variacion de los componentes y considerando las peores condiciones de trabajo. Usando un márgen de error del 15% y con la siguiente fármula se obtiene que Rsense=13mΩ. La resistencia se lleva a Rsense=15mΩ por ser este último un valor comercial, se recalcula la corriente máxima y se obtiene Ilimite=5.3A.
 
-El siguiente paso es hallar el transistor PMOS-FET correcto. Entre los parametros que se deben considerar esta la tension de ruptura BVDSs, corriente maxima de drain, la resistencia RDSon. Luego es necesario comprobar que la tension V_DS que soporte el MOSFET sea mayor que la tensión de entrada del regulador. Por último hay que tener en cuenta la inductancia de los pines asociada con el *package* del MOSFET. La *datasheet* ofrece valores estandar, que se muestra a continuación:
+![](https://latex.codecogs.com/gif.latex?I_%7BLIMIT%7D%5Csimeq%5Cfrac%7B95mV%7D%7BR_%7BSENSE%7D%7D)
+
+El siguiente paso es hallar el transistor PMOS-FET correcto. Entre los parámetros que se deben considerar esta la tensión de ruptura BVDSs, corriente máxima de drain, la resistencia RDSon. Luego es necesario comprobar que la tensión V_DS que soporte el MOSFET sea mayor que la tensión de entrada del regulador. Por último hay que tener en cuenta la inductancia de los pines asociada con el *package* del MOSFET. La *datasheet* ofrece valores estandar, que se muestra a continuación:
 
 | *Package* | Inductancia de pines |
 | --- | --- |
@@ -71,24 +79,28 @@ El siguiente paso es hallar el transistor PMOS-FET correcto. Entre los parametro
 | D2PAK | 4nH |
 | DPAK | 1.5nH |
 | SO-8 | 1nH |
- Luego de examinar entre la basta oferta de transistores se opto por ***FDS4685***, cuyas caracterisiticas son:
+
+Luego de examinar entre la basta oferta de transistores se optó por ***FDS4685***, cuyas características son:
 * BVDSs = -40V
 * ID = 8.2A continuo, 50A pulsado
 * RDSon = 27mΩ
-* S0-8 Package
+* Package: SO-8
 
 La potencia disipada esperada se calcula como:
 
 Como capacitancia se eligió una combinación de capacitor electrolítico y cerámico, en paralelo. Para la capacitancia de salida se utiliza el mismo diseño. En este caso, se observa que es vital la ESR del capacitor equivalente ya que definirá el ripple de la tensión de salida:
 
+![](https://latex.codecogs.com/gif.latex?%5CDelta%20V_%7BOUT%7D%5Cleq%20%5CDelta%20I_L%20%5Cleft%28ESR&plus;%5Cfrac%7B1%7D%7B8%5Ccdot%20f%5Ccdot%20C_%7BOUT%7D%7D%20%5Cright%20%29
+)
 
 Luego de realizar cálculos y simulaciones se llegó a que la mejor opción son dos capacitores electrolíticos de 47uF y uno cerámico. Si bien se sabe que el valor del ESR del cerámico es mucho más bajo, para elegir el valor de la capacitancia que debe tener dicho capacitor se investigó y se halló un [sitio](https://www.powerelectronictips.com/how-mixed-type-output-capacitors-affect-dcdc-converter-stability/) que investigo esta relación. Del mismo se extrae que la capacitancia del cerámico, para que se observe el fenómeno de baja del ripple de salida, debe ser de al menos del 20%, como se observa en el siguiente gráfico:
-
-
+![](https://r7knmqt3qn1hbgxc30yrat1a-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/Figure-5_Mehta.jpg)
 
 Por eso es que se opta por un capacitor cerámico de 22uf.
 El controlador permite un arranque suave proporcional al capacitor conectado al pin SS (*soft-start*):
 
+![](https://latex.codecogs.com/gif.latex?t_%7BSS%7D%3DC_%7BSS%7D%5Ccdot%20%5Cfrac%7B0.8V%7D%7B10%5Cmu%20A%7D)
 
-Se elige un capacitor de 10nF.
+
+Se elige un capacitor de 10nF, teniendo una arranque suave de aproximadamente 1 mS.
 Luego se realiza un divisor resistivo de la tensión de alimentación, unido al pin RUN, el cual se utiliza como protección por tensión baja.
