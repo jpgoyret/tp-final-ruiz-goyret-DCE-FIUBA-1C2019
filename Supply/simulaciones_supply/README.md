@@ -1,16 +1,16 @@
-## Mediciones de par·metros
+Ôªø## Mediciones de par√°metros
 
-Se realiza la simulaciÛn para Vin=28V, Vout=15V, RL=4O y se grafica Vout en funciÛn del timepo:
+Se realiza la simulaci√≥n para Vin=28V, Vout=15V, RL=4Œ© y se grafica Vout en funci√≥n del timepo:
 
 ![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/imagenes_supply/vout_temp.PNG)
 
-Se observa una tensiÛn de salida de 15V, con un tiempo de *soft-start* de 1ms. 
+Se observa una tensi√≥n de salida de 15V, con un tiempo de *soft-start* de 1ms. 
 
 Se aumenta en el sector estable de Vout y se mide el ripple de salida:
 
 ![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/imagenes_supply/vout_ripple.PNG)
 
-Para la siguiente simulaciÛn se colocÛ una carga de 0.001O (cortocircuito) y se grsficÛ la corriente de salida:
+Para la siguiente simulaci√≥n se coloc√≥ una carga de 0.001Œ© (cortocircuito) y se grsfic√≥ la corriente de salida:
 
 ![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/imagenes_supply/vout_ilim.PNG)
 
