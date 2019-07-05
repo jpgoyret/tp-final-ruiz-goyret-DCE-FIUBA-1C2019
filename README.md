@@ -14,8 +14,8 @@ El trabajo consiste en el diseño, simulación y armado en PCB de un amplificado
 
 El repositorio de encuentra estructurado en 3 carpetas principales: 
 
-- Amplificador: documentación, simulaciones y proyecto en Kicad del amplificador.
-- Supply: documentación, simulaciones y proyecto en Kicad de las fuentes de switching.
-- DOC: referencias para el diseño de los circuitos, artículos útiles y hojas de datos de amplificadores comerciales que se usaron como referencia para el proyecto.
+- [Amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador): documentación, simulaciones y proyecto en Kicad del amplificador.
+- [Supply](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Supply): documentación, simulaciones y proyecto en Kicad de las fuentes de switching.
+- [DOC](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/DOC): referencias para el diseño de los circuitos, artículos útiles y hojas de datos de amplificadores comerciales que se usaron como referencia para el proyecto.
 
 Cada subcarpeta cuenta con un archivo README.md propio describiendo su contenido y como debe ser analizado.

@@ -1,4 +1,4 @@
-update=18/06/2019 20:47:23
+update=29/06/2019 23:50:33
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=
+LastNetListRead=pcb_amplificador.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -28,13 +28,18 @@ MinViaDrill=0.3
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.25
-TrackWidth1=0.3048
-TrackWidth2=0.4064
-TrackWidth3=0.6096
+TrackWidth1=0.4064
+TrackWidth2=0.3048
+TrackWidth3=0.4064
+TrackWidth4=0.6096
+TrackWidth5=3.81
+TrackWidth6=7.62
 ViaDiameter1=1.016
 ViaDrill1=0.70104
 ViaDiameter2=1.27
 ViaDrill2=0.4064
+ViaDiameter3=1.5
+ViaDrill3=0.75
 dPairWidth1=0.2
 dPairGap1=0.25
 dPairViaGap1=0.25
@@ -64,7 +69,7 @@ SolderPasteClearance=0
 SolderPasteRatio=-0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
-Type=0
+Type=2
 Enabled=1
 [pcbnew/Layer.In1.Cu]
 Name=In1.Cu
@@ -188,7 +193,7 @@ Type=0
 Enabled=0
 [pcbnew/Layer.B.Cu]
 Name=B.Cu
-Type=0
+Type=1
 Enabled=1
 [pcbnew/Layer.B.Adhes]
 Enabled=1
@@ -232,7 +237,7 @@ Enabled=0
 [pcbnew/Netclasses/Default]
 Name=Default
 Clearance=0.3048
-TrackWidth=0.3048
+TrackWidth=0.4064
 ViaDiameter=1.016
 ViaDrill=0.70104
 uViaDiameter=0.3
