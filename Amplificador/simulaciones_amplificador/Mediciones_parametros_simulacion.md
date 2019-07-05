@@ -12,18 +12,17 @@ En este archivo se presentan los valores/caracterización de los siguientes par�
 - PSNR
 - Tensiones máximas a la salida para cargas de 4 y 8ohm.
 - Corriente máxima a la salida para una carga de 4 ohm.
-
-
+- Máxima potencia disipada en los transistores.
 
 ##### Resistencia de entrada
 
-![](imagenes_amplificador/medicion_rin.png)
+![](../imagenes_amplificador/medicion_rin.png)
 
 ##### Resistencia de salida
 
 Resistencia de salida con carga de 8ohm*
 
-![](imagenes_amplificador/medicion_rout_8ohm.png)
+![](../imagenes_amplificador/medicion_rout_8ohm.png)
 
 Factor de amortiguamiento máximo: 8ohm/22mohm = 363 
 
@@ -31,7 +30,7 @@ Factor de amortiguamiento máximo: 8ohm/22mohm = 363
 
 *Resistencia de salida con carga de 4ohm* 
 
-![](imagenes_amplificador/medicion_rout_4ohm.png)
+![](../imagenes_amplificador/medicion_rout_4ohm.png)
 
 Factor de amortiguamiento máximo: 4ohm/22mohm = 181
 
@@ -41,7 +40,7 @@ Factor de amortiguamiento máximo: 4ohm/22mohm = 181
 
 Medición con carga de 8ohm
 
-![](imagenes_amplificador/medicion_ganancia_de_lazo.png)
+![](../imagenes_amplificador/medicion_ganancia_de_lazo.png)
 
 Frecuencia de corte a lazo abierto: 17Hz
 
@@ -49,19 +48,19 @@ Ganancia a lazo abierto: 57.4K
 
 Margen de fase: 81°
 
-![](imagenes_amplificador/medicion_margen_de_fase.png)
+![](../imagenes_amplificador/medicion_margen_de_fase.png)
 
 ##### Respuesta en frecuencia
 
-![](imagenes_amplificador/medicion_resp_frec_lineal.png)
+![](../imagenes_amplificador/medicion_resp_frec_lineal.png)
 
 Ganancia a lazo cerrado: 22.8
 
-![](imagenes_amplificador/medicion_resp_frec_fi.png)
+![](../imagenes_amplificador/medicion_resp_frec_fi.png)
 
 Frecuencia de corte inferior: 830mHz
 
-![](imagenes_amplificador/medicion_resp_frec_fh.png)
+![](../imagenes_amplificador/medicion_resp_frec_fh.png)
 
 Frecuencia de corte superior: 1.46MHz
 
@@ -92,19 +91,19 @@ Por otro lado, la curva Vce y Ic de los transistores de potencia queda comprendi
 
 *Velocidad de respuesta medida con una tensión a la salida de 25*
 
-![](imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_25V.png)
+![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_25V.png)
 
 Tiempo hasta que se abre el relé: 27ms
 
 *Velocidad de respuesta medida con una tensión a la salida de 5V*
 
-![](imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_5V.png)
+![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_5V.png)
 
 Tiempo hasta que se abre el relé: 120ms
 
 *Mínima tensión a la que actúa la llave*
 
-![](imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_min.png)
+![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_min.png)
 
 Mínima tensión medida: 0.9V de continua a la salida
 
@@ -132,37 +131,75 @@ donde se tomó Vo_max = 27.8
 
 *Alimentación Vmax (30V)*
 
-![](imagenes_amplificador/medicion_psnr_-vmax.png)
+![](../imagenes_amplificador/medicion_psnr_-vmax.png)
 
 **Alimentación -Vmax (-30V)*
 
-![](imagenes_amplificador/medicion_psnr_vmax.png)
+![](../imagenes_amplificador/medicion_psnr_vmax.png)
 
 *Alimentación Vmin (12V)*
 
-![](imagenes_amplificador/medicion_psnr_vmin.png)
+![](../imagenes_amplificador/medicion_psnr_vmin.png)
 
 *Alimentación -Vmin (-12V)*
 
-![](imagenes_amplificador/medicion_psnr_-vmin.png)
+![](../imagenes_amplificador/medicion_psnr_-vmin.png)
 
 ##### Tensiones pico máximas a la salida
 
 *Carga de 8ohm*
 
-![](imagenes_amplificador/medicion_vomax_8ohm.png)
+![](../imagenes_amplificador/medicion_vomax_8ohm.png)
 
 Vo_max =  27.8V
 
 *Carga de 4ohm*
 
-![](imagenes_amplificador/medicion_vomax_4ohm.png)
+![](../imagenes_amplificador/medicion_vomax_4ohm.png)
 
 Vo_max = 27.1 V
 
 ##### Corriente pico máxima a la salida para una carga de 4 ohm
 
-![](imagenes_amplificador/medicion_iomax_4ohm.png)
+![](../imagenes_amplificador/medicion_iomax_4ohm.png)
 
 Io_max = 6.8 A
+
+##### Potencia disipada en los transistores
+
+###### Transistores alimentados con las tensiones más altas en módulo (+30V y -30V)
+
+Se varió la excursión de salida y se calculó la potencia media por medio de la simulación [amplificador_potencia.asc](amplificador_potencia.asc) para obtener:
+
+| V_out [V] | Pot_transistores [W] |
+| --------- | -------------------- |
+| 19        | 16,7                 |
+| 20        | 16,9                 |
+| 21        | 16,8                 |
+| 22        | 16,6                 |
+| 25        | 14,9                 |
+| 27        | 13,9                 |
+
+Dado que esperable que la potencia disipada sea menor a valores de V_out menores a 19V (porque los transistores se encienden en una porción menor del semiciclo) y mayores a 27V (debido a que el amplificador tiende a un funcionamiento en clase B), se tiene que la potencia máxima dispada en los transistores será aproximadamente 17W.
+
+Pot_max_alta_tension = 17 W
+
+###### Transistores alimentados con las tensiones más altas en módulo (+12V y -12V)
+
+Se realizó el mismo procedimiento para los transistores alimentados con las tensiones de módulo más bajo y se obtuvieron los siguientes valores cuando la etapa de salida no conmuta (|V_out | < 12V):
+
+| V_out [V] | Pot_transistores [W] |
+| --------- | -------------------- |
+| 5,5       | 3,2                  |
+| 6         | 3,3                  |
+| 7         | 3,3                  |
+| 7,3       | 3,3                  |
+| 7,6       | 3,3                  |
+| 9         | 3                    |
+
+Se ve que la máxima potencia disipada se alcanza para aproximadamente 7.6V de excursión, lo cual se condice con el valor de máxima potencia disipada en los transistores de un clase B alimentado con 12 V (a 64% de la excursión máxima).
+
+Cuando la etapa de salida conmuta se tiene que los transistores alimentados con +12V y -12V disiparán menos que sin conmutar ya que se encienden durante una parte menor del semiciclo. 
+
+En consecuencia, la potencia máxima disipada en los transistores alimentados con las tensiones más bajas es aproximadamente 3,3 W.
 
