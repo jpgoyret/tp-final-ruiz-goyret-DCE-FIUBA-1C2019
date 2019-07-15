@@ -4,4 +4,5 @@ En esta carpeta se incluye un registro de las mediciones realizadas durante el a
 
 - [5/7/19](Mediciones_amplificador_5_7_19.md)
 - [10/7/19](Mediciones_amplificador_10_7_19.md)
+- [12/7/19](Mediciones_amplificador_12_7_19.md)
 

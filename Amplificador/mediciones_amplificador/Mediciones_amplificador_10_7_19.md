@@ -4,7 +4,7 @@
 
   A continuación, se muestra un esquema del circuito armado hasta la fecha:
 
-  ![](fotos_mediciones_5_7_19/esquema_circuito_armado_10_7_19.png)
+  ![](fotos_mediciones_10_7_19/esquema_circuito_armado_10_7_19.png)
 
   Y otra de la placa armada:
 
