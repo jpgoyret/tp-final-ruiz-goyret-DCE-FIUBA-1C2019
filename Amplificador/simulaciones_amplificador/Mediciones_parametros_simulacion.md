@@ -165,6 +165,15 @@ Vo_max = 27.1 V
 
 Io_max = 6.8 A
 
+##### Potencia máxima entregada a la carga
+
+De los datos simulados para la máxima tensión pico obtenible a la salida se llega a que la máxima potencia entregable (no nominal) a la carga es:
+
+- Con carga de 8ohm: 48 W
+- Con carga de 4ohm: 91 W
+
+
+
 ##### Potencia disipada en los transistores
 
 ###### Transistores alimentados con las tensiones más altas en módulo (+30V y -30V)

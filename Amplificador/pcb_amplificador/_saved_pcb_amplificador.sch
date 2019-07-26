@@ -2141,8 +2141,6 @@ Wire Wire Line
 Wire Wire Line
 	1400 2000 1400 2350
 Wire Wire Line
-	1250 2100 1250 2500
-Wire Wire Line
 	950  2950 950  2350
 Wire Wire Line
 	950  2350 1400 2350
@@ -2151,7 +2149,6 @@ Wire Wire Line
 	1400 2350 1400 2750
 Wire Wire Line
 	1050 2500 1250 2500
-Connection ~ 1250 2500
 Wire Wire Line
 	1250 2500 1250 2600
 $Comp
@@ -2249,7 +2246,6 @@ F 3 "~" H 6750 5450 50  0001 C CNN
 	1    6750 5450
 	0    -1   1    0   
 $EndComp
-NoConn ~ 1250 1900
 Wire Wire Line
 	1100 750  1100 900 
 Wire Wire Line
@@ -2794,9 +2790,6 @@ Wire Wire Line
 Connection ~ 10550 1700
 Wire Wire Line
 	10550 1700 10350 1700
-Connection ~ 10950 1700
-Wire Wire Line
-	10950 1800 10950 1700
 Wire Wire Line
 	6950 5450 7400 5450
 Wire Wire Line
@@ -2815,4 +2808,13 @@ F 3 "~" H 7550 5450 50  0001 C CNN
 	1    7550 5450
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	1250 1900 1500 1900
+Wire Wire Line
+	1500 1900 1500 2500
+Wire Wire Line
+	1500 2500 1250 2500
+Connection ~ 1250 2500
+NoConn ~ 1250 2100
+NoConn ~ 1500 -350
 $EndSCHEMATC
