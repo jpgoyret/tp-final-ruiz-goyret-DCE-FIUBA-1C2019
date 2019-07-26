@@ -1,12 +1,12 @@
 # Boceto de amplificador seleccionado y sus especificaciones
 
-A continuación se hace una descripción del amplificador diseñado junto con sus especificaciones. Para ver las simulaciones en base a las cuales se fundamentan dichas especificaciones ir a [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md)
+A continuación se hace una descripción del amplificador diseñado junto con sus especificaciones. Para ver las simulaciones en base a las cuales se fundamentan dichas especificaciones ir a [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md). Para una explicación más detalla de cada etapa y subcircuitos del amplificador ir a [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md)
 
 ## Características generales del amplificador
 
  - Clase H con transistores de salida en paralelo y conmutación entre los drivers y los transistores de potencia realizada con transistores MOSFET.
  - Diseñado para recibir señal por medio de un celular o reproductor de música por medio de un conector de audio analógico de 3.5mm.
- - Apto para cargas de 4 u 8ohm.
+ - Apto para cargas de 4 u 8ohm. Los limitadores de corriente fueron diseñados para una carga de 3ohm como margen de seguridad para la correcta operación del amplificador.
 
 ## Esquema
 Como base para el diseño se ha utilizado el amplificador clase G perteneciente a la página 307 del libro "Audio Power Amplifier Handbook" de Douglas Self.
@@ -38,17 +38,24 @@ A dicho amplificador se le ha reemplazado la etapa de salida serie clase G por u
  - Tensiones de alimentación:
 	- V1 = 30 V
 	- V2 = 12 V
+	
  - Potencia nominal para las cargas especificadas:
     - 4ohm --> Pnom = 45 W
     - 8ohm --> Pnom = 85 W
+    
  - Eficiencia máxima (carga de 4ohm): 73% (valor obtenido mediante simulación: 75%).
+
  - Factor de amortiguación (en el rango de 20Hz a 20kHz): 
    
      - 4ohm: 400 (valor simulado: 360)
      - 8ohm: 200 (valor simulador: 180).
+     
  - Resistencia de entrada: al menos R_i = 20 kohm para frecuencias entre 20Hz y 20kHz (se simuló y se obtuvo este resultado).
+
  - Ancho de banda: f_i = 10Hz, f_h = 400KHz (valores simulados: f_i = 0.8Hz, f_h = 1.4MHz).
- - Ancho de banda de potencia: 40kHz  (valor simulado: 170kHz. No es posible determinarlo con precisión por análisis de la FFT porque antes se presenta la distorsión por la conmutación de la etapa de salida). Ver nota al final de este archivo para ver los motivos de la diferencia entre la especificación y el valor obtenido por simulación.
+
+ - Ancho de banda de potencia: 40kHz  (valor simulado: 150kHz. No es posible determinarlo con precisión por análisis de la FFT porque antes se presenta la distorsión por la conmutación de la etapa de salida). Ver nota al final de este archivo para ver los motivos de la diferencia entre la especificación y el valor obtenido por simulación.
+
  - TDH: valores simulados entre paréntesis. La simulaciones se realizaron con una corriente de colector de la etapa de salida Ic = 10mA. Se utilizaron los primeros 9 armónicos de 5 periodos consecutivos de la señal de salida.
 	- 8ohm y 1kHz:
 	  - 90% pot. nominal (V_i = 1.16V): 0,05% (0.001591%)
@@ -56,8 +63,8 @@ A dicho amplificador se le ha reemplazado la etapa de salida serie clase G por u
 	  - 10% pot. nominal (V_i = 385mV): 0,01% (0.0009%) 
 	- 8ohm y 10kHz:
 	  - 90% pot. nominal (V_i = 1.16V): 0,2% (0.021011%) 
-	  - 50% pot. nominal (V_i = 860mV): 0,12% (0.030388%) 
-	  - 10% pot. nominal (V_i = 385mV): 0,02% (0.008930%) 
+	  - 50% pot. nominal (V_i = 860mV): 0,08% (0.030388%) 
+	  - 10% pot. nominal (V_i = 385mV): 0,05% (0.008930%) 
 	- 4ohm y 1kHz:
 	  - 90% pot. nominal (V_i = 1.12V): 0,05% (0.001918%) 
 	  - 50% pot. nominal (V_i = 840mV): 0.02% (0.002363%) 
@@ -65,9 +72,13 @@ A dicho amplificador se le ha reemplazado la etapa de salida serie clase G por u
 	- 4ohm y 10kHz:
 	  - 90% pot. nominal (V_i = 1.12V): 0.25% (0.027886%) 
 	  - 50% pot. nominal (V_i = 840mV): 0.16%  (0.039084%) 
-	  - 10% pot. nominal (V_i = 375mV): 0.03%  (0.014913%)
+	  - 10% pot. nominal (V_i = 375mV): 0.08%  (0.014913%)
+	
  - Distorsión por intermodulación: 0,02 % a 1W/8ohm (valor medido: 0.0092% ; señales de prueba de 100Hz-182 mV y 5kHz-46mV)
- - PSNR simulada:  menor a -76dB para el rango de frecuencias medias. Este último valor se corresponde con el rechazo de ruido con respecto a la fuente de alimentación inferior suponiendo una resistencia nula en el cable que conecta la fuente de alimentación con el amplificador. Si se asume que dicha resistencia es de 1Ohm, la PSNR máxima es -79dB. El resto de las fuentes de alimentación reportan una PSNR menor a -90dB.
+
+ - PSNR:  menor a -75dB para el rango de frecuencias medias. 
+
+     Las simulaciones reportaron un valor de al menos -76dB para este rango. Este último valor se corresponde con el rechazo de ruido con respecto a la fuente de alimentación inferior suponiendo una resistencia nula en el cable que conecta la fuente de alimentación con el amplificador. Si se asume que dicha resistencia es de 1Ohm, la PSNR máxima es -79dB. El resto de las fuentes de alimentación reportan una PSNR menor a -90dB.
 
 ## Notas sobre las mediciones hasta el día 26/7/19
 
@@ -79,10 +90,3 @@ Hasta el día 26/7/19 se han realizado mediciones que han llevado a modificar la
   - El piso de THD medible (es decir, la mínima THD obtenida con un generador de señal para realizar las mediciones de distorsión) ha sido 0,005%. 
   - El menor valor de distorsión medido ha sido aproximadamente 0,011% para una carga de 8ohm, 1kHz y 10% de la potencia nominal de salida. Por lo tanto, se han llevado todas las especificaciones de distorsión que antes de encontraban por debajo de 0.01% a este nivel. Esto se ha debido en parte al alto piso de distorsión de las mediciones, al igual que al desconocimiento sobre si será posible disminuir aun más la distorsión sin comprometer otros parámetros del amplificador.
   - La distorsión armónica comienza a incrementarse a partir de una entrada Vin > 1,7Vpp sin un motivo claro hasta el momento. De esta forma, la THD alcanza el 1.3% para Vin = 2,12Vpp, lo cual no se condice con lo esperado ni de forma teórica, ni en las simulaciones. Todavía no se ha determinado el origen de este tipo de distorsión, que se caracteriza por un aumento de los armónicos impares. Por lo tanto, se han multiplicado por dos las especificaciones iniciales de distorsión para el  50% de la potencia nominal, al igual que por 5 las especificaciones iniciales de distorsión para 90% de la potencia nominal. Se espera remover esta fuente desconocida de distorsión, pero aun así se han modificado las metas por si se presentan otras limitaciones en el proceso de disminuir la distorsión.
-
-## Transistores utilizados
-
-- BC550/560: transistores de uso común de la línea BC, pero con la figura de ruido dentro de esa categoría. Se han utilizado para la etapa diferencial de entrada con el fin de reducir el ruido introducido por esta.
-- 2SCR514P/2SAR514P: empleados en la VAS, los conmutadores y los limitadores. Transistores que permiten el paso de medianas corrientes (máximo 0,7 A). Se utilizaron por poseen un parámetro beta muy lineal (reduce la alinealidad de la VAS) y ser rápidos para las conmutación (útiles para los conmutadores).
-- 2SC5200/2SA1943: empleados en la  etapa de salida. Fueron elegidos ya que son transistores especiales para audio que cuentan con un parámetro beta casi constante en el rango de corrientes que se manejan en este amplificador. Esto permite evitar alinealidades en la etapa de salida.
-- BD139/BD140: empleados en el multiplicador de Vbe (por tener un encapsulado TO-220 que permite acoplarlos térmicamente con los transistores de baja potencia de salida) y en los drivers (por poder disipar la potencia necesaria como para alimentar a los transistores de salida en el peor caso). También poseen un parámetro beta lineal en comparación con otras alternativas consideradas.

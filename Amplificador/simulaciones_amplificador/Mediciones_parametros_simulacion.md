@@ -14,9 +14,17 @@ En este archivo se presentan los valores/caracterización de los siguientes par�
 - Corriente máxima a la salida para una carga de 4 ohm.
 - Máxima potencia disipada en los transistores.
 
+En cada sección se incluye una imagen del circuito utilizado en el simulador para obtener los parámetros. Para poder observar los esquema con mayor resolución, puede hacerse clic en ellos y ser redireccionado al archivo en tamaño original alojado en este repositorio. 
+
 ##### Resistencia de entrada
 
 ![](../imagenes_amplificador/medicion_rin.png)
+
+Se observa que la resistencia de entrada supera en todo el rango de frecuencias medias al valor de 25kohm, que el establecido como especificación para el amplificador.
+
+El circuito utilizado para llevar a cabo la simulación fue:
+
+![](../imagenes_amplificador/esquema_medicion_rin.png)
 
 ##### Resistencia de salida
 
@@ -34,6 +42,10 @@ Factor de amortiguamiento máximo: 8ohm/22mohm = 363
 
 Factor de amortiguamiento máximo: 4ohm/22mohm = 181
 
+El circuito utilizado para llevar a cabo la simulación fue:
+
+![](../imagenes_amplificador/esquema_medicion_rin.png)
+
 
 
 ##### Ganancia de lazo/Margen de fase
@@ -50,6 +62,10 @@ Margen de fase: 81°
 
 ![](../imagenes_amplificador/medicion_margen_de_fase.png)
 
+El circuito empleado para llevar a cabo la simulación fue:
+
+![](../imagenes_amplificador/esquema_medicion_margen_fase.png)
+
 ##### Respuesta en frecuencia
 
 ![](../imagenes_amplificador/medicion_resp_frec_lineal.png)
@@ -64,11 +80,17 @@ Frecuencia de corte inferior: 830mHz
 
 Frecuencia de corte superior: 1.46MHz
 
+El circuito utilizado para la medición fue:
+
+![](../imagenes_amplificador/esquema_medicion_resp_frec.png)
+
 ##### Limitación de corriente
 
-En base a la simulación "test_proteccion_sobrecorriente.asc" se obtuvieron las combinaciones de tensiones y corrientes a la salida para las cuales actua la protección de sobrecorriente. Estás se presentan en una tabla a continuación.
+En base a la simulación "test_proteccion_sobrecorriente.asc" se obtuvieron las combinaciones de tensiones y corrientes a la salida para las cuales actúa la protección de sobrecorriente.  A continuación se muestra una imagen del circuito utilizado:
 
-Icorte es la corriente a la que actua la protección, mientras que Icarga es la corriente que tendría una carga de 3ohm para ese valor de V1 suponiendo que el amplificador fuera ideal y pudiera proveerla
+![](../imagenes_amplificador/esquema_caracterizacion_limitador_corriente.png)
+
+V1 representa la diferencia de potencial colector-emisor del transistor de potencia de salida, mientras que IR es equivalente a la corriente de colector de dicho transistor. Se variaron los valores de IR y V1 con el fin de obtener la recta IR-V1 para la cual se produce la activación de los limitadores por sobrecorriente. Los resultados presentan en una tabla a continuación. En dicha tabla, Icorte es la corriente a la que actúa la protección (el transistor comienza a conducir), mientras que Icarga es la corriente que tendría una carga de 3ohm para ese valor de V1 suponiendo que el amplificador fuera ideal y pudiera proveerla.
 
 | V1[V] | Icorte[A] | Icarga[A] |
 | ----- | --------- | --------- |
@@ -83,7 +105,7 @@ Icorte es la corriente a la que actua la protección, mientras que Icarga es la 
 | 28    | 7         | 4.3       |
 | 30    | 6         | 4         |
 
-Se que siempre se cumple que Icarga < Icorte, cosa que deber suceder para evitar disparos no intencionados del limitador.
+Se puede observar que siempre se cumple que Icarga < Icorte, cosa que deber suceder para evitar disparos no intencionados del limitador.
 
 Por otro lado, la curva Vce y Ic de los transistores de potencia queda comprendida dentro de la zona de operación segura (SOA).
 
@@ -107,6 +129,10 @@ Tiempo hasta que se abre el relé: 120ms
 
 Mínima tensión medida: 0.9V de continua a la salida
 
+El circuito utilizado para llevar a cabo la caracterización de la protección contra DC fue el siguiente:
+
+![](../imagenes_amplificador/esquema_caracterizacion_proteccion_DC.png)
+
 ##### Ancho de banda de potencia/"slew rate"
 
 En el semiciclo positivo de señal se tiene que la velocidad de crecimiento viene dada por (despreciando las capacidades parásitas sobre todo de Q7):
@@ -115,17 +141,27 @@ SR+ = I_cola_diferencial*1E-6/C4 = 1mA * 1E-6/ 33pF = 30V/us
 
 Donde  I_cola_diferencial es la corriente por R19.
 
-Por otro lado, en el semiciclo negativo:
-
-SR- = I_VAS*1E-6/C4  = 9.5mA * 1E-6/33pF = 287V/us
-
-Por lo que el factor limitante de la velocidad de crecimiento se da en el semiciclo positivo.
-
-Luego, el ancho de banda de potencia es:
+Por otra parte, dada la topología del circuito,  se espera que la velocidad de decrecimiento (SR-) sea similar o superior a la de crecimiento. De esta forma, el ancho de banda potencia es:
 
 BW_pot = SR+ / (Vo_max * 2 * pi) = 170kHz
 
 donde se tomó Vo_max = 27.8
+
+La simulación de la respuesta del circuito a una señal cuadrada de entrada para la determinación de SR+ se muestra a continuación:
+
+![](../imagenes_amplificador/medicion_slew_rate_crecimiento.png)
+
+Se observa que la pendiente obtenida es de aproximadamente 26V/us, algo menor a lo calculado previamente por la presencia de capacidades parásitas de los transistores. Con este valor se obtiene un ancho de banda de potencia de 150kHz.
+
+Por otra parte, para SR-:
+
+![](../imagenes_amplificador/medicion_slew_rate_decrecimiento.png)
+
+Donde se observa que la pendiente en la región central (no afectada ni por las conmutaciones ni por la velocidad en señal del circuito) es de aproximadamente 60V/us. De este modo, se confirma que el ancho de potencia está determinado por SR+.
+
+El circuito utilizado para la medición fue:
+
+![](../imagenes_amplificador/esquema_medicion_slew_rate.png)
 
 ##### PSNR
 
@@ -133,7 +169,7 @@ donde se tomó Vo_max = 27.8
 
 ![](../imagenes_amplificador/medicion_psnr_-vmax.png)
 
-**Alimentación -Vmax (-30V)*
+*Alimentación -Vmax (-30V)*
 
 ![](../imagenes_amplificador/medicion_psnr_vmax.png)
 
@@ -144,6 +180,14 @@ donde se tomó Vo_max = 27.8
 *Alimentación -Vmin (-12V)*
 
 ![](../imagenes_amplificador/medicion_psnr_-vmin.png)
+
+
+
+Para la simulación de la PSNR con respecto a las distintas fuentes de alimentación se utilizó el siguiente esquema: 
+
+![](../imagenes_amplificador/esquema_medicion_PSNR.png)
+
+Donde se colocaron generadores sinusoidales en serie con las fuentes y se realizó la división entre la señal observada a la salida y la del generador en sí. Para la medición de la PSNR con respecto a cada fuente, solo su respectivo generador sinusoidal fue activo. En el caso de la PSNR con respecto a -Vmax (la peor al compararla con la del resto de las fuentes) se realizó una simulación extra colocando una resistencia de 1ohm en serie con el generador para representar a los cables no ideales que se conectarán a la placa en la práctica. De este modo, el capacitor de C8 (de 1000uF) actua como filtro llevando la cota superior de la PSNR de -76dB a -79dB con respecto a -Vmax.
 
 ##### Tensiones pico máximas a la salida
 
@@ -171,8 +215,6 @@ De los datos simulados para la máxima tensión pico obtenible a la salida se ll
 
 - Con carga de 8ohm: 48 W
 - Con carga de 4ohm: 91 W
-
-
 
 ##### Potencia disipada en los transistores
 
