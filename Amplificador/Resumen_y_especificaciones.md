@@ -1,4 +1,4 @@
-# Boceto de amplificador seleccionado y sus especificaciones
+# Resumen del amplificador amplificador diseñado y sus especificaciones
 
 A continuación se hace una descripción del amplificador diseñado junto con sus especificaciones. Para ver las simulaciones en base a las cuales se fundamentan dichas especificaciones ir a [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md). Para una explicación más detalla de cada etapa y subcircuitos del amplificador ir a [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md)
 

@@ -1,6 +1,6 @@
 # Descripción de las etapas y subcircuitos del amplificador
 
-En este archivo se realiza una descripción más detallada y cualitativa de cada una de las etapas del amplificador y sus funciones.
+En este archivo se realiza una descripción más detallada y cualitativa de cada una de las etapas del amplificador y sus funciones. La justificación de los valores de los componentes del circuito llevadas a cabo tanto desde la teoría como desde la simulación puede verse en [determinacion_valores_componentes.md](determinacion_valores_componentes.md)
 
 ## Etapas
 
@@ -46,7 +46,7 @@ El capacitor C7 logra reducir la PSNR del amplificador con respecto a +30V, ya q
 
 #### Filtros de ruido de las fuente alimentación
 
-Se han incorporado filtros para reducir la PSNR. Esto son C9 y R6 para +30V y C5 y R8 para -30V. R6 y R8 valen 10ohm y no poseen un valor mayor (mejorando el filtro) debido a que limitarían la máxima excursión obtenible por la VAS, la cual, en esta topología, es el factor limitante de la máxima excursión de todo el amplificador.
+Se han incorporado filtros para reducir la PSNR. Esto son C9 y R6 para +30V y C5 y R8 para -30V. R6 y R8 valen 10ohm y no poseen un valor mayor (mejorando el filtro) debido a que limitarían la máxima excursión obtenible por la VAS, la cual, en esta topología, es el factor limitante de la máxima excursión de todo el amplificador. Para una mejor justificación de los valores de estos componentes ver [determinacion_valores_componentes.md](determinacion_valores_componentes.md)
 
 #### Multiplicador de Vbe
 
@@ -72,6 +72,8 @@ Compuestos por Q9 y Q22, evitar que la corriente y la tensión Vce de los transi
 
 Los limitadores obtienen información de las corrientes y de la Vce a partir de los resistores de degeneración de emisor de la etapa de salida R27 y 28.
 
+Una caracterización de los limitadores de corriente puede encontrarse en  [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md).
+
 #### Limitador de corriente de la VAS
 
 Compuesto por Q25 y R43, evitar un exceso de corriente en la VAS cuando se disparan los limitadores de la etapa de salida.  R43 limita la corriente que circula por la base de Q25 para que este no sufra daños.
@@ -82,12 +84,4 @@ Su entrada se encuentra constituida por un filtro pasa bajos conformado por R46,
 
 Los resistores R45 y R46 limitan la corriente que circula por Q26 y Q27, así como la tensión en ese nodo (ya que la salida del amplificador, fuera de la operación normal, podría llegar a los +30V o -30V).
 
-## Transistores utilizados
-
-- BC550/560C: transistores de uso común de la línea BC, pero con la figura de ruido dentro de esa categoría. Se han utilizado para la etapa diferencial de entrada con el fin de reducir el ruido introducido por esta.  Se ha elegido el tipo C ya que posee el mayor parámetro beta dentro de la gama, mejorando la paridad del par diferencial e incrementando la resistencia de entrada del amplificador y de la etapa VAS.
-- 2SCR514P/2SAR514P: empleados en la VAS, los conmutadores y los limitadores. Transistores que permiten el paso de medianas corrientes (máximo 0,7 A). Se utilizaron por poseen un parámetro beta muy lineal (reduce la alinealidad de la VAS) y ser rápidos para las conmutación (útiles para los conmutadores).
-- 2SC5200/2SA1943: empleados en la  etapa de salida. Fueron elegidos ya que son transistores especiales para audio que cuentan con un parámetro beta casi constante en el rango de corrientes que se manejan en este amplificador. Esto permite evitar alinealidades en la etapa de salida.
-- BD139/BD140: empleados en el multiplicador de Vbe (por tener un encapsulado TO-220 que permite acoplarlos térmicamente con los transistores de baja potencia de salida) y en los drivers (por poder disipar la potencia necesaria como para alimentar a los transistores de salida en el peor caso). También poseen un parámetro beta lineal en comparación con otras alternativas consideradas.
-- FDS9934: transistores NMOS y PMOS complementarios empleados en los conmutadores. Se han elegido por su baja Rds, que minimiza la caída de señal y la disipación de potencia en ellos. También se los ha seleccionado por ser complementarios, de forma de evitar disparidades en las ramas del semiciclo positivo y negativo.
-- BC817 y BC807: transistores de uso común empleados en las protección de DC. Se han elegido estos modelos ya que no se requiere de ninguna característica especial por su parte.
-- BS170: transistor MOS de uso común utilizado en la protección de DC. Al igual que para los BC817 y BC807, ha sido elegido por no requerirse de ninguna característica particular derivada de la funcionalidad que cumplirá este transistor.
+Una caracterización de la protección dee DC puede encontrarse en  [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md).

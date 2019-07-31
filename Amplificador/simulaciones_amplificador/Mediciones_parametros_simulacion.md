@@ -24,7 +24,7 @@ Se observa que la resistencia de entrada supera en todo el rango de frecuencias 
 
 El circuito utilizado para llevar a cabo la simulación fue:
 
-![](../imagenes_amplificador/esquema_medicion_rin.png)
+![](../imagenes_amplificador/esquema_medicion_Rin.png)
 
 ##### Resistencia de salida
 
@@ -32,21 +32,17 @@ Resistencia de salida con carga de 8ohm*
 
 ![](../imagenes_amplificador/medicion_rout_8ohm.png)
 
-Factor de amortiguamiento máximo: 8ohm/22mohm = 363 
-
-
+Factor de amortiguamiento máximo: 8ohm/22mohm = 363.
 
 *Resistencia de salida con carga de 4ohm* 
 
 ![](../imagenes_amplificador/medicion_rout_4ohm.png)
 
-Factor de amortiguamiento máximo: 4ohm/22mohm = 181
+Factor de amortiguamiento máximo: 4ohm/22mohm = 181.
 
 El circuito utilizado para llevar a cabo la simulación fue:
 
-![](../imagenes_amplificador/esquema_medicion_rin.png)
-
-
+![](../imagenes_amplificador/esquema_medicion_Rout.png)
 
 ##### Ganancia de lazo/Margen de fase
 
@@ -54,11 +50,11 @@ Medición con carga de 8ohm
 
 ![](../imagenes_amplificador/medicion_ganancia_de_lazo.png)
 
-Frecuencia de corte a lazo abierto: 17Hz
+Frecuencia de corte a lazo abierto: 17Hz.
 
-Ganancia a lazo abierto: 57.4K
+Ganancia a lazo abierto: 57,4K.
 
-Margen de fase: 81°
+Margen de fase: 81°.
 
 ![](../imagenes_amplificador/medicion_margen_de_fase.png)
 
@@ -70,15 +66,15 @@ El circuito empleado para llevar a cabo la simulación fue:
 
 ![](../imagenes_amplificador/medicion_resp_frec_lineal.png)
 
-Ganancia a lazo cerrado: 22.8
+Ganancia a lazo cerrado: 22,8.
 
 ![](../imagenes_amplificador/medicion_resp_frec_fi.png)
 
-Frecuencia de corte inferior: 830mHz
+Frecuencia de corte inferior: 830mHz.
 
 ![](../imagenes_amplificador/medicion_resp_frec_fh.png)
 
-Frecuencia de corte superior: 1.46MHz
+Frecuencia de corte superior: 1,46MHz.
 
 El circuito utilizado para la medición fue:
 
@@ -111,23 +107,23 @@ Por otro lado, la curva Vce y Ic de los transistores de potencia queda comprendi
 
 ##### Protección contra DC
 
-*Velocidad de respuesta medida con una tensión a la salida de 25*
+*Velocidad de respuesta medida con una tensión a la salida de 25V*
 
 ![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_25V.png)
 
-Tiempo hasta que se abre el relé: 27ms
+Tiempo hasta que se abre el relé: 27ms.
 
 *Velocidad de respuesta medida con una tensión a la salida de 5V*
 
 ![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_5V.png)
 
-Tiempo hasta que se abre el relé: 120ms
+Tiempo hasta que se abre el relé: 120ms.
 
 *Mínima tensión a la que actúa la llave*
 
 ![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_min.png)
 
-Mínima tensión medida: 0.9V de continua a la salida
+Mínima tensión medida: 0,9V de continua a la salida.
 
 El circuito utilizado para llevar a cabo la caracterización de la protección contra DC fue el siguiente:
 
@@ -135,23 +131,11 @@ El circuito utilizado para llevar a cabo la caracterización de la protección c
 
 ##### Ancho de banda de potencia/"slew rate"
 
-En el semiciclo positivo de señal se tiene que la velocidad de crecimiento viene dada por (despreciando las capacidades parásitas sobre todo de Q7):
-
-SR+ = I_cola_diferencial*1E-6/C4 = 1mA * 1E-6/ 33pF = 30V/us
-
-Donde  I_cola_diferencial es la corriente por R19.
-
-Por otra parte, dada la topología del circuito,  se espera que la velocidad de decrecimiento (SR-) sea similar o superior a la de crecimiento. De esta forma, el ancho de banda potencia es:
-
-BW_pot = SR+ / (Vo_max * 2 * pi) = 170kHz
-
-donde se tomó Vo_max = 27.8
-
 La simulación de la respuesta del circuito a una señal cuadrada de entrada para la determinación de SR+ se muestra a continuación:
 
 ![](../imagenes_amplificador/medicion_slew_rate_crecimiento.png)
 
-Se observa que la pendiente obtenida es de aproximadamente 26V/us, algo menor a lo calculado previamente por la presencia de capacidades parásitas de los transistores. Con este valor se obtiene un ancho de banda de potencia de 150kHz.
+Se observa que la pendiente obtenida es de aproximadamente 26V/us, algo menor al calculado teóricamente, por la presencia de capacidades parásitas de los transistores. Con este valor se obtiene un ancho de banda de potencia de 150kHz.
 
 Por otra parte, para SR-:
 
@@ -167,11 +151,11 @@ El circuito utilizado para la medición fue:
 
 *Alimentación Vmax (30V)*
 
-![](../imagenes_amplificador/medicion_psnr_-vmax.png)
+![](../imagenes_amplificador/medicion_psnr_vmax.png)
 
 *Alimentación -Vmax (-30V)*
 
-![](../imagenes_amplificador/medicion_psnr_vmax.png)
+![](../imagenes_amplificador/medicion_psnr_-vmax.png)
 
 *Alimentación Vmin (12V)*
 
@@ -180,7 +164,6 @@ El circuito utilizado para la medición fue:
 *Alimentación -Vmin (-12V)*
 
 ![](../imagenes_amplificador/medicion_psnr_-vmin.png)
-
 
 
 Para la simulación de la PSNR con respecto a las distintas fuentes de alimentación se utilizó el siguiente esquema: 
@@ -195,26 +178,26 @@ Donde se colocaron generadores sinusoidales en serie con las fuentes y se realiz
 
 ![](../imagenes_amplificador/medicion_vomax_8ohm.png)
 
-Vo_max =  27.8V
+Vo_max =  27,8V.
 
 *Carga de 4ohm*
 
 ![](../imagenes_amplificador/medicion_vomax_4ohm.png)
 
-Vo_max = 27.1 V
+Vo_max = 27,1 V.
 
 ##### Corriente pico máxima a la salida para una carga de 4 ohm
 
 ![](../imagenes_amplificador/medicion_iomax_4ohm.png)
 
-Io_max = 6.8 A
+Io_max = 6,8 A.
 
 ##### Potencia máxima entregada a la carga
 
 De los datos simulados para la máxima tensión pico obtenible a la salida se llega a que la máxima potencia entregable (no nominal) a la carga es:
 
-- Con carga de 8ohm: 48 W
-- Con carga de 4ohm: 91 W
+- Con carga de 8ohm: 48 W.
+- Con carga de 4ohm: 91 W.
 
 ##### Potencia disipada en los transistores
 
@@ -233,7 +216,7 @@ Se varió la excursión de salida y se calculó la potencia media por medio de l
 
 Dado que esperable que la potencia disipada sea menor a valores de V_out menores a 19V (porque los transistores se encienden en una porción menor del semiciclo) y mayores a 27V (debido a que el amplificador tiende a un funcionamiento en clase B), se tiene que la potencia máxima dispada en los transistores será aproximadamente 17W.
 
-Pot_max_alta_tension = 17 W
+Pot_max_alta_tension = 17 W.
 
 ###### Transistores alimentados con las tensiones más altas en módulo (+12V y -12V)
 
