@@ -3,7 +3,7 @@ La finalidad de este documento es explicar el funcionamiento de los conmutadores
 
 A continuación se muestra el esquema del conmutador de la rama que funciona durante el semiciclo positivo:
 
-AGREGAR IMAGEN	
+ ![](imagenes_amplificador/esquema_conmutador_individual.png)
 
 El transistor Q20 tiene como finalidad comparar la tensión que se encuentra en su base y la del nodo de salida. Cuando la tensión del nodo de salida menos tres caídas de diodo (la tensión en el emisor de Q20) es mayor a la tensión en la base de Q20, entonces este satura y la tensión en su colector (el gate de M2) pasa a ser aproximadamente Vout - 2,1V. Se dice que la salida "menos tres caídas de diodo" debe ser mayor a la tensión en el nodo de base debido a que se tienen dos diodos 1N4148 entre el emisor y Vout (que totalizan aproximadamente 1,4V de caída) y, a su vez, la tensión base-emisor de Q20 debe ser aproximadamente -0,7V para que el transistor pueda saturar. 
 

@@ -93,7 +93,7 @@ Se incluye a continuacioń una imagen de la etapa diferncial de entrada elegida 
 
 La etapa diferencial constituye un ampificador de transconductancia. La corriente de salida en función de la entrada diferencial es:
 
-![](http://latex.codecogs.com/gif.latex?G_{m1}=I_{out1}/V_{in}=g_{mQ1}/(1+g_{mQ1}\timesR_1\)=0,0057A/V)
+![](http://latex.codecogs.com/gif.latex?G_{m1}=I_{out1}/V_{in}=g_{mQ1}/[1+g_{mQ1}\timesR_1]=0,0057A/V)
 
 Donde se ha supuesto que las corrientes de ambas ramas del par son aproximdamente iguales, así como también R1 = R2 y R3 = R4.
 
