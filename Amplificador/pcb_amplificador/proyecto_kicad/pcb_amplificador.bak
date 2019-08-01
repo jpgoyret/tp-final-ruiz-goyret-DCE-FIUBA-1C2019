@@ -2816,4 +2816,5 @@ Wire Wire Line
 	1500 2500 1250 2500
 Connection ~ 1250 2500
 NoConn ~ 1250 2100
+NoConn ~ 1500 -350
 $EndSCHEMATC

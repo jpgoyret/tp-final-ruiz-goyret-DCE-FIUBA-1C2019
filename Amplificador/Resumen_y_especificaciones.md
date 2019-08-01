@@ -1,6 +1,8 @@
 # Resumen del amplificador amplificador diseñado y sus especificaciones
 
-A continuación se hace una descripción del amplificador diseñado junto con sus especificaciones. Para ver las simulaciones en base a las cuales se fundamentan dichas especificaciones ir a [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md). Para una explicación más detalla de cada etapa y subcircuitos del amplificador ir a [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md)
+A continuación se hace una descripción del amplificador diseñado junto con sus especificaciones. Para ver las simulaciones en base a las cuales se fundamentan dichas especificaciones ir a [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md). Por otra parte, para una explicación más detallada de cada etapa y subcircuitos del amplificador ir a [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md). Finalmente, en el archivo [determinacion_valores_componentes.md](determinacion_valores_componentes.md) se encuentran fundamentados los valores de los componentes utilizados en cada etapa/subcircuito del amplificador según se lo presenta en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md).
+
+Se recomienda leer la documentación del amplificador comenzando por este archivo, para luego ir a [determinacion_valores_componentes.md](determinacion_valores_componentes.md) con el fin de obtener una perspectiva general de los componentes del amplificador, y finalmente a [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md).
 
 ## Características generales del amplificador
 
@@ -15,7 +17,13 @@ Como base para el diseño se ha utilizado el amplificador clase G perteneciente 
 
 A dicho amplificador se le ha reemplazado la etapa de salida serie clase G por una etapa clase H donde los transistores de salida que utilizan las tensiones de alimentación más baja y más alta operan en paralelo. También se modificó al etapa diferencial y se la hizo cascode para mejorar la PSRR con respecto a la fuente de alimentación de -30V  (-Vmax en la imagen) .  El diagrama original del amplificador diseñado se presenta a continuación (sin añadir la protección de DC, ni colocar la carga en el nodo de salida Vout):
 
-![](imagenes_amplificador/esquema_amplificador_sin_protección_DC.png)
+![](imagenes_amplificador/esquema_amplificador_sin_proteccion_DC.png)
+
+En el esquema:
+Vmax = 30V
+-Vmax = -30V
+Vmin = 12V
+ -Vmin = -12V
 
 ## Especificaciones del amplificador
  - Máxima entrada de tensión: 1.2V. Se estima que la salida de audio máxima de un celular tiene un valor de 1V rms. Para realizar esta estimación se usaron las referencias en [5], [6] , [7] y [8] en el archivo [Referencias.md](../DOC/Referencias.md) y las mediciones en [Mediciones_salida_audio_celular.md](Mediciones_salida_audio_celular.md). En función de estos datos se decidió que el amplificador tendría una ganancia a lazo cerrado mayor a la necesaria para tener máxima excursión con 1Vrms a la entrada debido a la posibilidad de que algunos celulares no sean capaces de alcanzar este valor (ver el caso del Samsung Galaxy Note 4 en [Mediciones_salida_audio_celular.md](Mediciones_salida_audio_celular.md)).
@@ -31,7 +39,6 @@ A dicho amplificador se le ha reemplazado la etapa de salida serie clase G por u
       ![](imagenes_amplificador/esquema_proteccion_corriente.png)
       
       - Contra la componente de continua en el nodo de salida. Esto protege a los parlantes de una eventual tensión de continua en dicho punto en caso de una falla del amplificador. Tensión de DC a a partir de la cual actúa el limitador: aproximadamente 0.6 V. Velocidad de respuesta del limitador: al menos 100ms. A continuación se muestra un esquema de dicha protección, la cual se conecta al nodo de salida del amplificador:
-
 
 ![](imagenes_amplificador/esquema_proteccion_DC.png)
 

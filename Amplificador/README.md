@@ -1,6 +1,15 @@
 ## Amplificador
 
-En esta carpeta podrán encontrase dos carpetas relacionadas con el diseño del amplificador. Para ver un resumen de la descripción del amplificador junto con sus especificaciones ir a [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md). Una explicación más detalla de cada etapa y subcircuitos del amplificador se encuentra en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md).  A continuación de listan las subcarpetas asociadas al diseño del amplificador:
+Para comenzar con la lectura de la documentacipon del circuito ir a [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md). Si bien se recomienda comenzar con este útimo archivo, el cual irá direccionando al lector hacia otros documentos que permitirán comprender cada vez con mayor profudidad el diseño del circuito, a continuación se lista todos los archivos contenidos en esta carpeta relacionados con el desarrollo del circuito:
+
+- [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md): contiene un resumen de las características del amplificador y lista sus especificaciones. 
+- [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md): describe las etapas del amplificador y otros subcircuitos que lo componen.
+- [determinacion_valores_componentes.md](determinacion_valores_componentes.md): detalla los criterios y cálculos utiizados en la determinación de los valores y tipos de componentes empleados en el circuito.
+- [explicacion_conmutadores.md](explicacion_conmutadores.md): describe el funcionamiento de los conmutadores y la utilidad y valor de cada uno de los componentes involucrados en ellos.
+- [Mediciones_audio_celular.md](Mediciones_audio_celular.md): este documento no se encuentra relacionado directamente con el diseño del amplificador, pero en él se detallan mediciones que se realizaron con el fin de establece la especificación de ganancia a lazo cerrado del circuito.
+
+
+Por otra parte, a continuación se listan las subcarpetas asociadas al diseño del amplificador:
 
 - [simulaciones_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/simulaciones_amplificador): se encuentran los archivos para simular el amplificador completo por medio de LTSpice. Además, en [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md) es posible ver los resultados de las mediciones llevadas a cabo a partir de la simulación. Se han incluido simulaciones específicas para estudiar cada especificación del amplificador. Se han agregado también los modelos necesarios para realizar las simulaciones. Para que estas se lleven a cabo correctamente basta con descargar la carpeta completa y ejecutar los archivos localizados allí adentro. 
 - [pcb_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/pcb_amplificador): diseño del PCB del amplificador. 
