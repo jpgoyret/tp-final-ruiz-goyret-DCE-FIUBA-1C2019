@@ -1,4 +1,4 @@
-#Determinación de los valores de los componentes
+# Determinación de los valores de los componentes
 En este documento se procede a explicar los valores adoptados para los componentes utilizados. De esta forma, constituye una profundización de lo expuesto en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md). Algunos valores han sido determinados de forma teórica, mientras que otros han sido especificados suponiendo un valor aproximado apropiado y luego realizando un ajuste fino mediante simulación con el programa *LTSpice*.
 
 A lo largo del archivo se irán determinando los componentes a partir las especificaciones que se deseó alcanzar, las cuales se encuentran en el archivo [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md). A cada una de ellas se les ha asociado una sección correspondiente, las cuales, a medida que se las recorra, iran derivando en los valores finales.
@@ -59,7 +59,7 @@ Utilizando R20 = R21 = 10kohm, de forma que Ic_Q8 tenga un valor normal para un 
 
 En la práctica, las corrientes de base de Q17 y Q18 disminuirán el valor de I_VAS, hasta hacerlo de aproximadamente 9,5mA, aunque este es un valor suficiente como para garantizar alimentar a la base de los drivers y, como se verá más adelante, que la excursión no se vea limitada por el corte de Q8, sino su saturación.
 
-###Polarización y consumo sin señal
+### Polarización y consumo sin señal
 Embebido en la VAS se colocó un multipicador de Vbe, el cual se muestra a continuación:
 
 ![](imagenes_amplificador/esquema_multiplicador_vbe.png)
@@ -81,12 +81,12 @@ Por otra parte, el capacitor C6 sirve para atenuar el pico que experimenta la im
 
 ![](imagenes_amplificador/medicion_capacitor_multiplicador_Vbe.png)
 
-###Ganancia a lazo abierto
+### Ganancia a lazo abierto
 Para saber la ganancia a lazo abierto apropiada se tomó como criterio aquella empleada por Douglas Self en el diseño en base al cual se desarrolló este amplificador. Mediante esta ganancia a lazo abierto se consigue una ganancia de lazo lo suficientemente alta como para alcanzar las especificaciones de distorsión deseadas.
 
 La ganancia a lazo abierto viene dada por el producto de las ganancias de las tres etapas del circuito: entrada diferencial, VAS y etapa de salida. Se comienza entonces con el análisis de la etapa diferencial de entrada.
 
-####Etapa diferencial de entrada
+#### Etapa diferencial de entrada
 Se incluye a continuacioń una imagen de la etapa diferncial de entrada elegida con su copia espejo de corriente generando la corriente de cola:
 
 ![](imagenes_amplificador/esquema_par_diferencial.png)
@@ -109,7 +109,7 @@ Por otra parte, se decidió utilizar una corriente de cola de aproximadamente 1m
 
 De este modo, eligiendo R19 = 680ohm, se obtiene aproximadamente Icola = 1mA.
 
-####VAS
+#### VAS
 A continuación se muestra una imagen de la VAS:
 
 ![](imagenes_amplificador/esquema_VAS.png)
@@ -143,13 +143,13 @@ Entonces, aproximando la ganancia de la etapa de salida en 0,99 se obtiene que l
 
 ![](http://latex.codecogs.com/gif.latex?a=521\times10^3)
 
-####Drivers
+#### Drivers
 
 ![](imagenes_amplificador/esquema_drivers.png)
 
 La resistencia R14 fue elegida con un valor de 1kohm debido a que este minimiza los valores simulados de distorsión. Con esta resistencia, siendo la tensión en el nodo de salida aproximadamente 0V y las tensiones base emisor de U1 y U3 aproximadamente 0,7V, se tiene que la corriente de colector de Q11 y Q12 es 1,4mA.
 
-###Ganancia a lazo cerrado
+### Ganancia a lazo cerrado
 En la siguiente figura se incluye una imagen del realimentador, definido por R22 y R3 junto con el *bootstrap* a la entrada:
 
  ![](imagenes_amplificador/esquema_bootstrap.png)
@@ -174,14 +174,14 @@ Obteniéndose el valor deseado.
 
 Por otra parte, el orden de lo resistores R22 y R23 pudiera ser aumentado o reducido ya que el divisor resistivo queda definido por la relación entre ellos. Empero, de ser aumentados, el ruido térmico creado en la realimentación se ve incrementado. Por otra parte, de ser reducidos los valores de R22 y R23, la impedancia de entrada en señal de verá reducida. Lo que es más, de por sí R22 y R23 son lo suficientemente pequeños como para requerir un boostrap para lograr que la impedancia de entrada sea del orden de las decenas de kiloohm, de forma que R22 y R23 no deberían ser reducidos aun más.
 
-###Estabilidad
+### Estabilidad
 Por medio de simulación se determinó que, siendo C4 = 33p, el margen de fase es 81°. El resultado se muestra a continuación:
 
 ![](imagenes_amplificador/medicion_ganancia_de_lazo.png)
 
 Si bien, en un principio, dicho margen de fase se asociaría con un sistema sobrecompensado (lo optimo sería 60°), se ha decidido utilizar dicho valor de capacitor de compensación para atenuar las oscilaciones que podrían originarse en la práctica en el amplificador producto de las conmutaciones.
 
-###Slew rate
+### Slew rate
 En el semiciclo positivo de señal se tiene que la velocidad de crecimiento viene dada por (despreciando las capacidades parásitas sobre todo de Q7):
 
 ![](http://latex.codecogs.com/gif.latex?SR_{+}=I_{cola}\times10^{-6}/C_4=1mA\times\times10^{-6}/33pF=30V/us)
@@ -198,7 +198,7 @@ Las simulaciones realizadas e incluidas en [Mediciones_parametros_simulacion.md]
 
 El valor de ancho de banda de potencia obtenido para este caso es mucho mayor al mínimo requerido por el circuito para poder funcionar a máxima excursión de salida entro de la banda de frecuencias audibles sin distorsionar por limitaciones en la velocidad de crecimiento.
 
-###Ancho de banda
+### Ancho de banda
 La frecuencia de corte superior de la ganancia a lazo cerrado está dada por la frecuencia de corte determinada por el polo introducido por el capacitor de compensación, multiplicada por el factor (1 + af). Entonces, el polo dominante en altas frecuencias a lazo cerrado es:
 
 ![](http://latex.codecogs.com/gif.latex?f_h=f_{hla}(1+af))
@@ -236,7 +236,7 @@ Con una frecuencia de corte inferior en el orden del Hertz, se garantiza que el 
 
 Por otra parte, el capacitor de entrada C1 posee un valor de 47uF ya que de esta forma el polo creador por este se halla en el orden del Hertz y coincide con un cero creado por el boostrap en dicha frecuencia. De este modo, la frecuencia de corte inferior resulta ser aproximadamente la de la realimentación.
 
-###Impedancia de entrada
+### Impedancia de entrada
 Los resistores R25 y R26 valen 1,1kohm para poder igualar las corrientes de base de Q1 y Q2 en continua y evitar desapareamientos en el punto de reposo. Debido a esto, de no utilizarse el *boostrap* se tendría una impedancia de entrada del orden de los kiloohms (debido a que la impedancia de entrada del par diferencial en el sistema a lazo cerrado es mucho mayor a ese orden y se encuentra en paralelo a (R25+R26), si despreciamos la resistencia del generador de señal solo para fines de analizar la situación cualitativamente). 
 El boostrap, en un principio, aprovecha el hecho de que la realimentación hace que la tensión en la base de Q2 sea ligeramente menor a la de Q1 ya que:
 
@@ -257,7 +257,7 @@ Es entonces que utilizando C2//C15 = 470uF y R24 = 50ohm se obtiene la respuesta
 
 Por último, vale aclarar que se han utilizado dos capacitores en paralelo (C2 y C15), ya que C2, al ser cerámico, no ve deteriorado su valor al aumentar la frecuencia tanto como el electrolítico (C15).
 
-###Impedancia de salida
+### Impedancia de salida
 La impedancia de salida a lazo abierto viene dada por (suponiendo que solamente se activa una rama de las de salida, funcionando el amplificador en clase B):
 
 ![](http://latex.codecogs.com/gif.latex?R_{out-la}=R_{27}+\\1/g_{m-U1}+\\1/(g_{m-Q12}\beta_{U1}\)+\Big(r_{o-Q8}[1+g_{m-Q8}(r_{\pi-Q8}//(R_{44}+R_8\)\)]//[r_{o-Q17}[1+g_{m-Q17}(r_{\pi-Q17}//R_{17}\)]/(\beta_{U1}\beta_{Q12}\)\Big\)\simeq5,9\Omega)
@@ -272,8 +272,8 @@ Este valor es mucho menor al mínimo requerido por las especificaciones (20mohm)
 
 Es posible que esto se deba al hecho de que la ganancia de lazo experimenta cambios de ordenes de mágnitud a frecuencias bajas, de forma que la impedancia de entrada se ve afectada por este comportamiento y sufre variaciones imprevistas en los cálculos teóricos realizados. 
 
-###PSNR
-####Vmax
+### PSNR
+#### Vmax
 El capacitor C7 fue agregado con el fin de mejorar la PSNR en bajas frecuencias, tal y como se adelantó en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md). Se eligió su valor deseando obtener una PSNR menor a -100dB con respecto a Vmax en todo el rango de frecuencias audibles. 
 A continuación se muestra ua imagen de la PSNR sin C7:
 ![](imagenes_amplificador/medicion_psnr_vmax_sin_cap.png)
@@ -283,7 +283,7 @@ Y otra con C7:
 
 Por otro lado, C9 y R6 constituye un filtro pasabajos para remover componentes de alta frecuencias del ruido de la fuente de alimentación. Si bien este filtro no es del todo necesario para esta fuente ya que el rechazo de ruido propio del circuito con C7 incluido ya es mayor a los -100dB; se ha decidio incluir a C9 y R6 por motivos de simetría con el filtro de -Vmax, el cual si es relevante para la PSNR
 
-####-Vmax
+#### -Vmax
 El filtro compuesto por R8 y C5 fue determinado suponiendo que los cables de alimentación cuentan con una resistencia propia de aproximadamente 1ohm, de modo que el capacitor C8 de 1000u actua como un filtro en sí (aunque ese no sea su fin inicial). Esto peritió reducir el valor de C5 a 100uF, así como también de R8 a 10ohm para evitar una reducción o despreciable en la máxima excursión de salida.
 
 Bajo la suposición anterior de los cables de alimentación, la PSNR con respecto a -Vmax sin el filtro de R8 y C5 obtenida por simulación sería:
@@ -292,7 +292,7 @@ Bajo la suposición anterior de los cables de alimentación, la PSNR con respect
 Y con el filtro:
 ![](imagenes_amplificador/medicion_psnr_-vmax.png)
 
-###-Vmin
+#### -Vmin
 En un principio no resulta de interés filtrar Vmin y -Vmin ya que estas solamente alimentan a la etapa de salida para bajas excursiones. Además, el ripple en estas alimentaciones puede ser controlado por medio del diseño de las fuentes de swiching; mientras que el ruido será filtrado por los capacitores de  C16 y C17 y las resistencia de los cables que comunican las fuente de switching con el amplificador. 
 
 Sin embargo, un buen filtrado es de interés para -Vin, ya que esta polariza el cascode la etapa diferencial. Para ello se ha armado un filtro entre el resistor de base R5 = 15kohm (cuya funcionalidad es también limitar la corriente por la base de Q5 y Q6 en caso de problemas con las fuentes o fallas en el circuito) y el capacitor C11. Se eligió C11 de 1uF para que pudiera ser cerámico, con una consiguiente mejor respuesta en frecuencia.
@@ -306,7 +306,7 @@ Y con el filtro:
 ![](imagenes_amplificador/medicion_psnr_-vmin.png)
 
 
-###Criterios para la determinación de otros componentes
+### Criterios para la determinación de otros componentes
 El resistor de base de Q18 (R18) fue elegido para evitar las variaciones de la polarización de este último con la temperatura. Sin embargo, se limitó su tamaño a 3,9kohm para evitar que generase un cambio no despreciable en la corriente por R17.
 
 R11 y R12 se encuentran incluidos con ese mismo fin, al igual que también protegen a las bases de los transistores de picos de sobrecorriente que podrían generarse por, por ejemplo, un cortocircuito a la salida. Su valor de limitó a 50ohm para que la caída generada en ellos altere despreciableente a la ganancia a lazo abierto (ya que de otro modo se comprometerían aspectos como la distorsión a lazo cerrado)
@@ -315,7 +315,7 @@ Por otra parte, los capacitores C8, C10, C16 y C17 fueron incluidos para almacen
 
 Finalmente, los resistores R41 y R42 fueron obtenidos por simulación observando para que valores, a máxima excursión de salida, se obtenía una respuesta por parte de Q23 y Q24 que evitase exigir a los drivers con picos de corriente por encima de los tolerables durante la conmutación.
 
-##Transistores utilizados
+## Transistores utilizados
 Por último, se listan los transistores utilizados en el circuito y el criterio empleado en su selección.
 
 - BC850/860C: transistores SMD de uso general de la línea BC, pero con la menor figura de ruido dentro de esa categoría. Se han utilizado para la etapa diferencial de entrada con el fin de reducir el ruido introducido por esta.  Se ha elegido el tipo C ya que posee el mayor parámetro beta dentro de la gama, mejorando la paridad del par diferencial e incrementando la resistencia de entrada del amplificador y de la etapa VAS. Si bien en las simulaciones y esquemas presentados en los documetos se muestran transistores BC547/557C, se ha hecho esto ya que el software *LTSpice* cuenta con los modelos de estos componentes. Además, la principales diferencias entre los dos tipos de componentes son la figura de ruido, y el hecho de que los BC547/557C son *through hole*, aspectos que no influyen en la simulación.

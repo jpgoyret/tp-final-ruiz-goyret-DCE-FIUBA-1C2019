@@ -1,4 +1,4 @@
-#Funcionamiento de los conmutadores
+# Funcionamiento de los conmutadores
 La finalidad de este documento es explicar el funcionamiento de los conmutadores de la etapa de salida del amplificador. Una introducción sobre su funcionamiento de encuentra en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md), pero aquí se muestra en detalle el proceso de conmutación.
 
 A continuación se muestra el esquema del conmutador de la rama que funciona durante el semiciclo positivo:
@@ -17,7 +17,7 @@ El valor de R30 establece que tanta corriente circulará desde el colector de Q2
 
 Dado que cuando Q20 no se encuentra saturado se encuentra en corte y su base no conduce corriente, el divisor compuesto por R31 y R32 define el umbral que el comparador contrastará con la salida. Para los valores R31=1kohm y R32=2,7kohm, este umbral se encuentra en 9V aproximadamente. Si bien este valor es 3V menor a la tensión de alimentación inferior, la conmutación de los transistores M1 y M2 se completará para valores de excursión de salida mayores a 9V porque la necesidad de polarizar, por ejemplo, lo dioddos D5, D6, entre otros. Entonces, la activación/desactivación de los transistores U1 y U2 tendrá lugar para el rango de tensiones entre 11V y 12V de salida. En la siguiente imagen se muestran las corrientes de emisor de U1 (verde) y U2 (rojo) en función de la tensión de salida para una simulación realizada sobre los conmutadores:
 
- ![](imagenes_amplificador/medicion_corrientes_conmutador.png)
+ ![](imagenes_amplificador/medicion_corrientes_conmutacion.png)
  
 Las corrientes son negativas ya que la referencia de las corrietes de emisor se considerá entrante al terminal.
 
