@@ -156,15 +156,15 @@ En la siguiente figura se incluye una imagen del realimentador, definido por R22
 
 Entonces, sin considerar el *boostrap* en la entrada, el factor de realimentación viene dado por:
 
-![](http://latex.codecogs.com/gif.latex?f=R_{23}/(R_{22}+R_{23}\))
+![](http://latex.codecogs.com/gif.latex?f=R_{23}/[R_{22}+R_{23}])
 
 Empleando R22 = 2,2kohm y R23 = 110 se obtiene f = 0,048. De esta forma, sabiendo del apartado anterior que a >>1 se llega a que la ganancia a lazo cerrado es:
 
-![](http://latex.codecogs.com/gif.latex?A=V_s/V_{out}=a/(1+af\)\simeq1/f=21)
+![](http://latex.codecogs.com/gif.latex?A=V_s/V_{out}=a/[1+af]\simeq1/f=21)
 
 Este valor es menor al objetivo de las especificaciones, que es 23. Sin embargo, al actuar el *boostrap* en señal, R25 queda en paralelo con R23, teniendose entonces:
 
-![](http://latex.codecogs.com/gif.latex?f=(R_{23}//R_{25}\)/[R_{22}+(R_{23}//R_{25}\)]=0,043)
+![](http://latex.codecogs.com/gif.latex?f=[R_{23}//R_{25}]/\Big[R_{22}+[R_{23}//R_{25}]\Big]=0,043)
 
 De modo que:
 
@@ -190,7 +190,7 @@ Donde  I_cola_diferencial es la corriente por R19.
 
 Por otra parte, dada la topología del circuito,  se espera que la velocidad de decrecimiento (SR-) sea similar o superior a la de crecimiento. De esta forma, el ancho de banda potencia es:
 
-![](http://latex.codecogs.com/gif.latex?BW_{pot}=SR_{+}/(2\pi\hat{V}_{o-max}\)=170kHz)
+![](http://latex.codecogs.com/gif.latex?BW_{pot}=SR_{+}/[2\pi\hat{V}_{o-max}]=170kHz)
 
 donde se tomó Vomax = 27,8.
 
@@ -205,13 +205,13 @@ La frecuencia de corte superior de la ganancia a lazo cerrado está dada por la 
 
 Donde el polo a lazo abierto es:
 
-![](http://latex.codecogs.com/gif.latex?p_{la}=1/[2f_{la}\pi]=C_4[1+R_2I_2/(Rout1//Rin2\)]\times(Rout1//Rin2\))
+![](http://latex.codecogs.com/gif.latex?p_{la}=1/[2f_{la}\pi]=C_4\Big[1+R_2I_2/[Rout1//Rin2]\Big]\times[Rout1//Rin2])
 
 Donde Rout1 es la resistencia de salida de la etapa diferencial:
 ![](http://latex.codecogs.com/gif.latex?Rout1=r_{o-Q1}=200k\Omega)
 
 Y Rin2 es la resistencia de entrada de la VAS vista desde la base de Q7:
-![](http://latex.codecogs.com/gif.latex?Rin2=\beta_{Q7}{R7//[r_{\pi-Q8}+\beta_{Q8}(R_{44}+R8\)]\simeq715k\Omega)
+![](http://latex.codecogs.com/gif.latex?Rin2=\beta_{Q7}{R7//\Big[r_{\pi-Q8}+\beta_{Q8}[R_{44}+R8]\Big]\simeq715k\Omega)
 
 
 Siendo entonces:
@@ -226,7 +226,7 @@ De forma que la frecuencia de corte superior resultó ser aproximadamente una d�
 
 Por otra parte, se busca que la frecuencia de corte inferior a lazo cerrado, determinada por aquella en la que la realimentación comienza a volverse unitaria, no afecte a las frecuencias audibles ya que se convierte en una fuente de distorsión. Suponiendo que el polo del capacitor de entrada C1 es mucho menor al de C3, la base de Q1 se encuentra aproximadamente puesta a tierra en la frecuencia de corte del segundo. Entonces, por la realimentación la base de Q2 también lo está. Entoces, la resistencia vista por el capacitor C3 es aproximadamente R23. Entonces, la frecuencia de corte asociada a C3 (suponiendo que C2//C15 es un corto en dicha frecuencia) es:
 
-![](http://latex.codecogs.com/gif.latex?f=1/(2C_3R_{23}\pi\)=1,4Hz)
+![](http://latex.codecogs.com/gif.latex?f=1/[2C_3R_{23}\pi]=1,4Hz)
 
 Sin embargo, el capacitor C15 es del mismo orden que C3. Por lo que el boostrap influye en la frecuencia de corte antes mencionada. Es entonces que en la simulación la frecuencia de corte es 0,8Hz, según puede verse en la siguiente imagen:
 
@@ -240,10 +240,10 @@ Por otra parte, el capacitor de entrada C1 posee un valor de 47uF ya que de esta
 Los resistores R25 y R26 valen 1,1kohm para poder igualar las corrientes de base de Q1 y Q2 en continua y evitar desapareamientos en el punto de reposo. Debido a esto, de no utilizarse el *boostrap* se tendría una impedancia de entrada del orden de los kiloohms (debido a que la impedancia de entrada del par diferencial en el sistema a lazo cerrado es mucho mayor a ese orden y se encuentra en paralelo a (R25+R26), si despreciamos la resistencia del generador de señal solo para fines de analizar la situación cualitativamente). 
 El boostrap, en un principio, aprovecha el hecho de que la realimentación hace que la tensión en la base de Q2 sea ligeramente menor a la de Q1 ya que:
 
-![](http://latex.codecogs.com/gif.latex?V_{out}=V_{in}[a/(1+af\)]\simeq\\\V_{B-Q1}[a/(1+af\)])
+![](http://latex.codecogs.com/gif.latex?V_{out}=V_{in}\Big[a/[1+af]\Big]\simeq\\\V_{B-Q1}\Big[a/[1+af]\Big])
 
 Y entonces:
-![](http://latex.codecogs.com/gif.latex?V_{B-Q2}=V_{out}f\simeq\\\V_{B-Q1}[a/(1+af\)]f<V_{B-Q1})
+![](http://latex.codecogs.com/gif.latex?V_{B-Q2}=V_{out}f\simeq\\\V_{B-Q1}\Big[a/[1+af]\Big]f<V_{B-Q1})
 
 En consecuencia, al convertirse (C2//C15) en un corto en señal, se fuerza una diferencia de potencial pequeña entre los extremos de R25,  teniendo esta una resistencia equivalente mucho mayor a su valor real.
 
@@ -260,11 +260,11 @@ Por último, vale aclarar que se han utilizado dos capacitores en paralelo (C2 y
 ### Impedancia de salida
 La impedancia de salida a lazo abierto viene dada por (suponiendo que solamente se activa una rama de las de salida, funcionando el amplificador en clase B):
 
-![](http://latex.codecogs.com/gif.latex?R_{out-la}=R_{27}+\\1/g_{m-U1}+\\1/(g_{m-Q12}\beta_{U1}\)+\Big(r_{o-Q8}[1+g_{m-Q8}(r_{\pi-Q8}//(R_{44}+R_8\)\)]//[r_{o-Q17}[1+g_{m-Q17}(r_{\pi-Q17}//R_{17}\)]/(\beta_{U1}\beta_{Q12}\)\Big\)\simeq5,9\Omega)
+![](http://latex.codecogs.com/gif.latex?R_{out-la}=R_{27}+\\1/g_{m-U1}+\\1/[g_{m-Q12}\beta_{U1}]+\Big[r_{o-Q8}\big[1+g_{m-Q8}[r_{\pi-Q8}//15\Omega]\big]\Big]//\Big[r_{o-Q17}\big[1+g_{m-Q17}[r_{\pi-Q17}//R_{17}]\big]/[\beta_{U1}\beta_{Q12}]\Big]\simeq5,9\Omega)
 
 Entonces, la ganancia a lazo cerrado es:
 
-![](http://latex.codecogs.com/gif.latex?R_{out-lc}=R_{out-la}/(1+af\)=0,26m\Omega)
+![](http://latex.codecogs.com/gif.latex?R_{out-lc}=R_{out-la}/[1+af]=0,26m\Omega)
 
 Este valor es mucho menor al mínimo requerido por las especificaciones (20mohm). Sin embargo, en la simulación se observa que los valores de impedancia son mucho mayores y del orden de los 20ohm, tal y como se puede ver en la siguiente imagen para una carga de 8ohm por ejemplo:
 
