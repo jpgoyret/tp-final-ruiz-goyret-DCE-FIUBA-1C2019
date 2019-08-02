@@ -6,7 +6,7 @@ Para comenzar con la lectura de la documentacipon del circuito ir a [Resumen_y_e
 - [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md): describe las etapas del amplificador y otros subcircuitos que lo componen.
 - [determinacion_valores_componentes.md](determinacion_valores_componentes.md): detalla los criterios y cálculos utiizados en la determinación de los valores y tipos de componentes empleados en el circuito.
 - [explicacion_conmutadores.md](explicacion_conmutadores.md): describe el funcionamiento de los conmutadores y la utilidad y valor de cada uno de los componentes involucrados en ellos.
-- [Mediciones_audio_celular.md](Mediciones_audio_celular.md): este documento no se encuentra relacionado directamente con el diseño del amplificador, pero en él se detallan mediciones que se realizaron con el fin de establece la especificación de ganancia a lazo cerrado del circuito.
+- [Mediciones_salida_audio_celular.md](Mediciones_audio_celular.md): este documento no se encuentra relacionado directamente con el diseño del amplificador, pero en él se detallan mediciones que se realizaron con el fin de establece la especificación de ganancia a lazo cerrado del circuito.
 
 
 Por otra parte, a continuación se listan las subcarpetas asociadas al diseño del amplificador:

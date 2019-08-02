@@ -1,6 +1,6 @@
-## Disipadores del amplificador
+﻿## Disipadores del amplificador
 
-Los disipadores fueron elegidos en función de los valores de máxima disipación en los transistores hallados a partir de la simulación en [Mediciones_parametros_amplificador.md](../simulaciones_amplificador/Mediciones_parametros_amplificador.md). De allí se obtuvo:
+Los disipadores fueron elegidos en función de los valores de máxima disipación en los transistores hallados a partir de la simulación en [Mediciones_parametros_amplificador.md](../simulaciones_amplificador/Mediciones_parametros_simulacion.md). De allí se obtuvo:
 
 - Pot_max_U1 = 3,3W (transistores alimentados con +12V y -12V)
 - Pot_max_U2 = 17W (transistores alimentados con +30V y -30V)
