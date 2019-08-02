@@ -1,4 +1,4 @@
-# Resumen del amplificador amplificador diseñado y sus especificaciones
+﻿# Resumen del amplificador amplificador diseñado y sus especificaciones
 
 A continuación se hace una descripción del amplificador diseñado junto con sus especificaciones. Para ver las simulaciones en base a las cuales se fundamentan dichas especificaciones ir a [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md). Por otra parte, para una explicación más detallada de cada etapa y subcircuitos del amplificador ir a [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md). Finalmente, en el archivo [determinacion_valores_componentes.md](determinacion_valores_componentes.md) se encuentran fundamentados los valores de los componentes utilizados en cada etapa/subcircuito del amplificador según se lo presenta en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md).
 

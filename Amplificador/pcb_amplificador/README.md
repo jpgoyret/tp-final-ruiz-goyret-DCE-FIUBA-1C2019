@@ -1,6 +1,6 @@
-## Diseño del PCB del amplificador
+﻿## Diseño del PCB del amplificador
 
-En la carpeta [proyecto_kicad](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/pcb_amplificador/proyecto_kicad) se encuentran los archivos del proyecto en Kicad donde se diseñó el PCB del amplificador. Se incluyen las bibliotecas de componentes y "footprints" necesarios. Para visualizar correctamente el proyecto es suficiente con descargar la carpeta completa y ejecutar los archivos localizados allí adentro.
+En la carpeta [proyecto_kicad](./proyecto_kicad) se encuentran los archivos del proyecto en Kicad donde se diseñó el PCB del amplificador. Se incluyen las bibliotecas de componentes y "footprints" necesarios. Para visualizar correctamente el proyecto es suficiente con descargar la carpeta completa y ejecutar los archivos localizados allí adentro.
 
 El diseño del PCB del amplificador fue realizado queriendo conservar el eje de simetría del amplificador con el fin facilitar su análisis. 
 

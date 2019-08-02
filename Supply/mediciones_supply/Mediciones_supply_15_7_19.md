@@ -1,4 +1,4 @@
-## Mediciones fuente switching
+﻿## Mediciones fuente switching
 
 Fuente: MCP M10-SP3010L
 
@@ -32,11 +32,11 @@ Se obtuvo:
 | 10.1 ohm | 50mV |
 
 Se observa en ripple triangular clasico en el caso de R_out = 250ohm:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/mediciones_supply/fotos_mediciones_15_7_19/ripple_250.jpg)
+![](./fotos_mediciones_15_7_19/ripple_250.jpg)
 En cambio el ripple con R_out = 10.1 ohm resulta de menor amplitud, pero con forma no definida:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/mediciones_supply/fotos_mediciones_15_7_19/ripple_10.jpg)
+![](h./fotos_mediciones_15_7_19/ripple_10.jpg)
 
 ###### Mediciones arranque suave
 
 Se observa que la funcionalidad del integrado funciona correctamente, con un tiepo de arranque suave de 14mS:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/mediciones_supply/fotos_mediciones_15_7_19/time_ss.jpg)
+![](./fotos_mediciones_15_7_19/time_ss.jpg)

@@ -1,4 +1,4 @@
-## Amplificador
+﻿## Amplificador
 
 Para comenzar con la lectura de la documentacipon del circuito ir a [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md). Si bien se recomienda comenzar con este útimo archivo, el cual irá direccionando al lector hacia otros documentos que permitirán comprender cada vez con mayor profudidad el diseño del circuito, a continuación se lista todos los archivos contenidos en esta carpeta relacionados con el desarrollo del circuito:
 
@@ -11,12 +11,12 @@ Para comenzar con la lectura de la documentacipon del circuito ir a [Resumen_y_e
 
 Por otra parte, a continuación se listan las subcarpetas asociadas al diseño del amplificador:
 
-- [simulaciones_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/simulaciones_amplificador): se encuentran los archivos para simular el amplificador completo por medio de LTSpice. Además, en [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md) es posible ver los resultados de las mediciones llevadas a cabo a partir de la simulación. Se han incluido simulaciones específicas para estudiar cada especificación del amplificador. Se han agregado también los modelos necesarios para realizar las simulaciones. Para que estas se lleven a cabo correctamente basta con descargar la carpeta completa y ejecutar los archivos localizados allí adentro. 
-- [pcb_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/pcb_amplificador): diseño del PCB del amplificador. 
-- [mediciones_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/mediciones_amplificador): registro de las mediciones que se realizaron durante el armado del amplificador
-- [imagenes_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/Amplificador/imagenes_amplificador): imágenes varias para la elaboración de documentos como [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md) y [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md) .
-- [datasheets_componentes_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/datasheets_componentes_amplificador): hojas de datos de los transistores y diodos utilizados en el diseño del amplificador.
-- [disipadores_amplificador](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/tree/develop/disipadores_amplificador): se encuentra la información de los disipadores utilizados y sus fundamentos.
+- [simulaciones_amplificador](./simulaciones_amplificador): se encuentran los archivos para simular el amplificador completo por medio de LTSpice. Además, en [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md) es posible ver los resultados de las mediciones llevadas a cabo a partir de la simulación. Se han incluido simulaciones específicas para estudiar cada especificación del amplificador. Se han agregado también los modelos necesarios para realizar las simulaciones. Para que estas se lleven a cabo correctamente basta con descargar la carpeta completa y ejecutar los archivos localizados allí adentro. 
+- [pcb_amplificador](./pcb_amplificador): diseño del PCB del amplificador. 
+- [mediciones_amplificador](./mediciones_amplificador): registro de las mediciones que se realizaron durante el armado del amplificador
+- [imagenes_amplificador](./imagenes_amplificador): imágenes varias para la elaboración de documentos como [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md) y [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md) .
+- [datasheets_componentes_amplificador](./datasheets_componentes_amplificador): hojas de datos de los transistores y diodos utilizados en el diseño del amplificador.
+- [disipadores_amplificador](./disipadores_amplificador): se encuentra la información de los disipadores utilizados y sus fundamentos.
 
 
 
