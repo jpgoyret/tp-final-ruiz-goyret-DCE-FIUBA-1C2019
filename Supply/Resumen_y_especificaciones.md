@@ -43,7 +43,7 @@ Luego de evaluar las opciones, se elige el controlador *switching* ***LTC3864***
 ---
 ## Circuito
 A partir del [datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/3864fa.pdf) se extrae la topología que funciona con las características requeridas:
-![](https://github.com/jpgoyret/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/blob/develop/Supply/imagenes_supply/sch_LTC3864.PNG)
+![](./imagenes_supply/sch_LTC3864.PNG)
 Para la elección de los componentes se acude a la sección de diseño del *datasheet* (pag.10). El diseño se realiza en base a las siguientes especificaciones:
 * Vin = 16V a 30V
 * Vout = 15V
