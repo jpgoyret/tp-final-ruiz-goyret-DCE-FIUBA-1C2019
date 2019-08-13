@@ -417,15 +417,15 @@ Para el caso de R29 y R33 (resistencias que forman parte de los conmutadores), d
 
 Por último, R27 y R28 disiparán, en el peor caso:
 
-![](http://latex.codecogs.com/gif.latex?Pot_{R27-max}=0,1\Omega[\hat{I_O}/\pi]^2)
+![](http://latex.codecogs.com/gif.latex?Pot_{R27-max}=0,1\Omega\hat{I_O}^2/4)
 
-Donde Io = 26,1V/4ohm = 6,5A.
+Donde Io = 30V/4ohm = 7,5A (tomando un valor seguro de tensión de salida pico, aunque la excursión nunca llegará a ser igual a la fuente de alimentación superior).
 
 De modo que: 
 
-![](http://latex.codecogs.com/gif.latex?Pot_{R27-max}=0,4W)
+![](http://latex.codecogs.com/gif.latex?Pot_{R27-max}=1,4W)
 
-Resta evaluar la disponibilidad comercial de resistores con potencias nominales superiores a 0,4W.
+Resta evaluar la disponibilidad comercial de resistores con potencias nominales superiores a 1,4W (en el esquemático se ha adoptado un valor mínimo de 3W para contar con un margen de seguridad).
 
 ## Tolerancia de los resistores
 Los resistores cuya tolerancia se considera vital para un comportamiento del amplificador en la práctica similar al esperado teóricamente son:
