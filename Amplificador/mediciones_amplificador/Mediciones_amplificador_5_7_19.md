@@ -34,9 +34,7 @@ Las fuente de tensión altas fueron 27,4V y 27,7V respectivamente.
 
 Imagen de la fuente doble:
 
-###### ![](fotos_mediciones_5_7_19/fuente_vmax_5_7_19.jpg)
-
-
+![](fotos_mediciones_5_7_19/fuente_vmax_5_7_19.jpg)
 
 ###### Mediciones
 

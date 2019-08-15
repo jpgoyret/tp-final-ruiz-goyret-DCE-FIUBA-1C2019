@@ -7,3 +7,8 @@ En esta carpeta se incluye un registro de las mediciones realizadas durante el a
 - [12/7/19](Mediciones_amplificador_12_7_19.md)
 - [19/7/19](Mediciones_amplificador_19_7_19.md)
 
+En los siguientes archivos podrá encontrarse la caracterización de las protecciones del amplificador:
+
+- [Limitadores de sobrecorriente](caracterizacion_limitadores_sobrecorriente.md)
+- Protección contra continua en la carga
+
