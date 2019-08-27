@@ -10,5 +10,5 @@ En esta carpeta se incluye un registro de las mediciones realizadas durante el a
 En los siguientes archivos podrá encontrarse la caracterización de las protecciones del amplificador:
 
 - [Limitadores de sobrecorriente](caracterizacion_limitadores_sobrecorriente.md)
-- Protección contra continua en la carga
+- Protección contra continua en la carga[caracterizacion_proteccion_DC.md]
 
