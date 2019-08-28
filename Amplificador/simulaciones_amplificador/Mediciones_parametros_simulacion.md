@@ -151,6 +151,11 @@ Finalmente, con la resistencia R1 es posible regular la pendiente de la recta de
 ![](../imagenes_amplificador/simulacion_picos_por_conmutacion_limitador_corriente.png)
 
 ##### Protección contra DC
+El circuito utilizado para llevar a cabo la caracterización de la protección contra DC fue el siguiente:
+
+![](../imagenes_amplificador/esquema_caracterizacion_proteccion_DC.png)
+
+Vale tener en cuenta que todas las pruebas fueron realizadas con una tensión de DC > 0, salvo que se aclare lo contrario.
 
 *Velocidad de respuesta medida con una tensión a la salida de 25V*
 
@@ -170,9 +175,42 @@ Tiempo hasta que se abre el relé: 120ms.
 
 Mínima tensión medida: 0,9V de continua a la salida.
 
-El circuito utilizado para llevar a cabo la caracterización de la protección contra DC fue el siguiente:
+*Frecuencia a partir de la cual se activa la llave*
+Dado que el filtro pasa bajos de la llave deja de atenuar a frecuencias bajas, esto conllevará que esta se active a partir de una dada frecuencia de señal de entrada (lo cual también ocurrirá para todas las frecuencias menores a esta). Es consecuentemente de interés que dicha frecuencia se encuentre por debajo del espectro audible para no correr el riesgo de que se produzca la activación de la llave cuando el dispositivo se encuentra reproduciendo música.
 
-![](../imagenes_amplificador/esquema_caracterizacion_proteccion_DC.png)
+Se realizaron simulaciones para determinar la frecuencia antes mencionada con dos valores distintos de amplitud a la salida 12V (excursión media) y 28V (excursión completa). Es esperable que la frecuencia de corte sea más alta cuanto mayor la amplitud de salida, ya que, para un dado porcentaje de atenuación creado por el filtro, en un caso llegará una mayor tensión a los transistores que deciden la activación de la protección que en el otro. Por lo tanto, el relé se activará a una frecuencia mayor con 28V de ammplitud que con 12V.
+
+Los resultados de las simulaciones fueron los siguientes:
+- Frecuencia de corte de la llave para una componente de DC de 12V:
+
+![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_12V.png)
+
+Donde Vout es la tensión en la salida del amplificador (pero la entrada de la protección) y V(n001) la tensión en el nodo de al carga.
+
+La frecuencia de V(n001) es de 6Hz, de modo que se puede ver que la frecuencia de corte tiene aproximadamente este valor. Esto se sabe porque el nodo de la resistencia de carga se encuentra puesto a tierra después de un transitorio inicial, es decir, no circula corriente por la carga; mientras que el nodo que conecta a las resistencias R28 y R27 sí posee tensión. A frecuencias mayores, Vout efectivamente presentaba la tensión, denotando que la protección no se activaba:
+
+![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_12V_activacion.png)
+
+Esta última simulación se corresponde con una frecuencia de 7Hz, donde se ve que la protección no actúa.
+
+- Frecuencia de corte de la llave para una componente de DC de 28V:
+
+![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_28V.png)
+
+Se observa que, para una amplitud de 30V, la protección actua con una frecuencia de 15Hz aproximadamente. Sin embargo, con una de 16Hz ya no lo hace:
+
+![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_28V_activación.png)
+
+En consecuencia, las protección de DC actúa a frecuencias no audibles, lo que se considerá que no afectará el normal funcionamiento del amplificador.
+
+*Mínima tensión de continua negativa con la que actua la protección*
+Por último, se repitió la simulación de la mínima tensión a la que actua la protección pero con una tensión de DC negativa. El resultado fue que esta se activa para tensiones de entrada mayores a los 0,67V, como se puede ver a continuación: 
+
+![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_negativa_min.png)
+
+Se introdujo un pulso de tensión negativa a la entrada (Vout) y se observó que la tensión en la carga (Vcarga) caía antes de que el pulso a la entrada finalizara. 
+
+Esto da como resultado que el umbral de activación para el caso negativo es menor que para el positivo. Dado que las contantes de tiempo del circuito son aproximadamente las mismas para el caso en el que se activa el sistema por DC negativa que aquel en el que lo hace por DC positiva, se concluye que es de esperarse que todos los otros parámetros medidos sean mejores para con DC negativa que positiva. Esto se corroboró luego en la práctica, como se puede ver en el documento [caracterizacion_proteccion_DC.md](../mediciones_amplificador/caracterizacion_proteccion_DC.md).
 
 ##### Ancho de banda de potencia/"slew rate"
 
