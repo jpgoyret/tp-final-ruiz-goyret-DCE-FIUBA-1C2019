@@ -1,6 +1,8 @@
-﻿## Diseño del PCB del amplificador
+## Diseño del PCB del amplificador
 
-En la carpeta [proyecto_kicad](./proyecto_kicad) se encuentran los archivos del proyecto en Kicad donde se diseñó el PCB del amplificador. Se incluyen las bibliotecas de componentes y "footprints" necesarios. Para visualizar correctamente el proyecto es suficiente con descargar la carpeta completa y ejecutar los archivos localizados allí adentro.
+En la carpeta [proyecto_kicad](./proyecto_kicad) se encuentran los archivos del proyecto en Kicad donde se diseñó el PCB del amplificador al mes de junio de 2019. Se incluyen las bibliotecas de componentes y "footprints" necesarios. Para visualizar correctamente el proyecto es suficiente con descargar la carpeta completa y ejecutar los archivos localizados allí adentro.
+
+Por otra parte, en la carpeta [proyecto_kicad_modificado](./proyecto_kicad_modificado) se encuentra el proyecto de Kicad donde se han ido incluyendo las modificaciones hechas sobre el prototipo en un PCB rediseñado. El objetivo es que este sea una segunda resivisión del amplificador.
 
 El diseño del PCB del amplificador fue realizado queriendo conservar el eje de simetría del amplificador con el fin facilitar su análisis. 
 

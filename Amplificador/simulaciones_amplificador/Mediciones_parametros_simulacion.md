@@ -118,11 +118,16 @@ El circuito utilizado para la medición fue:
 
 ##### Limitación de corriente
 
+
 En base a la simulación "test_proteccion_sobrecorriente.asc" se obtuvieron las combinaciones de tensiones y corrientes a la salida para las cuales actúa la protección de sobrecorriente.  A continuación se muestra una imagen del circuito utilizado:
 
 ![](../imagenes_amplificador/esquema_caracterizacion_limitador_corriente.png)
 
-V1 representa la diferencia de potencial colector-emisor del transistor de potencia de salida, mientras que IR es equivalente a la corriente de colector de dicho transistor. Se variaron los valores de IR y V1 con el fin de obtener la recta IR-V1 para la cual se produce la activación de los limitadores por sobrecorriente. Los resultados presentan en una tabla a continuación. En dicha tabla, Iactivacion representa la corriente por R4 (el resistor de linealización de emisor de la etapa de salida) para la cual se da la activación total de  la protección, es decir, por el colector de Q1 circulan 10mA (la corriente de reposo de la VAS), estando este transistor en modo activo directo. Por otra parte, Iincipiente representa la corriente que debe circular por R4 para que la protección comience a activarse (a conducir). Como criterio para esto último se ha adoptado que la corriente de colector de Q1 sea de 100uA (dos órdenes menor a la corriente de reposo de la VAS) para asegurarse de que no se produzcan activaciones inesperadas en la práctica. En la tabla a continuacion se presentan los resultados simulados:
+*Semiciclo positivo*
+
+El análisis realizado en esta subsección es solamente válido para el semiciclo positivo de señal ya que, como se verá luego, las condiciones de activación de la protección para el semiciclo negativo son distintas.
+
+En la imagen previa, V1 representa la diferencia de potencial colector-emisor del transistor de potencia de salida, mientras que IR es equivalente a la corriente de colector de dicho transistor. Se variaron los valores de IR y V1 con el fin de obtener la recta IR-V1 para la cual se produce la activación de los limitadores por sobrecorriente. Los resultados presentan en una tabla a continuación. En dicha tabla, Iactivacion representa la corriente por R4 (el resistor de linealización de emisor de la etapa de salida) para la cual se da la activación total de  la protección, es decir, por el colector de Q1 circulan 10mA (la corriente de reposo de la VAS), estando este transistor en modo activo directo. Por otra parte, Iincipiente representa la corriente que debe circular por R4 para que la protección comience a activarse (a conducir). Como criterio para esto último se ha adoptado que la corriente de colector de Q1 sea de 100uA (dos órdenes menor a la corriente de reposo de la VAS) para asegurarse de que no se produzcan activaciones inesperadas en la práctica. En la tabla a continuacion se presentan los resultados simulados:
 
 | V1[V] | Iactivacion[A] | Iincipiente[A] |
 | ----- | --------- | --------- |
@@ -150,6 +155,16 @@ Finalmente, con la resistencia R1 es posible regular la pendiente de la recta de
 
 ![](../imagenes_amplificador/simulacion_picos_por_conmutacion_limitador_corriente.png)
 
+*Semiciclo negativo*
+
+Como se describe en [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md), en el semiciclo negativo, al activarse la protección de Q22, circula por su colector una corriente del orden de los 100mA debido a que esta es incorporada por la VAS. La limitación para la corriente que esta puede incorporar está dada por R44, que para dada corriente activa a Q25, quien a su vez le quita corriente a la entrada de la VAS y limita la excursión de salida.
+
+En la simulación, si se coloca una carga de 1ohm y se introduce a la entrada del amplificador una señal de 1,1V se obtiene una señal cuadrada en el nodo de salida cuyos extremos están dados por las corrientes a las que actuan los limitadores. Con R44 = 5ohm se obtiene a la salida:
+
+![](../imagenes_amplificador/recorte_carga_1ohm_R40=11k.png)
+
+Con lo que la limitación de corriente para el semiciclo negativo de encuentra en los 9,5A. Este valor es mayor que para el semicilo positivo, que ronda los 6A. Empero, debido a lo mismo que se expuso para el semiciclo positivo, como los transistores de potencia de salida tendrán una no mayor en módulo a 20V (porque solo actuan para una región de la excursión de salida), una corriente de 9,5A se encuentra dentro de la SOA, aunque en su límite. Por esto es que se decidió no alterar los valores de las resistencias que se conectan a la base de Q22. 
+
 ##### Protección contra DC
 El circuito utilizado para llevar a cabo la caracterización de la protección contra DC fue el siguiente:
 
@@ -176,11 +191,13 @@ Tiempo hasta que se abre el relé: 120ms.
 Mínima tensión medida: 0,9V de continua a la salida.
 
 *Frecuencia a partir de la cual se activa la llave*
+
 Dado que el filtro pasa bajos de la llave deja de atenuar a frecuencias bajas, esto conllevará que esta se active a partir de una dada frecuencia de señal de entrada (lo cual también ocurrirá para todas las frecuencias menores a esta). Es consecuentemente de interés que dicha frecuencia se encuentre por debajo del espectro audible para no correr el riesgo de que se produzca la activación de la llave cuando el dispositivo se encuentra reproduciendo música.
 
 Se realizaron simulaciones para determinar la frecuencia antes mencionada con dos valores distintos de amplitud a la salida 12V (excursión media) y 28V (excursión completa). Es esperable que la frecuencia de corte sea más alta cuanto mayor la amplitud de salida, ya que, para un dado porcentaje de atenuación creado por el filtro, en un caso llegará una mayor tensión a los transistores que deciden la activación de la protección que en el otro. Por lo tanto, el relé se activará a una frecuencia mayor con 28V de ammplitud que con 12V.
 
 Los resultados de las simulaciones fueron los siguientes:
+
 - Frecuencia de corte de la llave para una componente de DC de 12V:
 
 ![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_12V.png)
@@ -199,11 +216,12 @@ Esta última simulación se corresponde con una frecuencia de 7Hz, donde se ve q
 
 Se observa que, para una amplitud de 30V, la protección actua con una frecuencia de 15Hz aproximadamente. Sin embargo, con una de 16Hz ya no lo hace:
 
-![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_28V_activación.png)
+![](../imagenes_amplificador/frecuencia_corte_proteccion_DC_28V_activacion.png)
 
 En consecuencia, las protección de DC actúa a frecuencias no audibles, lo que se considerá que no afectará el normal funcionamiento del amplificador.
 
 *Mínima tensión de continua negativa con la que actua la protección*
+
 Por último, se repitió la simulación de la mínima tensión a la que actua la protección pero con una tensión de DC negativa. El resultado fue que esta se activa para tensiones de entrada mayores a los 0,67V, como se puede ver a continuación: 
 
 ![](../imagenes_amplificador/medicion_velocidad_respuesta_proteccion_DC_negativa_min.png)

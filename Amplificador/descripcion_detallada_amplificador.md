@@ -88,19 +88,30 @@ A este capacitor se le han colocado protecciones con diodos rápidos 1N4148 para
 
 ![](imagenes_amplificador/esquema_proteccion_corriente.png)
 
-Compuestos por Q9 y Q22, evitar que la corriente y la tensión Vce de los transistores de potencia exceda la permitida por su SOA. La red de resistores conectada a la base de los transistores (R15, R16 y R37) para el caso de Q9 garantiza el límite de corriente admisible en función de la Vce de los transistores de salida.
+Compuestos por Q9 y Q22, evitan que la corriente y la tensión Vce de los transistores de potencia exceda la permitida por su SOA. La red de resistores conectada a la base de los transistores (R15, R16 y R37) para el caso de Q9 garantiza el límite de corriente admisible en función de la Vce de los transistores de salida.
 
-Los limitadores obtienen información de las corrientes y de la Vce a partir de los resistores de degeneración de emisor de la etapa de salida R27 y 28.
+Los limitadores obtienen información de las corrientes y de la Vce a partir de los resistores de degeneración de emisor de la etapa de salida R27 y R28.
 
-Por otra parte, los diodos D21 y D22 evitar la activación indeseada de los limitadores de corriente basados en Q9 y Q22 respectivamente, durante el semiciclo de salida opuesto a aquel en el que circula señal por la rama que deben proteger. Por ejemplo, si se observa el limitador de Q9, se verá que para cualquier señal de salida la tensión Vbe de Q9 será siempre mayor que cero sin importar el semiciclo. Por otra parte, la tensión Vce de Q9 debiera ser negativa y no activarse durante el semiciclo negativo. Sin embargo, debido a la presencia del multiplicador de Vbe (que hace que la base de Q12 posea una tensión de más de 2V mayor a la de Q11), la tensión Vce de Q9 sin el diodo D21 sería positiva para parte del semiciclo negativo, y esto podría llevar a la activación de los transistores. El diodo incrementa entonces la diferencia de potencial que debe existir entre la base de Q12 y la salida para que el transistor Q9 se active. Todo lo explicado anteriormente aplica también para el limitador de corriente del semicilo negativo
+Por otra parte, los diodos D21 y D22 evitar la activación indeseada de los limitadores de corriente basados en Q9 y Q22 respectivamente, durante el semiciclo de salida opuesto a aquel en el que circula señal por la rama que deben proteger. Por ejemplo, si se observa el limitador de Q9, se verá que para cualquier señal de salida la tensión Vbe de Q9 será siempre mayor que cero sin importar el semiciclo. Por otro lado, la tensión Vce de Q9 debiera ser negativa y no activarse durante el semiciclo negativo. Sin embargo, debido a la presencia del multiplicador de Vbe (que hace que la base de Q12 posea una tensión de más de 2V mayor a la de Q11), la tensión Vce de Q9 sin el diodo D21 sería positiva para parte del semiciclo negativo, y esto podría llevar a la activación de los transistores. El diodo incrementa entonces la diferencia de potencial que debe existir entre la base de Q12 y la salida para que el transistor Q9 se active. Todo lo explicado anteriormente aplica también para el limitador de corriente del semicilo negativo
 
 Una caracterización de los limitadores de corriente puede encontrarse en  [Mediciones_parametros_simulacion.md](simulaciones_amplificador/Mediciones_parametros_simulacion.md).
 
-#### Limitador de corriente de la VAS
+*Limitador de corriente de la VAS*
 
 ![](imagenes_amplificador/esquema_limitador_corriente_vas.png)
 
-Compuesto por Q25 y R43, evitar un exceso de corriente en la VAS cuando se disparan los limitadores de la etapa de salida.  R43 limita la corriente que circula por la base de Q25 para que este no sufra daños.
+A lo explicado anteriormente se debería sumar que el limitador de corriente en el semiciclo negativo no funcionaría si no fuera por el segundo limitador compuesto por Q25, R43 y R44. 
+
+El funcionamiento del limitador de Q9 en el semiciclo positivo está fundamentado en el hecho de que, al conducir este transistor circula por su colector toda la corriente corriente disponible en la VAS para entregar al driver (aprox. 10mA). Por lo tanto, los drivers dejan de tener corriente para activar a los transistores de potencia y la excursión queda recortada. 
+
+Por el contrario, en el semiciclo negativo, el transistor Q22 toma corriente de la salida, la cual puede ser absorbida por la VAS sin una limitación propia de esta etapa. Es entonces que el límite es impuesto por la red de Q25, R43 y R44. Cuando circula una corriente del orden de los 100mA por R44, se forma una diferencia de potencial en ella de modo de activar a Q25, quien le quita corriente a la entrada de la VAS, logrando limitar la excursión de salida.
+
+Es entonces que la limitación de sobrecorriente en el semiciclo negativo depende de dos variables: 
+
+- La corriente necesaria en R44 para activar a Q25 (la cual queda definida por el valor de R44)
+- La corriente necesaria en la etapa de salida para que Q22 deje circular la corriente del item anterior. Cuanta corriente a la salida activará a Q22 está determinada por R38, R39 y R40.
+
+R44 no puede tomar valores demasiado elevados ya que conduce a: reducir la ganancia de la VAS en señal; recortar la máxima excursión obtenible a la salida en un modo de funcionamiento normal. Tampoco puede ser demasiado baja ya que ello elevaría el umbral de activación de la limitación, al igual que haría que demasiada corriente circulase por la VAS (generando un daño en Q8) en el caso de un cortocircuito a la salida.
 
 #### Protección contra DC en el nodo de salida
 

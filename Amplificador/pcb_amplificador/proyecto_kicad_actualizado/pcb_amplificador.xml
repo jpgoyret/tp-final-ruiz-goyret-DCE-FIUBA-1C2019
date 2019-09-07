@@ -1,0 +1,2204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\Juan Pablo\Documents\repositorios\tp-final-DCE\Amplificador\pcb_amplificador\pcb_amplificador.sch</source>
+    <date>25/06/2019 12:12:07</date>
+    <tool>Eeschema (5.0.1)-4</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Audio Amplifier Class H Shunt Output</title>
+        <company/>
+        <rev>0</rev>
+        <date/>
+        <source>pcb_amplificador.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="Q2">
+      <value>BC860</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661</datasheet>
+      <libsource lib="Transistor_BJT" part="BC860" description="0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFA6FE</tstamp>
+    </comp>
+    <comp ref="Q5">
+      <value>BC860</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661</datasheet>
+      <libsource lib="Transistor_BJT" part="BC860" description="0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFA78F</tstamp>
+    </comp>
+    <comp ref="Q6">
+      <value>BC860</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661</datasheet>
+      <libsource lib="Transistor_BJT" part="BC860" description="0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFA859</tstamp>
+    </comp>
+    <comp ref="C11">
+      <value>1u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFABDB</tstamp>
+    </comp>
+    <comp ref="Q3">
+      <value>BC850</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657</datasheet>
+      <libsource lib="Transistor_BJT" part="BC850" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB072</tstamp>
+    </comp>
+    <comp ref="Q4">
+      <value>BC850</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657</datasheet>
+      <libsource lib="Transistor_BJT" part="BC850" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB101</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>68</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB363</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>68</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB461</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB53E</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>120</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB646</tstamp>
+    </comp>
+    <comp ref="R26">
+      <value>1.1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB6F9</tstamp>
+    </comp>
+    <comp ref="R25">
+      <value>1.1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB75D</tstamp>
+    </comp>
+    <comp ref="R24">
+      <value>50</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB810</tstamp>
+    </comp>
+    <comp ref="R23">
+      <value>110</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFB88A</tstamp>
+    </comp>
+    <comp ref="D17">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFBD99</tstamp>
+    </comp>
+    <comp ref="D18">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFBF78</tstamp>
+    </comp>
+    <comp ref="D19">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFC015</tstamp>
+    </comp>
+    <comp ref="D20">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFC097</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>BC860</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661</datasheet>
+      <libsource lib="Transistor_BJT" part="BC860" description="0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFA629</tstamp>
+    </comp>
+    <comp ref="Q19">
+      <value>BC860</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661</datasheet>
+      <libsource lib="Transistor_BJT" part="BC860" description="0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D003320</tstamp>
+    </comp>
+    <comp ref="R19">
+      <value>680</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D00340A</tstamp>
+    </comp>
+    <comp ref="Q18">
+      <value>BC860</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC857SERIES_BC858SERIES_BC859SERIES_BC860SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541da0e3a1661</datasheet>
+      <libsource lib="Transistor_BJT" part="BC860" description="0.1A Ic, 45V Vce, PNP Small Signal Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D005143</tstamp>
+    </comp>
+    <comp ref="R20">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0051B1</tstamp>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D005219</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.4</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D00526B</tstamp>
+    </comp>
+    <comp ref="Q8">
+      <value>2SCR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
+      <libsource lib="amplificador_transistores" part="2SCR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D001749</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D006519</tstamp>
+    </comp>
+    <comp ref="R44">
+      <value>5</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D00F988</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D00F9EE</tstamp>
+    </comp>
+    <comp ref="Q25">
+      <value>2SCR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
+      <libsource lib="amplificador_transistores" part="2SCR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D00FA88</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>1000u</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D015F71</tstamp>
+    </comp>
+    <comp ref="R43">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D01F3F7</tstamp>
+    </comp>
+    <comp ref="R10">
+      <value>2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D030C1B</tstamp>
+    </comp>
+    <comp ref="RV1">
+      <value>R_POT</value>
+      <footprint>Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R_POT" description="Potentiometer"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D030FF2</tstamp>
+    </comp>
+    <comp ref="R11">
+      <value>50</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D047F12</tstamp>
+    </comp>
+    <comp ref="R12">
+      <value>50</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D047FD9</tstamp>
+    </comp>
+    <comp ref="R18">
+      <value>3.9k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D069621</tstamp>
+    </comp>
+    <comp ref="R17">
+      <value>68</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D076A01</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D08FCB6</tstamp>
+    </comp>
+    <comp ref="C10">
+      <value>1000u</value>
+      <footprint>Capacitor_THT:CP_Radial_D12.5mm_P5.00mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D09017D</tstamp>
+    </comp>
+    <comp ref="R14">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D09CF1E</tstamp>
+    </comp>
+    <comp ref="R41">
+      <value>3.3</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0AFA71</tstamp>
+    </comp>
+    <comp ref="R42">
+      <value>3.3</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0AFCF9</tstamp>
+    </comp>
+    <comp ref="Q23">
+      <value>2SCR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
+      <libsource lib="amplificador_transistores" part="2SCR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0BE594</tstamp>
+    </comp>
+    <comp ref="R22">
+      <value>2.2k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0D9152</tstamp>
+    </comp>
+    <comp ref="M2">
+      <value>FDS9934C</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/FD/FDS9934C.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="FDS9934C" description="6.5A Id, 20V Vds, Dual N and P Channel MOSFET, 30mOhm Ron, 4.5V Vgs, SO8L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EAC0A</tstamp>
+    </comp>
+    <comp ref="R29">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EB338</tstamp>
+    </comp>
+    <comp ref="R30">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EB416</tstamp>
+    </comp>
+    <comp ref="Q14">
+      <value>2SC5200-O_Q</value>
+      <footprint>digikey-footprints:TO-3P-5</footprint>
+      <datasheet>http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</datasheet>
+      <fields>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="DK_Datasheet_Link">http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</field>
+        <field name="DK_Detail_Page">/product-detail/en/toshiba-semiconductor-and-storage/2SC5200-O(Q)/2SC5200-OQ-ND/871387</field>
+        <field name="Description">TRANS NPN 230V 15A TO-3PL</field>
+        <field name="Digi-Key_PN">2SC5200-OQ-ND</field>
+        <field name="Family">Transistors - Bipolar (BJT) - Single</field>
+        <field name="MPN">2SC5200-O(Q)</field>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Status">Active NonStock</field>
+      </fields>
+      <libsource lib="dk_Transistors-Bipolar-BJT-Single" part="2SC5200-O_Q" description="TRANS NPN 230V 15A TO-3PL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EBD7E</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EC23F</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EC71A</tstamp>
+    </comp>
+    <comp ref="R27">
+      <value>0.1</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1287F5</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D128A7D</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D128B35</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D12E3FD</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D12E565</tstamp>
+    </comp>
+    <comp ref="R32">
+      <value>3k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D15889D</tstamp>
+    </comp>
+    <comp ref="R31">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D15895D</tstamp>
+    </comp>
+    <comp ref="D15">
+      <value>MBR735</value>
+      <footprint>Package_TO_SOT_THT:TO-220-2_Vertical</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF</datasheet>
+      <libsource lib="Diode" part="MBR735" description="35V 7.5A Schottky Barrier Rectifier Diode, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D17C6FD</tstamp>
+    </comp>
+    <comp ref="R34">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D24318F</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431B3</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431B9</tstamp>
+    </comp>
+    <comp ref="R28">
+      <value>0.1</value>
+      <footprint>Resistor_SMD:R_2512_6332Metric_Pad1.52x3.35mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431D1</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431D7</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431DD</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431E9</tstamp>
+    </comp>
+    <comp ref="D14">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2431EF</tstamp>
+    </comp>
+    <comp ref="R36">
+      <value>3k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D243203</tstamp>
+    </comp>
+    <comp ref="R35">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D243209</tstamp>
+    </comp>
+    <comp ref="D16">
+      <value>MBR735</value>
+      <footprint>Package_TO_SOT_THT:TO-220-2_Vertical</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF</datasheet>
+      <libsource lib="Diode" part="MBR735" description="35V 7.5A Schottky Barrier Rectifier Diode, TO-220"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D24321C</tstamp>
+    </comp>
+    <comp ref="Q17">
+      <value>2SAR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</datasheet>
+      <libsource lib="amplificador_transistores" part="2SAR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2A26D1</tstamp>
+    </comp>
+    <comp ref="Q24">
+      <value>2SAR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</datasheet>
+      <libsource lib="amplificador_transistores" part="2SAR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2D553A</tstamp>
+    </comp>
+    <comp ref="Q20">
+      <value>2SAR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</datasheet>
+      <libsource lib="amplificador_transistores" part="2SAR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2D56D8</tstamp>
+    </comp>
+    <comp ref="Q13">
+      <value>2SA1943-O_Q_</value>
+      <footprint>digikey-footprints:TO-3P-5</footprint>
+      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</datasheet>
+      <fields>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="DK_Datasheet_Link">https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/toshiba-semiconductor-and-storage/2SA1943-O(Q)/2SA1943-OQ-ND/871383</field>
+        <field name="Description">TRANS PNP 230V 15A TO-3PL</field>
+        <field name="Digi-Key_PN">2SA1943-OQ-ND</field>
+        <field name="Family">Transistors - Bipolar (BJT) - Single</field>
+        <field name="MPN">2SA1943-O(Q)</field>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Status">Active</field>
+      </fields>
+      <libsource lib="dk_Transistors-Bipolar-BJT-Single" part="2SA1943-O_Q_" description="TRANS PNP 230V 15A TO-3PL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D3971A6</tstamp>
+    </comp>
+    <comp ref="Q15">
+      <value>2SA1943-O_Q_</value>
+      <footprint>digikey-footprints:TO-3P-5</footprint>
+      <datasheet>https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</datasheet>
+      <fields>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="DK_Datasheet_Link">https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/toshiba-semiconductor-and-storage/2SA1943-O(Q)/2SA1943-OQ-ND/871383</field>
+        <field name="Description">TRANS PNP 230V 15A TO-3PL</field>
+        <field name="Digi-Key_PN">2SA1943-OQ-ND</field>
+        <field name="Family">Transistors - Bipolar (BJT) - Single</field>
+        <field name="MPN">2SA1943-O(Q)</field>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Status">Active</field>
+      </fields>
+      <libsource lib="dk_Transistors-Bipolar-BJT-Single" part="2SA1943-O_Q_" description="TRANS PNP 230V 15A TO-3PL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D3976BC</tstamp>
+    </comp>
+    <comp ref="R13">
+      <value>16</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D41564B</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>33n</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D4B3E0B</tstamp>
+    </comp>
+    <comp ref="Q21">
+      <value>2SCR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
+      <libsource lib="amplificador_transistores" part="2SCR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D377056</tstamp>
+    </comp>
+    <comp ref="Q9">
+      <value>2SCR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
+      <libsource lib="amplificador_transistores" part="2SCR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D51B9B3</tstamp>
+    </comp>
+    <comp ref="R15">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D55DA4B</tstamp>
+    </comp>
+    <comp ref="R16">
+      <value>330</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D55DBA8</tstamp>
+    </comp>
+    <comp ref="D21">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D55DD10</tstamp>
+    </comp>
+    <comp ref="R39">
+      <value>270</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D60B5AF</tstamp>
+    </comp>
+    <comp ref="R38">
+      <value>330</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D60B7CC</tstamp>
+    </comp>
+    <comp ref="Q22">
+      <value>2SCR514P5</value>
+      <footprint>Package_TO_SOT_SMD:SOT-89-3</footprint>
+      <datasheet>http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF</datasheet>
+      <libsource lib="amplificador_transistores" part="2SCR514P5" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D60B9A2</tstamp>
+    </comp>
+    <comp ref="D22">
+      <value>1N4148W</value>
+      <footprint>Diode_SMD:D_SOD-123</footprint>
+      <datasheet>https://www.vishay.com/docs/85748/1n4148w.pdf</datasheet>
+      <libsource lib="Diode" part="1N4148W" description="75V 0.15A Fast Switching Diode, SOD-123"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D624046</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>15k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D66ADC5</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>33p</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D672C42</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>1000u</value>
+      <footprint>Capacitor_SMD:CP_Elec_10x10.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5CFFBA53</tstamp>
+    </comp>
+    <comp ref="R37">
+      <value>15k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D7D52B9</tstamp>
+    </comp>
+    <comp ref="R40">
+      <value>15k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D8062AE</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>470u</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x10.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D890C13</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:CP_Elec_5x5.4</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D8B3046</tstamp>
+    </comp>
+    <comp ref="M1">
+      <value>FDS9934C</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>https://www.fairchildsemi.com/datasheets/FD/FDS9934C.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="FDS9934C" description="6.5A Id, 20V Vds, Dual N and P Channel MOSFET, 30mOhm Ron, 4.5V Vgs, SO8L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D99A510</tstamp>
+    </comp>
+    <comp ref="Q26">
+      <value>BC817</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC817.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC817" description="0.8A Ic, 45V Vce, NPN Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D022EAE</tstamp>
+    </comp>
+    <comp ref="Q28">
+      <value>BC807</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC807.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC807" description="0.8A Ic, 45V Vce, PNP Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D023301</tstamp>
+    </comp>
+    <comp ref="R46">
+      <value>22k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0480B5</tstamp>
+    </comp>
+    <comp ref="C12">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.4</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D048CA1</tstamp>
+    </comp>
+    <comp ref="C14">
+      <value>47u</value>
+      <footprint>Capacitor_SMD:CP_Elec_6.3x5.4</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D048DD1</tstamp>
+    </comp>
+    <comp ref="R45">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D05C719</tstamp>
+    </comp>
+    <comp ref="R47">
+      <value>50k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D05C8B5</tstamp>
+    </comp>
+    <comp ref="R51">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0A439F</tstamp>
+    </comp>
+    <comp ref="R50">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0A4886</tstamp>
+    </comp>
+    <comp ref="C13">
+      <value>22u</value>
+      <footprint>Capacitor_SMD:CP_Elec_5x5.4</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0A68EA</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>SANYOU_SRD_Form_B</value>
+      <footprint>Relay_THT:Relay_SPST_SANYOU_SRD_Series_Form_B</footprint>
+      <datasheet>http://www.sanyourelay.ca/public/products/pdf/SRD.pdf</datasheet>
+      <libsource lib="pcb_amplificador-rescue" part="SANYOU_SRD_Form_B-Relay" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0A74B1</tstamp>
+    </comp>
+    <comp ref="Q27">
+      <value>BC817</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BC/BC817.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BC817" description="0.8A Ic, 45V Vce, NPN Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0A3038</tstamp>
+    </comp>
+    <comp ref="Q10">
+      <value>BD139</value>
+      <footprint>Package_TO_SOT_THT:TO-126-3_Vertical</footprint>
+      <datasheet>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BD139" description="1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D54447E</tstamp>
+    </comp>
+    <comp ref="Q11">
+      <value>BD140</value>
+      <footprint>Package_TO_SOT_THT:TO-126-3_Vertical</footprint>
+      <datasheet>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BD140" description="1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D5A0F0D</tstamp>
+    </comp>
+    <comp ref="Q7">
+      <value>BC850</value>
+      <footprint>Package_TO_SOT_SMD:SOT-23</footprint>
+      <datasheet>http://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657</datasheet>
+      <libsource lib="Transistor_BJT" part="BC850" description="0.1A Ic, 45V Vce, NPN Transistor, SOT-23"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D5E7337</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D70AEE0</tstamp>
+    </comp>
+    <comp ref="Rp1">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0DFFA7</tstamp>
+    </comp>
+    <comp ref="Rp2">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0E0897</tstamp>
+    </comp>
+    <comp ref="CON1">
+      <value>SJ-3523-SMT-TR</value>
+      <footprint>digikey-footprints:Switch_Slide_11.6x4mm_SJ-3523-SMT</footprint>
+      <datasheet>https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf</datasheet>
+      <fields>
+        <field name="Category">Connectors, Interconnects</field>
+        <field name="DK_Datasheet_Link">https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/cui-inc/SJ-3523-SMT-TR/CP-3523SJCT-ND/669704</field>
+        <field name="Description">CONN JACK STEREO 3.5MM SMD R/A</field>
+        <field name="Digi-Key_PN">CP-3523SJCT-ND</field>
+        <field name="Family">Barrel - Audio Connectors</field>
+        <field name="MPN">SJ-3523-SMT-TR</field>
+        <field name="Manufacturer">CUI Inc.</field>
+        <field name="Status">Active</field>
+      </fields>
+      <libsource lib="dk_Barrel-Audio-Connectors" part="SJ-3523-SMT-TR" description="CONN JACK STEREO 3.5MM SMD R/A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D4FCBB5</tstamp>
+    </comp>
+    <comp ref="J5">
+      <value>Conn_01x03_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x03_Male" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0DEEDA</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D09C039</tstamp>
+    </comp>
+    <comp ref="Q16">
+      <value>2SC5200-O_Q</value>
+      <footprint>digikey-footprints:TO-3P-5</footprint>
+      <datasheet>http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</datasheet>
+      <fields>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="DK_Datasheet_Link">http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</field>
+        <field name="DK_Detail_Page">/product-detail/en/toshiba-semiconductor-and-storage/2SC5200-O(Q)/2SC5200-OQ-ND/871387</field>
+        <field name="Description">TRANS NPN 230V 15A TO-3PL</field>
+        <field name="Digi-Key_PN">2SC5200-OQ-ND</field>
+        <field name="Family">Transistors - Bipolar (BJT) - Single</field>
+        <field name="MPN">2SC5200-O(Q)</field>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Status">Active NonStock</field>
+      </fields>
+      <libsource lib="dk_Transistors-Bipolar-BJT-Single" part="2SC5200-O_Q" description="TRANS NPN 230V 15A TO-3PL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D0EB999</tstamp>
+    </comp>
+    <comp ref="Q12">
+      <value>BD139</value>
+      <footprint>Package_TO_SOT_THT:TO-126-3_Vertical</footprint>
+      <datasheet>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</datasheet>
+      <libsource lib="Transistor_BJT" part="BD139" description="1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D5442B5</tstamp>
+    </comp>
+    <comp ref="R49">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D243189</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1D5DCE</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D172649</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D34C555</tstamp>
+    </comp>
+    <comp ref="C15">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D530831</tstamp>
+    </comp>
+    <comp ref="R48">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D12015B</tstamp>
+    </comp>
+    <comp ref="R33">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D179C77</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100u</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x10.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1D85AB</tstamp>
+    </comp>
+    <comp ref="C9">
+      <value>100u</value>
+      <footprint>Capacitor_SMD:CP_Elec_8x10.5</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1DA011</tstamp>
+    </comp>
+    <comp ref="HS2">
+      <value>Heatsink</value>
+      <footprint>disipadores:disipador_5.1C</footprint>
+      <libsource lib="Mechanical" part="Heatsink" description="Heatsink"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D202283</tstamp>
+    </comp>
+    <comp ref="HS1">
+      <value>Heatsink</value>
+      <footprint>disipadores:disipador_1.8C</footprint>
+      <libsource lib="Mechanical" part="Heatsink" description="Heatsink"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D202B43</tstamp>
+    </comp>
+    <comp ref="R52">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D29E8F8</tstamp>
+    </comp>
+    <comp ref="R53">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2B4807</tstamp>
+    </comp>
+    <comp ref="R54">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2B8B24</tstamp>
+    </comp>
+    <comp ref="R57">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D33878E</tstamp>
+    </comp>
+    <comp ref="R56">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D33900C</tstamp>
+    </comp>
+    <comp ref="R60">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D4AA2C8</tstamp>
+    </comp>
+    <comp ref="R59">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D4AA41E</tstamp>
+    </comp>
+    <comp ref="R62">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D5441B2</tstamp>
+    </comp>
+    <comp ref="R61">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D544334</tstamp>
+    </comp>
+    <comp ref="R63">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D5C09AE</tstamp>
+    </comp>
+    <comp ref="R64">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6A2BF1</tstamp>
+    </comp>
+    <comp ref="Q29">
+      <value>BS170</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline</footprint>
+      <datasheet>http://www.fairchildsemi.com/ds/BS/BS170.pdf</datasheet>
+      <libsource lib="Transistor_FET" part="BS170" description="0.5A Id, 60V Vds, N-Channel MOSFET, TO-92"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D6A7CB9</tstamp>
+    </comp>
+    <comp ref="R55">
+      <value>0</value>
+      <footprint>Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D143DEB</tstamp>
+    </comp>
+    <comp ref="J6">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1A37C9</tstamp>
+    </comp>
+    <comp ref="J7">
+      <value>Screw_Terminal_01x02</value>
+      <footprint>Connector_Phoenix_MC:PhoenixContact_MCV_1,5_2-G-3.5_1x02_P3.50mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Screw_Terminal_01x02" description="Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D1E4C97</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x03_Male">
+      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Screw_Terminal_01x02">
+      <description>Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TerminalBlock*:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Screw_Terminal_01x02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R_POT">
+      <description>Potentiometer</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Potentiometer*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">RV</field>
+        <field name="Value">R_POT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="MBR735">
+      <aliases>
+        <alias>MBR745</alias>
+        <alias>CSD01060A</alias>
+        <alias>C3D02060A</alias>
+        <alias>C3D03060A</alias>
+        <alias>C3D04060A</alias>
+        <alias>C3D06060A</alias>
+        <alias>C3D08060A</alias>
+        <alias>C3D10060A</alias>
+        <alias>C3D04065A</alias>
+        <alias>C3D06065I</alias>
+        <alias>C3D06065A</alias>
+        <alias>C3D08065A</alias>
+        <alias>C3D08065I</alias>
+        <alias>C3D10065I</alias>
+        <alias>C3D10065A</alias>
+        <alias>C3D12065A</alias>
+        <alias>C3D16065A</alias>
+        <alias>CVFD20065A</alias>
+        <alias>C4D02120A</alias>
+        <alias>C4D05120A</alias>
+        <alias>C4D08120A</alias>
+        <alias>C4D10120A</alias>
+        <alias>C4D15120A</alias>
+        <alias>C4D20120A</alias>
+      </aliases>
+      <description>35V 7.5A Schottky Barrier Rectifier Diode, TO-220</description>
+      <docs>http://www.onsemi.com/pub_link/Collateral/MBR735-D.PDF</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">MBR735</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-2_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Diode" part="MMSD914">
+      <aliases>
+        <alias>1N4148W</alias>
+        <alias>BAV16W</alias>
+        <alias>1N4448W</alias>
+      </aliases>
+      <description>100V 0.2A Switching Diode, SOD-123</description>
+      <docs>https://www.onsemi.com/pub/Collateral/MMSD914T1-D.PDF</docs>
+      <footprints>
+        <fp>D*SOD?123*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">MMSD914</field>
+        <field name="Footprint">Diode_SMD:D_SOD-123</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="Heatsink">
+      <description>Heatsink</description>
+      <fields>
+        <field name="Reference">HS</field>
+        <field name="Value">Heatsink</field>
+      </fields>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC807">
+      <aliases>
+        <alias>BC808</alias>
+        <alias>BC856</alias>
+        <alias>BC857</alias>
+        <alias>BC858</alias>
+        <alias>BC859</alias>
+        <alias>BC860</alias>
+        <alias>MMBT3906</alias>
+      </aliases>
+      <description>0.8A Ic, 45V Vce, PNP Transistor, SOT-23</description>
+      <docs>http://www.fairchildsemi.com/ds/BC/BC807.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC807</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BC817">
+      <aliases>
+        <alias>BC818</alias>
+        <alias>BC847</alias>
+        <alias>BC848</alias>
+        <alias>BC849</alias>
+        <alias>BC850</alias>
+        <alias>MMBT3904</alias>
+        <alias>MMBT5550L</alias>
+        <alias>MMBT5551L</alias>
+      </aliases>
+      <description>0.8A Ic, 45V Vce, NPN Transistor, SOT-23</description>
+      <docs>http://www.fairchildsemi.com/ds/BC/BC817.pdf</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BC817</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-23</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="E" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BD139">
+      <aliases>
+        <alias>BD135</alias>
+        <alias>BD137</alias>
+        <alias>BD233</alias>
+        <alias>BD235</alias>
+        <alias>BD237</alias>
+      </aliases>
+      <description>1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126</description>
+      <docs>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</docs>
+      <footprints>
+        <fp>TO?126*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BD139</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-126-3_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_BJT" part="BD140">
+      <aliases>
+        <alias>BD136</alias>
+        <alias>BD138</alias>
+        <alias>BD234</alias>
+        <alias>BD236</alias>
+        <alias>BD238</alias>
+      </aliases>
+      <description>1.5A Ic, 80V Vce, Low Voltage Transistor, TO-126</description>
+      <docs>http://www.st.com/internet/com/TECHNICAL_RESOURCES/TECHNICAL_LITERATURE/DATASHEET/CD00001225.pdf</docs>
+      <footprints>
+        <fp>TO?126*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BD140</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-126-3_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="E" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="B" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="BS107">
+      <aliases>
+        <alias>BS108</alias>
+        <alias>BS170</alias>
+      </aliases>
+      <description>0.25A Id, 200V Vds, N-Channel MOSFET, TO-92</description>
+      <docs>http://www.onsemi.com/pub_link/Collateral/BS107-D.PDF</docs>
+      <footprints>
+        <fp>TO?92*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">BS107</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-92_Inline</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D" type="passive"/>
+        <pin num="2" name="G" type="input"/>
+        <pin num="3" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Transistor_FET" part="IRF7309IPBF">
+      <aliases>
+        <alias>FDS4559</alias>
+        <alias>FDS4897AC</alias>
+        <alias>FDS4897C</alias>
+        <alias>FDS8960C</alias>
+        <alias>FDS9934C</alias>
+        <alias>IRF7343PBF</alias>
+        <alias>Si4532DY</alias>
+        <alias>Si4542DY</alias>
+      </aliases>
+      <description>3A Id, 30V Vds, Dual HEXFET MOSFET, SO-8</description>
+      <docs>http://www.irf.com/product-info/datasheets/data/irf7309ipbf.pdf</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">IRF7309IPBF</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="G" type="input"/>
+        <pin num="3" name="1" type="passive"/>
+        <pin num="4" name="G" type="input"/>
+        <pin num="5" name="D" type="passive"/>
+        <pin num="6" name="D" type="passive"/>
+        <pin num="7" name="D" type="passive"/>
+        <pin num="8" name="D" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="amplificador_transistores" part="2SAR514P5">
+      <footprints>
+        <fp>SOT?89*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SAR514P5</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="amplificador_transistores" part="2SCR514P5">
+      <footprints>
+        <fp>SOT?89*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SCR514P5</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-89-3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="passive"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dk_Barrel-Audio-Connectors" part="SJ-3523-SMT-TR">
+      <description>CONN JACK STEREO 3.5MM SMD R/A</description>
+      <docs>https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf</docs>
+      <fields>
+        <field name="Reference">CON</field>
+        <field name="Value">SJ-3523-SMT-TR</field>
+        <field name="Footprint">digikey-footprints:Switch_Slide_11.6x4mm_SJ-3523-SMT</field>
+        <field name="Datasheet">https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf</field>
+        <field name="Digi-Key_PN">CP-3523SJCT-ND</field>
+        <field name="MPN">SJ-3523-SMT-TR</field>
+        <field name="Category">Connectors, Interconnects</field>
+        <field name="Family">Barrel - Audio Connectors</field>
+        <field name="DK_Datasheet_Link">https://www.cui.com/product/resource/digikeypdf/sj-352x-smt_series.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/cui-inc/SJ-3523-SMT-TR/CP-3523SJCT-ND/669704</field>
+        <field name="Description">CONN JACK STEREO 3.5MM SMD R/A</field>
+        <field name="Manufacturer">CUI Inc.</field>
+        <field name="Status">Active</field>
+      </fields>
+      <pins>
+        <pin num="1" name="S" type="passive"/>
+        <pin num="2" name="T" type="passive"/>
+        <pin num="3" name="R" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dk_Transistors-Bipolar-BJT-Single" part="2SA1943-O_Q_">
+      <description>TRANS PNP 230V 15A TO-3PL</description>
+      <docs>https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SA1943-O_Q_</field>
+        <field name="Footprint">digikey-footprints:TO-3P-5</field>
+        <field name="Datasheet">https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</field>
+        <field name="Digi-Key_PN">2SA1943-OQ-ND</field>
+        <field name="MPN">2SA1943-O(Q)</field>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="Family">Transistors - Bipolar (BJT) - Single</field>
+        <field name="DK_Datasheet_Link">https://media.digikey.com/pdf/Data%20Sheets/Toshiba%20PDFs/2SA1943.pdf</field>
+        <field name="DK_Detail_Page">/product-detail/en/toshiba-semiconductor-and-storage/2SA1943-O(Q)/2SA1943-OQ-ND/871383</field>
+        <field name="Description">TRANS PNP 230V 15A TO-3PL</field>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Status">Active</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="dk_Transistors-Bipolar-BJT-Single" part="2SC5200-O_Q">
+      <description>TRANS NPN 230V 15A TO-3PL</description>
+      <docs>http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">2SC5200-O_Q</field>
+        <field name="Footprint">digikey-footprints:TO-3P-5</field>
+        <field name="Datasheet">http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</field>
+        <field name="Digi-Key_PN">2SC5200-OQ-ND</field>
+        <field name="MPN">2SC5200-O(Q)</field>
+        <field name="Category">Discrete Semiconductor Products</field>
+        <field name="Family">Transistors - Bipolar (BJT) - Single</field>
+        <field name="DK_Datasheet_Link">http://toshiba.semicon-storage.com/info/docget.jsp?did=20668&amp;prodName=2SC5200</field>
+        <field name="DK_Detail_Page">/product-detail/en/toshiba-semiconductor-and-storage/2SC5200-O(Q)/2SC5200-OQ-ND/871387</field>
+        <field name="Description">TRANS NPN 230V 15A TO-3PL</field>
+        <field name="Manufacturer">Toshiba Semiconductor and Storage</field>
+        <field name="Status">Active NonStock</field>
+      </fields>
+      <pins>
+        <pin num="1" name="B" type="input"/>
+        <pin num="2" name="C" type="passive"/>
+        <pin num="3" name="E" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pcb_amplificador-rescue" part="SANYOU_SRD_Form_B-Relay">
+      <footprints>
+        <fp>Relay*SPST*SANYOU*SRD*Series*Form*B*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">SANYOU_SRD_Form_B-Relay</field>
+        <field name="Footprint">Relay_THT:Relay_SPST_SANYOU_SRD_Series_Form_B</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Diode">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Diode.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Mechanical.lib</uri>
+    </library>
+    <library logical="Transistor_BJT">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Transistor_BJT.lib</uri>
+    </library>
+    <library logical="Transistor_FET">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Transistor_FET.lib</uri>
+    </library>
+    <library logical="amplificador_transistores">
+      <uri>C:\Users\Juan Pablo\Documents\repositorios\tp-final-DCE\Amplificador\pcb_amplificador/librerias/simbolos/amplificador_transistores.lib</uri>
+    </library>
+    <library logical="dk_Barrel-Audio-Connectors">
+      <uri>C:\Users\Juan Pablo\Documents\repositorios\tp-final-DCE\Amplificador\pcb_amplificador/librerias/simbolos/digikey-symbols/dk_Barrel-Audio-Connectors.lib</uri>
+    </library>
+    <library logical="dk_Transistors-Bipolar-BJT-Single">
+      <uri>C:\Users\Juan Pablo\Documents\repositorios\tp-final-DCE\Amplificador\pcb_amplificador/librerias/simbolos/digikey-symbols/dk_Transistors-Bipolar-BJT-Single.lib</uri>
+    </library>
+    <library logical="pcb_amplificador-rescue">
+      <uri>C:\Users\Juan Pablo\Documents\repositorios\tp-final-DCE\Amplificador\pcb_amplificador/pcb_amplificador-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(Q26-Pad1)">
+      <node ref="Q27" pin="2"/>
+      <node ref="R45" pin="2"/>
+      <node ref="Q26" pin="1"/>
+      <node ref="R47" pin="1"/>
+    </net>
+    <net code="2" name="Earth">
+      <node ref="C3" pin="2"/>
+      <node ref="J3" pin="1"/>
+      <node ref="Q7" pin="3"/>
+      <node ref="J3" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="C8" pin="1"/>
+      <node ref="R25" pin="2"/>
+      <node ref="D18" pin="1"/>
+      <node ref="D20" pin="2"/>
+      <node ref="C11" pin="2"/>
+      <node ref="R21" pin="2"/>
+      <node ref="Q27" pin="1"/>
+      <node ref="C10" pin="2"/>
+      <node ref="R36" pin="2"/>
+      <node ref="C5" pin="1"/>
+      <node ref="Q26" pin="2"/>
+      <node ref="J5" pin="3"/>
+      <node ref="R47" pin="2"/>
+      <node ref="C14" pin="1"/>
+      <node ref="R32" pin="2"/>
+      <node ref="Q28" pin="3"/>
+      <node ref="CON1" pin="3"/>
+      <node ref="Q29" pin="3"/>
+      <node ref="C13" pin="2"/>
+      <node ref="R51" pin="2"/>
+    </net>
+    <net code="3" name="Net-(J4-Pad1)">
+      <node ref="J4" pin="1"/>
+      <node ref="K1" pin="1"/>
+    </net>
+    <net code="4" name="Net-(K1-Pad2)">
+      <node ref="K1" pin="2"/>
+      <node ref="Q29" pin="1"/>
+    </net>
+    <net code="5" name="Net-(C12-Pad1)">
+      <node ref="R45" pin="1"/>
+      <node ref="R46" pin="1"/>
+      <node ref="C12" pin="1"/>
+    </net>
+    <net code="6" name="Net-(C12-Pad2)">
+      <node ref="C14" pin="2"/>
+      <node ref="C12" pin="2"/>
+    </net>
+    <net code="7" name="Net-(Q27-Pad3)">
+      <node ref="Q27" pin="3"/>
+      <node ref="Q28" pin="1"/>
+    </net>
+    <net code="8" name="Net-(D22-Pad1)">
+      <node ref="D22" pin="1"/>
+      <node ref="R11" pin="1"/>
+      <node ref="Q11" pin="3"/>
+    </net>
+    <net code="9" name="Net-(Q10-Pad3)">
+      <node ref="RV1" pin="3"/>
+      <node ref="R10" pin="2"/>
+      <node ref="Q10" pin="3"/>
+    </net>
+    <net code="10" name="Net-(Q7-Pad2)">
+      <node ref="Q7" pin="2"/>
+      <node ref="Q8" pin="1"/>
+      <node ref="R7" pin="1"/>
+    </net>
+    <net code="11" name="/Vmin">
+      <node ref="J1" pin="1"/>
+      <node ref="R54" pin="2"/>
+      <node ref="R31" pin="2"/>
+      <node ref="D15" pin="2"/>
+    </net>
+    <net code="12" name="Net-(C13-Pad1)">
+      <node ref="C13" pin="1"/>
+      <node ref="Q28" pin="2"/>
+      <node ref="R51" pin="1"/>
+      <node ref="Q26" pin="3"/>
+      <node ref="Q29" pin="2"/>
+      <node ref="R50" pin="1"/>
+    </net>
+    <net code="13" name="Net-(K1-Pad5)">
+      <node ref="K1" pin="5"/>
+      <node ref="R50" pin="2"/>
+      <node ref="R54" pin="1"/>
+    </net>
+    <net code="14" name="/-Vmin">
+      <node ref="J2" pin="2"/>
+      <node ref="R53" pin="2"/>
+      <node ref="D16" pin="1"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="15" name="Net-(D22-Pad2)">
+      <node ref="Q22" pin="2"/>
+      <node ref="D22" pin="2"/>
+    </net>
+    <net code="16" name="Net-(D21-Pad2)">
+      <node ref="D21" pin="2"/>
+      <node ref="Q12" pin="3"/>
+      <node ref="R12" pin="2"/>
+    </net>
+    <net code="17" name="Net-(M2-Pad1)">
+      <node ref="R14" pin="1"/>
+      <node ref="R57" pin="2"/>
+      <node ref="Q11" pin="1"/>
+      <node ref="M2" pin="1"/>
+    </net>
+    <net code="18" name="Net-(M1-Pad7)">
+      <node ref="R62" pin="1"/>
+      <node ref="M1" pin="7"/>
+      <node ref="M1" pin="8"/>
+      <node ref="M2" pin="2"/>
+    </net>
+    <net code="19" name="Net-(C3-Pad1)">
+      <node ref="R23" pin="1"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="20" name="Net-(Q9-Pad1)">
+      <node ref="R16" pin="2"/>
+      <node ref="R15" pin="2"/>
+      <node ref="R37" pin="1"/>
+      <node ref="Q9" pin="1"/>
+    </net>
+    <net code="21" name="Net-(R37-Pad2)">
+      <node ref="R37" pin="2"/>
+      <node ref="R64" pin="1"/>
+    </net>
+    <net code="22" name="Net-(Q22-Pad1)">
+      <node ref="R39" pin="2"/>
+      <node ref="R38" pin="1"/>
+      <node ref="Q22" pin="1"/>
+      <node ref="R40" pin="2"/>
+    </net>
+    <net code="23" name="Net-(M1-Pad4)">
+      <node ref="M1" pin="4"/>
+      <node ref="R60" pin="1"/>
+    </net>
+    <net code="24" name="Net-(R59-Pad1)">
+      <node ref="R60" pin="2"/>
+      <node ref="R59" pin="1"/>
+    </net>
+    <net code="25" name="Net-(R61-Pad1)">
+      <node ref="R61" pin="1"/>
+      <node ref="R62" pin="2"/>
+    </net>
+    <net code="26" name="Net-(Q17-Pad2)">
+      <node ref="Q17" pin="2"/>
+      <node ref="R52" pin="1"/>
+    </net>
+    <net code="27" name="Net-(R10-Pad1)">
+      <node ref="R13" pin="1"/>
+      <node ref="R10" pin="1"/>
+      <node ref="R52" pin="2"/>
+    </net>
+    <net code="28" name="Net-(R35-Pad2)">
+      <node ref="R53" pin="1"/>
+      <node ref="R35" pin="2"/>
+    </net>
+    <net code="29" name="Net-(M1-Pad2)">
+      <node ref="R34" pin="2"/>
+      <node ref="R55" pin="1"/>
+      <node ref="M1" pin="2"/>
+    </net>
+    <net code="30" name="Net-(D13-Pad1)">
+      <node ref="Q21" pin="2"/>
+      <node ref="D13" pin="1"/>
+      <node ref="R55" pin="2"/>
+    </net>
+    <net code="31" name="Net-(J6-Pad2)">
+      <node ref="J6" pin="2"/>
+    </net>
+    <net code="32" name="Net-(J7-Pad1)">
+      <node ref="J7" pin="1"/>
+    </net>
+    <net code="33" name="Net-(M1-Pad5)">
+      <node ref="M1" pin="6"/>
+      <node ref="M1" pin="5"/>
+      <node ref="Q14" pin="1"/>
+    </net>
+    <net code="34" name="Net-(Q6-Pad3)">
+      <node ref="Rp2" pin="1"/>
+      <node ref="Q6" pin="3"/>
+    </net>
+    <net code="35" name="Net-(CON1-Pad1)">
+      <node ref="CON1" pin="1"/>
+    </net>
+    <net code="36" name="Net-(C1-Pad2)">
+      <node ref="CON1" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J5" pin="1"/>
+    </net>
+    <net code="37" name="Net-(C4-Pad2)">
+      <node ref="Q3" pin="3"/>
+      <node ref="Rp1" pin="2"/>
+      <node ref="Q25" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="Q7" pin="1"/>
+    </net>
+    <net code="38" name="Net-(J5-Pad2)">
+      <node ref="J5" pin="2"/>
+    </net>
+    <net code="39" name="Net-(C4-Pad1)">
+      <node ref="Q8" pin="2"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="40" name="Net-(J4-Pad2)">
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="41" name="Net-(Q5-Pad3)">
+      <node ref="Rp1" pin="1"/>
+      <node ref="Q5" pin="3"/>
+    </net>
+    <net code="42" name="Net-(C15-Pad1)">
+      <node ref="R24" pin="2"/>
+      <node ref="C15" pin="1"/>
+      <node ref="C2" pin="1"/>
+    </net>
+    <net code="43" name="/Vmax">
+      <node ref="J1" pin="2"/>
+      <node ref="R33" pin="1"/>
+      <node ref="C10" pin="1"/>
+      <node ref="Q16" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="J7" pin="2"/>
+      <node ref="Q24" pin="3"/>
+      <node ref="R42" pin="2"/>
+      <node ref="R49" pin="1"/>
+      <node ref="R64" pin="2"/>
+    </net>
+    <net code="44" name="Net-(Q12-Pad2)">
+      <node ref="Q24" pin="1"/>
+      <node ref="Q12" pin="2"/>
+      <node ref="R42" pin="1"/>
+    </net>
+    <net code="45" name="Net-(Q24-Pad2)">
+      <node ref="Q24" pin="2"/>
+      <node ref="R63" pin="2"/>
+    </net>
+    <net code="46" name="Net-(Q25-Pad1)">
+      <node ref="Q25" pin="1"/>
+      <node ref="R43" pin="2"/>
+    </net>
+    <net code="47" name="Net-(Q8-Pad3)">
+      <node ref="Q8" pin="3"/>
+      <node ref="R43" pin="1"/>
+      <node ref="R44" pin="1"/>
+    </net>
+    <net code="48" name="Net-(C5-Pad2)">
+      <node ref="R4" pin="2"/>
+      <node ref="Q25" pin="3"/>
+      <node ref="R8" pin="2"/>
+      <node ref="R44" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="R7" pin="2"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="49" name="Net-(Q17-Pad3)">
+      <node ref="R18" pin="1"/>
+      <node ref="R17" pin="1"/>
+      <node ref="Q17" pin="3"/>
+    </net>
+    <net code="50" name="Net-(M1-Pad3)">
+      <node ref="R14" pin="2"/>
+      <node ref="Q12" pin="1"/>
+      <node ref="R56" pin="2"/>
+      <node ref="M1" pin="3"/>
+    </net>
+    <net code="51" name="Net-(Q18-Pad1)">
+      <node ref="Q18" pin="1"/>
+      <node ref="R18" pin="2"/>
+    </net>
+    <net code="52" name="Net-(C15-Pad2)">
+      <node ref="C15" pin="2"/>
+      <node ref="R25" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="R26" pin="2"/>
+    </net>
+    <net code="53" name="Net-(D17-Pad1)">
+      <node ref="D18" pin="2"/>
+      <node ref="D17" pin="1"/>
+    </net>
+    <net code="54" name="Net-(Q19-Pad3)">
+      <node ref="R2" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="Q19" pin="3"/>
+    </net>
+    <net code="55" name="Net-(D19-Pad2)">
+      <node ref="D20" pin="1"/>
+      <node ref="D19" pin="2"/>
+    </net>
+    <net code="56" name="Net-(Q3-Pad2)">
+      <node ref="R3" pin="1"/>
+      <node ref="Q3" pin="2"/>
+    </net>
+    <net code="57" name="Net-(Q2-Pad2)">
+      <node ref="Q2" pin="2"/>
+      <node ref="R2" pin="2"/>
+    </net>
+    <net code="58" name="Net-(C11-Pad1)">
+      <node ref="C11" pin="1"/>
+      <node ref="Q6" pin="1"/>
+      <node ref="Q5" pin="1"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="59" name="Net-(Q1-Pad3)">
+      <node ref="Q5" pin="2"/>
+      <node ref="Q1" pin="3"/>
+    </net>
+    <net code="60" name="Net-(Q2-Pad3)">
+      <node ref="Q2" pin="3"/>
+      <node ref="Q6" pin="2"/>
+    </net>
+    <net code="61" name="Net-(Q3-Pad1)">
+      <node ref="Rp2" pin="2"/>
+      <node ref="Q3" pin="1"/>
+      <node ref="Q4" pin="1"/>
+      <node ref="Q4" pin="3"/>
+    </net>
+    <net code="62" name="Net-(Q4-Pad2)">
+      <node ref="Q4" pin="2"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="63" name="Net-(Q1-Pad2)">
+      <node ref="R1" pin="2"/>
+      <node ref="Q1" pin="2"/>
+    </net>
+    <net code="64" name="Net-(Q19-Pad2)">
+      <node ref="Q19" pin="2"/>
+      <node ref="R19" pin="2"/>
+    </net>
+    <net code="65" name="Net-(Q17-Pad1)">
+      <node ref="Q18" pin="3"/>
+      <node ref="R20" pin="1"/>
+      <node ref="Q17" pin="1"/>
+      <node ref="Q19" pin="1"/>
+    </net>
+    <net code="66" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1"/>
+      <node ref="R21" pin="1"/>
+      <node ref="R20" pin="2"/>
+    </net>
+    <net code="67" name="Net-(C7-Pad2)">
+      <node ref="R19" pin="1"/>
+      <node ref="C7" pin="2"/>
+      <node ref="Q18" pin="2"/>
+      <node ref="R17" pin="2"/>
+      <node ref="C9" pin="1"/>
+      <node ref="R6" pin="1"/>
+    </net>
+    <net code="68" name="Net-(C1-Pad1)">
+      <node ref="Q1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="R26" pin="1"/>
+    </net>
+    <net code="69" name="Net-(D16-Pad2)">
+      <node ref="D16" pin="2"/>
+      <node ref="Q13" pin="2"/>
+    </net>
+    <net code="70" name="Net-(D11-Pad2)">
+      <node ref="D11" pin="2"/>
+      <node ref="Q21" pin="3"/>
+      <node ref="D14" pin="2"/>
+    </net>
+    <net code="71" name="Net-(D11-Pad1)">
+      <node ref="D11" pin="1"/>
+      <node ref="D12" pin="2"/>
+    </net>
+    <net code="72" name="Net-(D13-Pad2)">
+      <node ref="R35" pin="1"/>
+      <node ref="Q21" pin="1"/>
+      <node ref="R36" pin="1"/>
+      <node ref="D14" pin="1"/>
+      <node ref="D13" pin="2"/>
+    </net>
+    <net code="73" name="Net-(D21-Pad1)">
+      <node ref="D21" pin="1"/>
+      <node ref="Q9" pin="2"/>
+    </net>
+    <net code="74" name="Net-(M2-Pad7)">
+      <node ref="M2" pin="8"/>
+      <node ref="M2" pin="7"/>
+      <node ref="Q13" pin="1"/>
+    </net>
+    <net code="75" name="Net-(C6-Pad1)">
+      <node ref="C6" pin="1"/>
+      <node ref="R9" pin="1"/>
+      <node ref="Q10" pin="1"/>
+      <node ref="RV1" pin="2"/>
+      <node ref="RV1" pin="1"/>
+      <node ref="R11" pin="2"/>
+    </net>
+    <net code="76" name="Net-(C6-Pad2)">
+      <node ref="R13" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="Q10" pin="2"/>
+      <node ref="R12" pin="1"/>
+    </net>
+    <net code="77" name="Net-(M2-Pad3)">
+      <node ref="M2" pin="3"/>
+      <node ref="R56" pin="1"/>
+      <node ref="R30" pin="1"/>
+    </net>
+    <net code="78" name="Net-(D7-Pad2)">
+      <node ref="M2" pin="4"/>
+      <node ref="Q20" pin="2"/>
+      <node ref="R30" pin="2"/>
+      <node ref="D7" pin="2"/>
+    </net>
+    <net code="79" name="Net-(D15-Pad1)">
+      <node ref="Q14" pin="2"/>
+      <node ref="D15" pin="1"/>
+    </net>
+    <net code="80" name="Net-(D3-Pad1)">
+      <node ref="D3" pin="1"/>
+      <node ref="R63" pin="1"/>
+      <node ref="R29" pin="2"/>
+      <node ref="R59" pin="2"/>
+      <node ref="M2" pin="5"/>
+      <node ref="M2" pin="6"/>
+      <node ref="Q16" pin="1"/>
+      <node ref="R48" pin="2"/>
+    </net>
+    <net code="81" name="Net-(D3-Pad2)">
+      <node ref="D4" pin="1"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="82" name="Net-(D4-Pad2)">
+      <node ref="R27" pin="1"/>
+      <node ref="Q16" pin="3"/>
+      <node ref="R15" pin="1"/>
+      <node ref="Q14" pin="3"/>
+      <node ref="D4" pin="2"/>
+    </net>
+    <net code="83" name="/VOUT">
+      <node ref="R16" pin="1"/>
+      <node ref="R38" pin="2"/>
+      <node ref="R46" pin="2"/>
+      <node ref="D6" pin="2"/>
+      <node ref="Q22" pin="3"/>
+      <node ref="R22" pin="2"/>
+      <node ref="D12" pin="1"/>
+      <node ref="R28" pin="2"/>
+      <node ref="R27" pin="2"/>
+      <node ref="Q9" pin="3"/>
+      <node ref="K1" pin="4"/>
+    </net>
+    <net code="84" name="Net-(D5-Pad2)">
+      <node ref="D6" pin="1"/>
+      <node ref="D5" pin="2"/>
+    </net>
+    <net code="85" name="Net-(Q11-Pad2)">
+      <node ref="Q11" pin="2"/>
+      <node ref="Q23" pin="1"/>
+      <node ref="R41" pin="2"/>
+    </net>
+    <net code="86" name="/-Vmax">
+      <node ref="Q23" pin="3"/>
+      <node ref="R29" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="R48" pin="1"/>
+      <node ref="C8" pin="2"/>
+      <node ref="R41" pin="1"/>
+      <node ref="Q15" pin="2"/>
+      <node ref="R40" pin="1"/>
+      <node ref="J6" pin="1"/>
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="87" name="Net-(D17-Pad2)">
+      <node ref="Q2" pin="1"/>
+      <node ref="R22" pin="1"/>
+      <node ref="D19" pin="1"/>
+      <node ref="R24" pin="1"/>
+      <node ref="R23" pin="2"/>
+      <node ref="D17" pin="2"/>
+    </net>
+    <net code="88" name="Net-(D10-Pad1)">
+      <node ref="D10" pin="1"/>
+      <node ref="Q15" pin="3"/>
+      <node ref="R39" pin="1"/>
+      <node ref="R28" pin="1"/>
+      <node ref="Q13" pin="3"/>
+    </net>
+    <net code="89" name="Net-(M1-Pad1)">
+      <node ref="R57" pin="1"/>
+      <node ref="M1" pin="1"/>
+      <node ref="R34" pin="1"/>
+    </net>
+    <net code="90" name="Net-(D9-Pad2)">
+      <node ref="Q15" pin="1"/>
+      <node ref="R49" pin="2"/>
+      <node ref="Q23" pin="2"/>
+      <node ref="R33" pin="2"/>
+      <node ref="D9" pin="2"/>
+      <node ref="R61" pin="2"/>
+    </net>
+    <net code="91" name="Net-(D10-Pad2)">
+      <node ref="D9" pin="1"/>
+      <node ref="D10" pin="2"/>
+    </net>
+    <net code="92" name="Net-(D5-Pad1)">
+      <node ref="D8" pin="1"/>
+      <node ref="Q20" pin="3"/>
+      <node ref="D5" pin="1"/>
+    </net>
+    <net code="93" name="Net-(D7-Pad1)">
+      <node ref="Q20" pin="1"/>
+      <node ref="R32" pin="1"/>
+      <node ref="R31" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="D8" pin="2"/>
+    </net>
+  </nets>
+</export>
