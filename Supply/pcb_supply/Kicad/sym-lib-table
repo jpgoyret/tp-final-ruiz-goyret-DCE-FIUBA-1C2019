@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name supply-rescue)(type Legacy)(uri ${KIPRJMOD}/supply-rescue.lib)(options "")(descr ""))
-)
