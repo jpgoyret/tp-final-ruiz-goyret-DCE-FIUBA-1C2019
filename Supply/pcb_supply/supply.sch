@@ -469,20 +469,7 @@ F 3 "" H 8750 4700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	8750 4700 8750 4600
-Wire Wire Line
-	9400 4200 9750 4200
 Connection ~ 9400 4200
-$Comp
-L power:GND #PWR03
-U 1 1 5D0440E7
-P 9750 4500
-F 0 "#PWR03" H 9750 4250 50  0001 C CNN
-F 1 "GND" H 9755 4327 50  0000 C CNN
-F 2 "" H 9750 4500 50  0001 C CNN
-F 3 "" H 9750 4500 50  0001 C CNN
-	1    9750 4500
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0117
 U 1 1 5D04B695
@@ -518,21 +505,8 @@ F 3 "~" H 900 4050 50  0001 C CNN
 	1    900  4050
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Connector:Screw_Terminal_01x02 J2
-U 1 1 5D065E71
-P 9950 4200
-F 0 "J2" H 10030 4192 50  0000 L CNN
-F 1 "Screw_Terminal_01x02" H 10030 4101 50  0000 L CNN
-F 2 "Connector:691102710002" H 9950 4200 50  0001 C CNN
-F 3 "~" H 9950 4200 50  0001 C CNN
-	1    9950 4200
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 4150 1100 4350
-Wire Wire Line
-	9750 4300 9750 4500
 Wire Wire Line
 	6700 4200 7100 4200
 Wire Wire Line
@@ -697,4 +671,30 @@ F 3 "~" H 5050 4000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 NoConn ~ 3600 3700
+Wire Wire Line
+	9400 4200 9750 4200
+$Comp
+L power:GND #PWR03
+U 1 1 5D0440E7
+P 9750 4450
+F 0 "#PWR03" H 9750 4200 50  0001 C CNN
+F 1 "GND" H 9755 4277 50  0000 C CNN
+F 2 "" H 9750 4450 50  0001 C CNN
+F 3 "" H 9750 4450 50  0001 C CNN
+	1    9750 4450
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Screw_Terminal_01x02 J2
+U 1 1 5D065E71
+P 9950 4300
+F 0 "J2" H 10030 4292 50  0000 L CNN
+F 1 "Screw_Terminal_01x02" H 10030 4201 50  0000 L CNN
+F 2 "Connector:691102710002" H 9950 4300 50  0001 C CNN
+F 3 "~" H 9950 4300 50  0001 C CNN
+	1    9950 4300
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	9750 4300 9750 4450
 $EndSCHEMATC

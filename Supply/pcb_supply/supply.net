@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "/home/juan/Documents/FIUBA/Materias/Diseno de circuitos electronicos/repositorio/tp-final-ruiz-goyret-DCE-FIUBA-1C2019/Supply/pcb_supply/supply.sch")
-    (date "Tue 24 Sep 2019 03:06:43 PM -03")
+    (date "Wed 25 Sep 2019 01:24:03 AM -03")
     (tool "Eeschema 5.1.2-f72e74a~84~ubuntu18.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
