@@ -19,4 +19,20 @@ Por otra parte, a continuación se listan las subcarpetas asociadas al diseño d
 - [disipadores_amplificador](./disipadores_amplificador): se encuentra la información de los disipadores utilizados y sus fundamentos.
 
 
+## Resumen de especificaciones
 
+
+| Parámetro                  | Diseño | Simulación | Medición |
+|----------------------------|--------|------------|----------|
+| Potencia nominal (8ohm)    |45W|            |          |
+| Eficiencia máxima          |        |            |          |
+| Alimentación               |        |            |          |
+| Resistencia de entrada     |        |            |          |
+| Resistencia de salida      |        |            |          |
+| Máxima tensión de entrada  |        |            |          |
+| Ganancia de lazo cerrado   |        |            |          |
+| Consumo sin señal          |        |            |          |
+| Ancho de banda             |        |            |          |
+| Ancho de banda de potencia |        |            |          |
+| PSNR                       |        |            |          |
+| THD                        |        |            |          |
