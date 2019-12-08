@@ -4,7 +4,7 @@ Para comenzar con la lectura de la documentacipon del circuito ir a [Resumen_y_e
 
 - [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md): contiene un resumen de las características del amplificador y lista sus especificaciones. 
 - [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md): describe las etapas del amplificador y otros subcircuitos que lo componen.
-- [determinacion_valores_componentes.md](determinacion_valores_componentes.md): detalla los criterios y cálculos utiizados en la determinación de los valores y tipos de componentes empleados en el circuito.
+- [determinacion_valores_componentes.md](determinacion_valores_componentes.md): detalla los criterios y cálculos utilizados en la determinación de los valores y tipos de componentes empleados en el circuito.
 - [explicacion_conmutadores.md](explicacion_conmutadores.md): describe el funcionamiento de los conmutadores y la utilidad y valor de cada uno de los componentes involucrados en ellos.
 - [Mediciones_salida_audio_celular.md](Mediciones_audio_celular.md): este documento no se encuentra relacionado directamente con el diseño del amplificador, pero en él se detallan mediciones que se realizaron con el fin de establece la especificación de ganancia a lazo cerrado del circuito.
 
@@ -22,7 +22,7 @@ Por otra parte, a continuación se listan las subcarpetas asociadas al diseño d
 ## Resumen de especificaciones
 
 
-| Parámetro                  | Diseño | Simulación | Medición |
+| Parámetro                  | [Diseño](Resumen_y_especificaciones.md) | [Simulación ](simulaciones_amplificador/Mediciones_parametros_simulacion.md)| [Medición](mediciones_amplificador/Mediciones_finales.md) |
 |----------------------------|--------|------------|----------|
 | Potencia nominal (8ohm)    |45W|            |          |
 | Eficiencia máxima          |        |            |          |
