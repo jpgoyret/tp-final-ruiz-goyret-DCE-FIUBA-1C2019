@@ -47,8 +47,8 @@ Vmin = 12V
 	- V2 = 12 V
 	
  - Potencia nominal para las cargas especificadas:
-    - 4ohm --> Pnom = 45 W
-    - 8ohm --> Pnom = 85 W
+    - 4ohm --> Pnom = 85 W
+    - 8ohm --> Pnom = 45 W
     
  - Eficiencia máxima (carga de 4ohm): 73% (valor obtenido mediante simulación: 75%).
 

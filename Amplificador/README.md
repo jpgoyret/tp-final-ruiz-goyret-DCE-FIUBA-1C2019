@@ -24,16 +24,16 @@ Por otra parte, a continuación se listan las subcarpetas asociadas al diseño d
 
 | Parámetro                  | [Diseño](Resumen_y_especificaciones.md) | [Simulación ](simulaciones_amplificador/Mediciones_parametros_simulacion.md)| [Medición](mediciones_amplificador/Mediciones_finales.md) |
 |----------------------------|--------|------------|----------|
-| Potencia nominal (8Ω)    |	45W   |    48W     |          |
+| Potencia nominal (RMS) (8Ω)|	45W   |    48W     |     50W     |
 | Eficiencia máxima          |     73%   |     75%       |          |
 | Alimentación               |+-30V/+-12V |  +-30V/+-12V |  +-30V/+-12V  |
-| Resistencia de entrada  @1kHz   |    >20kΩ   |     26KΩ       |          |
+| Resistencia de entrada  @1kHz   |    >20kΩ   |     26kΩ       |    25KΩ      |
 | Resistencia de salida      |        	|            |          |
-| Máxima tensión de entrada  |    1.2V  |            |          |
-| Ganancia de lazo cerrado   |   22.8   |            |          |
+| Máxima tensión de entrada  |    1.2V  |      1.2V  |          |
+| Ganancia de lazo cerrado   |   22.8   |            |   24  |
 | Consumo sin señal          |    <2W   |            |          |
-| Ancho de banda             |    10Hz-40kHz    |    0.8Hz-1.4MHz        |          |
-| PSNR			     |    <-75dB    |      <-76dB      |          |
+| Ancho de banda             |    10Hz-40kHz    |    0.8Hz-1.4MHz        |  2Hz-550kHz |
+| PSNR			     |    -75dB    |      -76dB      |          |
 | Ancho de banda de potencia |    40kHz    |    150kHz        |          |
 | THD (8Ω@1khz/10%potencia)  |   0.01%   |     0.0009%       |          |
 | Factor de amortiguamiento (8Ω@1kHz)  |	200	|	180	|		|
