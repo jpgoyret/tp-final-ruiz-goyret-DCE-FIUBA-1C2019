@@ -1,6 +1,6 @@
 ﻿## Amplificador
 
-Para comenzar con la lectura de la documentacipon del circuito ir a [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md). Si bien se recomienda comenzar con este útimo archivo, el cual irá direccionando al lector hacia otros documentos que permitirán comprender cada vez con mayor profudidad el diseño del circuito, a continuación se lista todos los archivos contenidos en esta carpeta relacionados con el desarrollo del circuito:
+Para comenzar con la lectura de la documentación del circuito ir a [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md). Si bien se recomienda comenzar con este útimo archivo, el cual irá dirigiendo al lector hacia otros documentos que permitirán comprender cada vez con mayor profudidad el diseño del circuito, a continuación se listan todos los archivos contenidos en esta carpeta relacionados con el desarrollo del circuito:
 
 - [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md): contiene un resumen de las características del amplificador y lista sus especificaciones. 
 - [descripcion_detallada_amplificador.md](descripcion_detallada_amplificador.md): describe las etapas del amplificador y otros subcircuitos que lo componen.
@@ -20,9 +20,10 @@ Por otra parte, a continuación se listan las subcarpetas asociadas al diseño d
 
 
 ## Resumen de especificaciones
+En la siguiente tabla se comparan las especificaciones que se habían establecido como objetivos de diseño con los resultados de las simulaciones y las mediciones. En los titulos de cada columna se encuentra un link a los archivos donde se detallan las especificaciones, y la forma en la que fueron realizadas las simulaciones y las mediciones.
 
 
-| Parámetro                  | [Diseño](Resumen_y_especificaciones.md) | [Simulación ](simulaciones_amplificador/Mediciones_parametros_simulacion.md)| [Medición](mediciones_amplificador/Mediciones_finales.md) |
+| Parámetro                  | [Diseño](Resumen_y_especificaciones.md) | [Simulación ](simulaciones_amplificador/Mediciones_parametros_simulacion.md)| [Medición](mediciones_amplificador/mediciones_finales.md) |
 |----------------------------|--------|------------|----------|
 | Potencia nominal (RMS) (8Ω)|	45W   |    48W     |     50W     |
 | Eficiencia máxima          |     73%   |     75%       |          |

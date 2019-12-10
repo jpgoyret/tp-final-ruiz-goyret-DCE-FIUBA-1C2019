@@ -1,2 +1,292 @@
-## Detalle de las mediciones de caracterización del amplificador
-#
+## Mediciones finales del amplificador
+En este archivo se incluyen las mediciones finales llevadas a cabo para caracterizar el amplificador.
+
+#### Polarización
+Se medieron las corrientes y tensiones de polarización con su respectivo error. Dichas mediciones fueron realizadas con un multímetro ........ con una incertidumbre de .....
+
+###### Corrientes
+| Referencia | Teórico [mA] | Simulado [mA] | Medido [mA] | Error del valor medido [mA] |
+| ---- | ---- | ---- | ---- | ---- |
+| Ivas/Icq17  | 10,2 | 9,5 |  |  |
+| Icola/Icq19 | 1 | 0,98 |  |  |
+| Icq1 | 0,5 | 0,49 |  |  |
+| Icq2 | 0,5 | 0,49 |  |  |
+| Icq3 | 0,5 | 0,49 |  |  |
+| Icq4 | 0,5 | 0,48 |  |  |
+| Icq18 | 1,4 | 1,4 |  |  |
+| Ieq7 | 0,3 | 0,34 |  |  |
+| Ir14 | 1 | 1,1 |  |  |
+| IcU1 | 10 | 9,4 |  |  |
+| IcU3 | 10 | 9,4 |  |  |
+
+Nota: en realidad, en la simulación, Icq1-Icq2 = 1uA.
+
+###### Tensiones
+| Referencia | Teórico [V] | Simulado [V] | Medido [mA] | Error del valor medido [mA] |
+| ---- | ---- | ---- | ---- | ---- |
+| Vo | 0 | 0,2m |  |  |
+| VbeQ18 | -0,7 | -0,64 |  |  |
+| VbeQ17 | -0,7 | -0,62 |  |  |
+| VbeQ19 | -0,7 | 0,6 |  |  |
+| VbeQ7 | 0,7 | 0,59 |  |  |
+| VbeQ8 | 0,7 | 0,63 |  |  |
+| VbeQ10 | 0,7 | 0,63 |  |  |
+| VbeQ12 | 0,65 | 0,57 |  |  |
+| VbeQ11 | -0,65 | -0,57 |  |  |
+| VbeU1 | 0,5 | 0,56 |  |  |
+| VbeU3 | -0,5 | 0,54 |  |  |
+
+#### Potencia máxima de salida
+Se introdujo una señal armónica de 1kHz a la entrada del amplificador y se la aumentó hasta obvervar en el osciloscopio que la señal de salida sufriera un achatamiento producto de una limitación en la excursión. 
+La tensioń pico fue medida con un tester Proskit MT1707 de incertidumbre 0.8% + 3 dígitos. 
+Esto ocurrió para:
+
+![](https://latex.codecogs.com/gif.latex?V_{o&space;\&space;RMS&space;\&space;max}&space;=&space;20\pm&space;0,2V) 
+
+Por lo tanto, la potencia máxima obenible sobre una carga de 8ohm s:
+
+![](https://latex.codecogs.com/gif.latex?Pot_{max}&space;=&space;V_{o&space;\&space;RMS&space;\&space;max}^2/8\Omega&space;=&space;51\pm&space;1W) 
+
+A continuación se muestra una captura de la meódicin de la potencia máxima obtenible sobre la carga:
+
+![](mediciones_finales/potencia_maxima.jpg) 
+
+#### Sensibilidad
+Se buscó hallar la tensión de entrada tal que se obtuviera la potencia nominal especificada para una carga de 8ohm. Siendo la potencia nominal igual a 45W, la tensión de entrada obtenida para conseguir dicha potencia fue de:
+
+![](https://latex.codecogs.com/gif.latex?V_{in}&space;=&space;2,3&space;\pm&space;0,06&space;Vpp) 
+
+Este valor fue medido con un osciloscopio RIGOL DS1302CA.
+
+Dicho valor transformado a valor eficaz implica que:
+
+![](https://latex.codecogs.com/gif.latex?V_{in}&space;=&space;0.8&space;\pm&space;0,03&space;V) 
+
+#### Distorsión armónica
+Esta medición fue realizada utilzando el programa SpectraPLUS-RT para PC. Se generó una señal de salida desde el "line out" de la PC, la cual fue introducida a la entrada del aplificador por medio de un cable allado conconectores de 3.5mm. Por otra parte, se hizo pasar a la señal de salida del amplificador a través de un divisor resistivo variable generado con un preset, el cual permitía que las amplitudes de salida de hasta 28V pudieran ser dirigidas a la entrada "line in" de la PC, con el fin de que la distorsión de las señales fuera calculada por el programa SpectraPLUS.
+
+Las mediciones se realizaron con una carga de 8ohm en el amplificador.
+
+Con una armónica de 1kHz:
+
+| Porcentaje de la potencia máxima | Distorsión |
+| ---- | -------- |
+| 10% | 0,009% |
+| 50% | 0,020% |
+| 90% | 0,024% |
+
+Con una armónica de 10kHz:
+
+| Porcentaje de la potencia máxima | Distorsión |
+| ---- | -------- |
+| 10% | 0,023% |
+| 50% | 0,032% |
+| 90% | 0,030% |
+
+El piso de distorsión medido con SpectraPLUS-RT conectando el line out de la PC a su propio line in fue de 0,006%.
+
+#### Linealidad
+Se midió la variación de ganancia del amplificador con la amplitud de la señal de entrada para una frecuencia fija de 1kHz. Las mediciones fueron realizadas con una carga de 8ohm.
+
+El equipo utilizado fue un osciloscopio RIGOL DS1302CA.
+
+A constinuación de muestra una tabla con los resultados y su incertidumbre: 
+
+E(x) reprenta la incertidumbre del parámetro x.
+
+| Vin[V] | E(Vni) | Vo | E(Vo) | Ganancia | E(ganancia) |
+| ---- | -------- | --------- | --------- | --------- | --------- |
+| 0,13 | 0,004 | 3,1 | 0,04 | 24 | 1 |
+| 0,26 | 0,004 | 6,2 | 0,04 | 24 | 0,5 |
+| 0,39 | 0,008 | 9,4 | 0,04 | 24 | 0,6 |
+| 0,52 | 0,004 | 12,8 | 0,2  | 24,6 | 0,6 |
+| 0,65 | 0,004 | 16 | 0,2 | 24,7 | 0,5 |
+| 0,78 | 0,008 | 19,6 | 0,2 | 25 | 0,5 |
+| 0,92 | 0,02 | 22 | 0,4 | 24 | 1 |
+| 1,1 | 0,1 | 26 | 0,4 | 24 | 2,5 |
+
+#### Ancho de banda
+Se conectó una señal a la entrada del amplificador y se fue variando su frecuencia para observar el cambio en la ganancia. La medición fue realizada con una carga de 8ohm conectada a la salida.
+Las mediciones se realizaron con un osciloscopio RIGOL1302CA de 300MHz de ancho de banda.
+
+Los resultados se muestran en la tabla a continuación:
+
+| Frecuencia[Hz] | Vout[V] | Vin[mV] | Ganancia |
+| ---- | -------- | --------- | ---- |
+| 2 | 1,1 | 60 | 18,3  |
+| 20 | 1,1 | 58 | 19 |
+| 200 | 1,1 | 55 | 20 |
+| 500 | 1,1 | 55 | 20 |
+| 600 | 1,1 | 55 | 20 |
+| 1k | 1,1 | 57 | 20 |
+| 2k | 1,1 | 55 | 20 |
+| 5k | 1,1 | 55 | 20 |
+| 10k | 1,1 | 55 | 20 |
+| 15k | 1,1 | 55 | 20 |
+| 20k | 1,1 | 55 | 20 |
+| 30k | 1,1 | 55 | 20 |
+| 50k | 1,1 | 46 | 24 |
+| 100k | 1,2 | 58 | 21 |
+| 200k | 1,4 | 86 | 16 |
+
+Por otra parte, se buscaron las frecuencias de corte inferior y superior observando los puntos donde se producía un desfase de 45° entre la señal de entrada y la de salida. Ambas mediciones se hicieron con el modo de captura del osciloscopio como promediador de 32 muestras.
+
+#####Frecuencia de corte baja
+No se llegó a observar la frecuencia de corte inferior debido a que el relé de la protección contra DC actuaba y desconectaba a la carga del amplificador. Sin embargo, se llegó a observar que a 2Hz todavía no se producía la rotación de fase de 45°. Esto es suficiente como para afirma que la frecuencia de corte inferior se halla por debajo de los 20Hz, que es lo que se desea.
+
+Foto de la pantalla del osciloscopio con una señal de 2Hz:
+
+![](mediciones_finales/frecuencia_corte_baja.jpg) 
+
+#####Frecuencia de corte alta
+Dado que conseguir amplitudes menores con el generador de entrada no era posible, para frecuencias mayores a los 200kHz se comenzó a notar el efecto del slew rate. Es por esto que resultó dificil observar la frecuencia donde se daba el desfase de 45° con claridad. Sin embargo, esta se estimó en 550kHz, según como se ve en la imagen:
+
+![](mediciones_finales/frecuencia_corte_alta.jpg) 
+
+En la tabla agregada más arriba en esta sección se han removido los casos mayores a 200kHz debido a que la deformación en la señal de salida impedía obtener valores coeherentes de ganancia.
+
+#### Slew rate
+Se colocó una señal cuadrada a la entrada del amplificador y se observó la señal de salida. Debido a que el ancho de banda de potencia se encuentra limitado por el slew rate, por encima de cierta frecuencia de la cuadrada (con una amplitud lo suficientemente grande) se podrá ver que su pendiente a la salida es constante y de un valor que permite conocer el slew rate.
+
+Las mediciones se realizaron con una carga de 8ohm y una señal de entrada de 20kHz. El osciloscopio empleado fue un RIGOL1302CA de 300MHz de ancho de banda.
+
+Para una amplitud de entrada de 300mVpp (de forma que el amplificador no comutase) se obtuvieron los iguientes valores de slew rate:
+
+- ![](https://latex.codecogs.com/gif.latex?SR+&space;=&space;10&space;\pm&space;4&space;V/us) 
+- ![](https://latex.codecogs.com/gif.latex?SR-&space;=&space;21&space;\pm&space;4&space;V/us) 
+
+Medicion del SR+ sin conmutar:
+![](mediciones_finales/SR_positivo_sin_conmutar_tension.jpg) 
+
+![](mediciones_finales/SR_positivo_sin_conmutar_tiempo.jpg) 
+
+Medicion del SR- sin conmutar:
+![](mediciones_finales/SR_negativo_sin_conmutar_tension.jpg) 
+
+![](mediciones_finales/SR_negativo_sin_conmutar_tiempo.jpg) 
+
+Y con una amplitud de entrada de 1,85Vpp (de modo que el amplificador sí conmutase):
+
+- ![](https://latex.codecogs.com/gif.latex?SR-&space;=&space;7&space;V/us) 
+- ![](https://latex.codecogs.com/gif.latex?SR-&space;=&space;18&space;V/us) 
+
+Medicion del SR+ conmutando:
+![](mediciones_finales/SR_positivo_conmutacion_tension.jpg) 
+
+![](mediciones_finales/SR_positivo_conmutacion_tiempo.jpg) 
+
+Medicion del SR- sin conmutando:
+![](mediciones_finales/SR_negativo_conmutacion_tension.jpg) 
+
+![](mediciones_finales/SR_negativo_conmutacion_tiempo.jpg) 
+
+En las imagenes se ve que la comutación complica la adopción de un criterio para definir cual es el slew rate. Es por esto que resulta complicado adoptar un criterio para determinar la incertidumbre de la medición, por lo que se interpreta a los valores obtenidos solamente como una aproximacioń al verdadero valor del slew rate.
+
+#### Ancho de banda de potencia
+De los valores medidos del slew rate se extrae, por el mismo método que el utilizado en los cálculos teóricos del amplificador, que el ancho de anda de resolución en conmutación y fuera de conmutación es:
+
+- Sin conmutación: ![](https://latex.codecogs.com/gif.latex?PBW&space;=&space;53&space;\pm&space;20&space;kHz) 
+- En conmutación: ![](https://latex.codecogs.com/gif.latex?PBW&space;=&space;37&space;kHz) 
+
+Donde para cada caso se ha utilizado el peor slew rate, que en ambos resultó ser el del flanco ascendente. Además, se ha aproximado a la excursión máxima del amplificador como de 30V (aunque se ha concluido de las mediciones que esta no supera los 28V).
+
+Notar que para el ancho de banda de potencia en conmutación no se ha reportado una incertidumbre por el hecho de que tampoco pudo hacérselo con seguridad en el apartadoa de SR. Finalmente, la incertidumbre para el caso sin conmutación resulta ser elevada y se deriva de la propagación de errores que se realizó. Sin embargo, dado que se llevaron a cabo varias mediciones del slew rate a lo largo del armado y puesta a prueba del amplificador, se confía en que el ancho de banda de potencia sea mayor a 40kHz.
+
+#### Impedancia de entrada
+Para medir la impedancia de entrada (que en adelante trataremos como resistencia de entrada debido a que se supondrá para los cálculos que esta es real) del amplificador se conectó en serie entre el generador de señal y la entrada en sí una resistencia de 9,9kohm como se muestra en la siguiente imagen:
+
+![](mediciones_finales/med_imp_entrada.png) 
+
+Se utilizó dicho valor de resistencia ya que se encuentra en el mismo orden de magnitud que se espera que tenga la resistencia de entrada.
+
+Colocando una armónica dentro del rango de frecuencias audibles como señal de entrada y comparando su valor pico o RMS con el de la misma armónica observada en el nodo entre la entrada del amplificador y la resistencia de 9,9kohm es posible despejar el valor de la resistencia de entrada de la siguiente forma:
+
+![](https://latex.codecogs.com/gif.latex?R_{in}&space;=&space;V_N&space;\frac{R_T}{V_{in}&space;-&space;V_N}) 
+
+La mediciones de las tensiones se realizaron con un multímetro Proskit MT1707 True RMS con una incertidumbre de 0.8% + 3 dígitos. A continuación se muestra una tabla con la resistencia de entrada medida entre 100Hz y 20kHz. No se logró alcanzar valores más bajos en frecuencia debido a que el generador experimentaba problemas para proveer una amplitud constante.
+
+E(X) representa la incertidumbre del paŕametro X.
+
+| Frecuencia[Hz] | Vin[mV] |  E[Vin][mV] | Vn[mV] | E[Vn][mV] | Rin[kohm] | E(Rin)[kohm] |
+| ---- | -------- | ---- | --------- | ---- | --------- | ---- |
+| 100 | 103 | 2 | 76 | 2 | 27 | 5 |
+| 200 | 101 | 2 | 77 | 2 | 34 | 5 |
+| 300 | 101 | 2 | 76 | 2 | 30 | 5 |
+| 400 | 101 | 2 | 74 | 2 | 27 | 5 |
+| 500 | 100 | 2 | 73 | 2 | 26 | 5 |
+| 1k | 96 | 2 | 69 | 2 | 25 | 5 |
+| 2k | 102 | 2 | 73 | 2 | 25 | 5 |
+| 3k | 100 | 2 | 70 | 2 | 23 | 5 |
+| 5k | 103 | 2 | 73 | 2 | 24 | 5 |
+| 8k | 103 | 2 | 73 | 2 | 24 | 5 |
+| 10k | 103 | 2 | 73 | 2 | 24 | 5 |
+| 15k | 103 | 2 | 72 | 2 | 23 | 5 |
+| 18k | 103 | 2 | 73 | 2 | 23 | 5 |
+| 20k | 102 | 2 | 71 | 2 | 22 | 5 |
+
+Se ve que la incertidumbre en las mediciones es grande producto de la cancelación que se da en el denominador de la expresión que se mostró anteriormente para realizar los cálculos.
+
+#### Impedancia de salida
+
+La medición de la impedancia de salida del amplificador consistió en suponer que este se comporta a su salida como el siguiente equivalente:
+
+![](mediciones_finales/med_imp_salida_esquema_sin_carga.png)
+
+Donde Vg es función de señal de entrada del amplificador y Zo es su impedancia de impedancia de salida, la cual se desea hallar. En la imagen se han incluido resistencias para representar a las impedancias ya que para la medición se asumirá que estas son reales.  Al colocar una carga ZL se obtiene la situación:
+
+![](mediciones_finales/med_imp_salida_esquema_con_carga.png)
+
+Donde la tensión de salida Vo queda expresada por el divisor de tensión:
+
+![](http://latex.codecogs.com/gif.latex?V_O=V_G\frac{ZL}{Z_O+Z_L})
+
+Y de allí puede despejarse la impedancia de salida como:
+
+![](http://latex.codecogs.com/gif.latex?Z_O=Z_L[\frac{V_O}{V_G}-1])
+
+Colocando una señal armónica de entrada de amplitud determinada en el amplificador y dejando abierta su salida (sin carga), en el nodo de salida se mide tensión Vg (para esa dada tensión de entrada) ya que no hay corriente por la malla de la primera figura. Luego, con la misma señal de entrada del amplificador y colocando una carga ZL de forma de cerrar la malla en el nodo de salida se mide la tensión Vo para esa dada carga. Asumiendo que Vg se mantuvo igual para el segundo caso, se puede despejar Zo de la segunda ecuación. Para esta medición se supuso, además, que la impedancia de salida del amplificador es real.
+
+Las condiciones de la medición fueron:
+
+- Amplitud de entrada del amplificador 250mV
+- Frecuencia de la señal de entrada: 1kHz.
+- Carga de 9ohm medida con multímetro Proskit MT1707. La incertidumbre del multímetro para esta medición es de 0.8% + 3 dígitos, entonces:
+
+![](http://latex.codecogs.com/gif.latex?\Delta&space;Z_L=0,4\Omega)
+
+El instrumento utilizado para medir las tensiones fue un multímetro Proskit MT1707 y se midieron tensiones RMS. Los resultados fueron, sin considerar en un principio sus incertidumbres:
+
+Vg = 3,939V
+
+Vo = 3,934V
+
+Los cual, con una carga de 9ohm da un valor de impedancia de salida Zo = 11mohm.
+
+Sin embargo, la incertidumbre del multímetro para el rango utilizado fue de 0.8% + 3 dígitos. Esto implica que la incerteza para Vg y Vo fue aproximadamente de:
+
+![](http://latex.codecogs.com/gif.latex?\Delta&space;V_G\simeq\Delta&space;V_O=0,035V)
+
+Lo cual es un orden mayor a la diferencia obtenida entre Vg y Vo, por lo que el error haría que la medición no fuera representativa. Para suplir esto se calculó el peor caso (la impedancia de salida más grande) de un intervalo de confianza, donde Vg y ZL fueran lo más grande posible dentro de sus rangos de incertidumbre y Vo lo más pequeña posible. De esta forma, se llega a que el peor caso de la impedancia de salida es 0,18ohm = 180mohm.
+
+#### Factor de amortiguamiento
+
+El factor de amortiguamiento viene dado por:
+
+![](http://latex.codecogs.com/gif.latex?F_{amort}=Z_L/Z_o)
+
+Con el valor medio de la impedancia de salida obtenido en el apartado anterior y su cota máxima se llega a los siguientes valores de factor de amortiguamiento para cargas de 4ohm y 8 ohm:
+
+|      | Zo media | Zo máxima |
+| ---- | -------- | --------- |
+| 8ohm | 727      | 44        |
+| 4ohm | 364      | 22        |
+
+
+#### Overshoot de respuesta al escalón
+Se introdujo una señal cuadrada a la entrada del amplificador tal que a la salida se produjeran escalones de 2V aproximadamente con el fin de observar el overshoot y el ringing ocasionados. A continuación se muestra una captura de la medición:
+
+ ![](mediciones_finales/overshoot.jpg)
+ 
+En la imagen se observa que el sobrepico es de 200mV aproximadamente, lo que denota un overshoot del 10%. A su vez, se llega a observar un poco más de un ciclo y medio de oscilación (ringing) sobre la cuadrada. Esto lleva a concluir que el margen de fase se ha de encontrar cercano a 60° pero algo menor, ya que dicha condición exige un overshoot del 10% y un solo ciclo completo de oscilación.
+
+#### Rechazo de ripple
