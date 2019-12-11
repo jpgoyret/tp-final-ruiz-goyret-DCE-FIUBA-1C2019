@@ -34,7 +34,7 @@ En la siguiente tabla se comparan las especificaciones que se habían establecid
 | Consumo sin señal          |    <2W   |      1,8      |    1,9     |
 | Ancho de banda             |    10Hz-400kHz    |    0,8Hz-1,4MHz        |  2Hz-550kHz |
 | Ancho de banda de potencia sin conmutación |    40kHz    |    150kHz        | 53kHz |
-| THD (8Ω@1khz/10%potencia)  |   0,01%   |  0,0009% | 0.0009% |
+| THD (8Ω@1khz/10%potencia)  |   0,01%   |  0,0009% | 0.009% |
 | Factor de amortiguamiento (8Ω@1kHz)  |	200	| 8000 | 730 |
 
 Como se puede ver en el archivo [mediciones_amplificador/mediciones_finales.md](mediciones_amplificador/mediciones_finales.md), la medición de la impedancia de salida (y en consecuencia la del factor de amortiguamiento) cuenta con una gran incertidumbre producto del multímetro. Sin embargo, en esta tabla se ha reportado el valor medio obtenido.
