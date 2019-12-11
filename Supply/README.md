@@ -1,3 +1,4 @@
+
 ## Fuente de alimentación
 
 En esta carpeta podrán encontrase todo lo relacionado con el diseño de la fuente de alimentación. Para ver un resumen de la descripción del amplificador junto con sus especificaciones ir a [Resumen_y_especificaciones.md](Resumen_y_especificaciones.md):
@@ -9,12 +10,12 @@ En esta carpeta podrán encontrase todo lo relacionado con el diseño de la fuente
 
 A continuación se resumen las especificaciones principales, comparando los valores en etapa de diseño, en simulación y en la medición del circuito armado:
 
-| Parámetro               | [Diseño](Resumen_y_especificaciones.md) | [Simulación](./simulaciones_supply) | Medición |
+| Parámetro               | [Diseño](Resumen_y_especificaciones.md) | [Simulación](./simulaciones_supply) | [Medición ](./mediciones_supply) |
 |-------------------------|--------|------------|----------|
 | Tensión de salida       |     10V-20V   |      0.8V-60V      |    0.8-32V      |
 | Corriente máxima        |     5A   |     5.5A       |    5.2A      |
 | Tensión de entrada      |    30V    |      3.5V-60V      |     3.5V-32V     |
-| Eficiencia máxima       |    >80%    |     98%       |          |
+| Eficiencia máxima       |    >80%    |     98%       |     92%     |
 | Ripple con carga (8ohm) |    <100mVpp    |       85mVpp     |          |
 | Ripple sin carga        |    <100mVpp    |            |          |
 | Frecuencia de operación |    >100kHz    |      350kHz      |          |

@@ -33,6 +33,7 @@ Se obtuvo un ripple de ??mVpp.
 
 ### Eficiencia
 Condición de medición: R_out=10.1ohm 25W
+
 | V_in | I_in | V_out | I_out | Eff |
 | --- | --- | --- | --- | --- |
 | 29V | 0.59A | 11.98V | 1.19A | 83% |
