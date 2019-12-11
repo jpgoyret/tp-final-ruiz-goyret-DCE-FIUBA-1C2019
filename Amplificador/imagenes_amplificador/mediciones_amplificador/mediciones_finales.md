@@ -2,39 +2,37 @@
 En este archivo se incluyen las mediciones finales llevadas a cabo para caracterizar el amplificador.
 
 #### Polarización
-Se medieron las corrientes y tensiones de polarización con su respectivo error. Dichas mediciones fueron realizadas con un multímetro ........ con una incertidumbre de .....
+Se midieron las corrientes y tensiones de polarización con su respectivo error. Dichas mediciones fueron realizadas con un multímetro Proskit MT-1707 con una incertidumbre de 0,5% + 3 dígitos para las mediciones de tensión continua y 0,5% + 3 dígitos para las de alterna. 
 
 ###### Corrientes
 | Referencia | Teórico [mA] | Simulado [mA] | Medido [mA] | Error del valor medido [mA] |
 | ---- | ---- | ---- | ---- | ---- |
-| Ivas/Icq17  | 10,2 | 9,5 |  |  |
-| Icola/Icq19 | 1 | 0,98 |  |  |
-| Icq1 | 0,5 | 0,49 |  |  |
-| Icq2 | 0,5 | 0,49 |  |  |
-| Icq3 | 0,5 | 0,49 |  |  |
-| Icq4 | 0,5 | 0,48 |  |  |
-| Icq18 | 1,4 | 1,4 |  |  |
-| Ieq7 | 0,3 | 0,34 |  |  |
-| Ir14 | 1 | 1,1 |  |  |
-| IcU1 | 10 | 9,4 |  |  |
-| IcU3 | 10 | 9,4 |  |  |
-
-Nota: en realidad, en la simulación, Icq1-Icq2 = 1uA.
+| Ivas/Icq17  | 10,2 | 9,5 | 9 | 0,05 |
+| Icola/Icq19 | 1 | 0,98 | 0,87 | 0,005 |
+| Icq1 | 0,5 | 0,49 | 0,43 | 0,005 |
+| Icq2 | 0,5 | 0,49 | 0,43 | 0,005 |
+| Icq3 | 0,5 | 0,49 | 0,37 | 0,006 |
+| Icq4 | 0,5 | 0,48 | 0,41 | 0,006 |
+| Icq18 | 1,4 | 1,4 | 1,44 | 0,009 |
+| Ieq7 | 0,3 | 0,34 | 0,30 | 0,003 |
+| Ir14 | 1 | 1,1 | 1,08 | 0,009 |
+| IcU1 | 10 | 9,4 | 20 | 0,2  |
+| IcU3 | 10 | 9,4 | 20 | 0,2 |
 
 ###### Tensiones
 | Referencia | Teórico [V] | Simulado [V] | Medido [mA] | Error del valor medido [mA] |
 | ---- | ---- | ---- | ---- | ---- |
-| Vo | 0 | 0,2m |  |  |
-| VbeQ18 | -0,7 | -0,64 |  |  |
-| VbeQ17 | -0,7 | -0,62 |  |  |
-| VbeQ19 | -0,7 | 0,6 |  |  |
-| VbeQ7 | 0,7 | 0,59 |  |  |
-| VbeQ8 | 0,7 | 0,63 |  |  |
-| VbeQ10 | 0,7 | 0,63 |  |  |
-| VbeQ12 | 0,65 | 0,57 |  |  |
-| VbeQ11 | -0,65 | -0,57 |  |  |
-| VbeU1 | 0,5 | 0,56 |  |  |
-| VbeU3 | -0,5 | 0,54 |  |  |
+| Vo | 0 | 0,2m | 0,3m |  |
+| VbeQ18 | -0,7 | -0,64 | -0,61 | 0,003 |
+| VbeQ17 | -0,7 | -0,62 | -0,56 | 0,003 |
+| VbeQ19 | -0,7 | -0,6 | -0,57 | 0,003 |
+| VbeQ7 | 0,7 | 0,59 | 0,56 | 0,003 |
+| VbeQ8 | 0,7 | 0,63 | 0,58 | 0,003 |
+| VbeQ10 | 0,7 | 0,63 | 0,61 | 0,003 |
+| VbeQ12 | 0,65 | 0,57 | 0,55 | 0,003 |
+| VbeQ11 | -0,65 | -0,57 | 0,57 | 0,003 |
+| VbeU1 | 0,5 | 0,56 | 0,54 | 0,003 |
+| VbeU3 | -0,5 | -0,54 | -0,54 | 0,003 |
 
 #### Potencia máxima de salida
 Se introdujo una señal armónica de 1kHz a la entrada del amplificador y se la aumentó hasta obvervar en el osciloscopio que la señal de salida sufriera un achatamiento producto de una limitación en la excursión. 
@@ -60,7 +58,7 @@ Este valor fue medido con un osciloscopio RIGOL DS1302CA.
 
 Dicho valor transformado a valor eficaz implica que:
 
-![](https://latex.codecogs.com/gif.latex?V_{in}&space;=&space;0.8&space;\pm&space;0,03&space;V) 
+![](https://latex.codecogs.com/gif.latex?V_{in}&space;=&space;0.8&space;\pm&space;0,03&space;Vrms) 
 
 #### Distorsión armónica
 Esta medición fue realizada utilzando el programa SpectraPLUS-RT para PC. Se generó una señal de salida desde el "line out" de la PC, la cual fue introducida a la entrada del aplificador por medio de un cable allado conconectores de 3.5mm. Por otra parte, se hizo pasar a la señal de salida del amplificador a través de un divisor resistivo variable generado con un preset, el cual permitía que las amplitudes de salida de hasta 28V pudieran ser dirigidas a la entrada "line in" de la PC, con el fin de que la distorsión de las señales fuera calculada por el programa SpectraPLUS.
@@ -131,14 +129,16 @@ Los resultados se muestran en la tabla a continuación:
 
 Por otra parte, se buscaron las frecuencias de corte inferior y superior observando los puntos donde se producía un desfase de 45° entre la señal de entrada y la de salida. Ambas mediciones se hicieron con el modo de captura del osciloscopio como promediador de 32 muestras.
 
-#####Frecuencia de corte baja
+Por último, la ganancia resultó ser aproximadamente de 20 para estas mediciones, lo que la hace menor a los valores medidos para linealidad y los estimados teóricamente y por simulación, aunque aproximadamente constante a lo largo del todo el ancho de banda. Se atribuye esto a un error sistemático de medición, que aun así permite conocer el alcance del ancho de banda del amplificador.
+
+##### Frecuencia de corte baja
 No se llegó a observar la frecuencia de corte inferior debido a que el relé de la protección contra DC actuaba y desconectaba a la carga del amplificador. Sin embargo, se llegó a observar que a 2Hz todavía no se producía la rotación de fase de 45°. Esto es suficiente como para afirma que la frecuencia de corte inferior se halla por debajo de los 20Hz, que es lo que se desea.
 
 Foto de la pantalla del osciloscopio con una señal de 2Hz:
 
 ![](mediciones_finales/frecuencia_corte_baja.jpg) 
 
-#####Frecuencia de corte alta
+##### Frecuencia de corte alta
 Dado que conseguir amplitudes menores con el generador de entrada no era posible, para frecuencias mayores a los 200kHz se comenzó a notar el efecto del slew rate. Es por esto que resultó dificil observar la frecuencia donde se daba el desfase de 45° con claridad. Sin embargo, esta se estimó en 550kHz, según como se ve en la imagen:
 
 ![](mediciones_finales/frecuencia_corte_alta.jpg) 
@@ -276,7 +276,7 @@ El factor de amortiguamiento viene dado por:
 
 Con el valor medio de la impedancia de salida obtenido en el apartado anterior y su cota máxima se llega a los siguientes valores de factor de amortiguamiento para cargas de 4ohm y 8 ohm:
 
-|      | Zo media | Zo máxima |
+|      |F_amort_med | F_amort_max |
 | ---- | -------- | --------- |
 | 8ohm | 727      | 44        |
 | 4ohm | 364      | 22        |
@@ -289,4 +289,49 @@ Se introdujo una señal cuadrada a la entrada del amplificador tal que a la sali
  
 En la imagen se observa que el sobrepico es de 200mV aproximadamente, lo que denota un overshoot del 10%. A su vez, se llega a observar un poco más de un ciclo y medio de oscilación (ringing) sobre la cuadrada. Esto lleva a concluir que el margen de fase se ha de encontrar cercano a 60° pero algo menor, ya que dicha condición exige un overshoot del 10% y un solo ciclo completo de oscilación.
 
-#### Rechazo de ripple
+#### Eficiencia
+Se conectaron multimetros en modo amperímetro en la salida de las fuentes de +30V y +12V, mientras que se midió la amplitud RMS de salida con un osciloscopio. De esta forma, variando la amplitud de salida se fue relevando la eficiencia para distintos valores de excursión.
+La potencia entregada por cada fuente de puede calcular como:
+
+![](https://latex.codecogs.com/gif.latex?P_{fuente}&space;=&space;V_{fuente}\times&space;I_{avg&space;\&space;fuente}) 
+
+Y la potencia entregada a la carga se calcula como:
+
+![](https://latex.codecogs.com/gif.latex?P_{carga}&space;=&space;V_{carga&space;\&space;RMS}/R_{carga}) 
+
+Teniendo en cuenta que hay dos fuentes de cada valor de tensión (una positiva y otra negativa), y asumiendo que ambas entregan la misma corriente, se tiene que la potencia total entregada por todas las fuentes es:
+
+![](https://latex.codecogs.com/gif.latex?P_{total}&space;=&space;2&space;\times&space;(12V&space;\times&space;I_{avg&space;\&space;12V}&space;&plus;&space;30V&space;\times&space;I_{avg&space;\&space;30V})) 
+
+Y la eficiencia se calculó finalmente como:
+
+![](https://latex.codecogs.com/gif.latex?\epsilon&space;=&space;P_{carga}\times100\%/P_{total}) 
+
+A continuación se muestran fotos del banco de trabajo con los dos multímetros:
+
+![](mediciones_finales/banco_de_trabajo_eficiencia_1.jpg) 
+
+![](mediciones_finales/banco_de_trabajo_eficiencia_2.jpg) 
+
+Finalmente, los valores relevados fueron:
+
+| V_carga_rms [V] | I_avg_12V [A] | I_avg_30V [A] | P_fuentes | Eficiencia |
+| ---- | -------- | --------- | --------- | --------- |
+| 3,0 | 0,08 | 0,03 | 3,7 | 26% | 
+| 4,0 | 0,10 | 0,03 | 4,2 | 41% |
+| 5,0 | 0,12 | 0,03 | 4,7 | 57% |
+| 6,5 | 0,32 | 0,03 | 5,4 | 56%  |
+| 7,0 | 0,34 | 0,03 | 5,6 | 55% |
+| 8,3 | 0,10 | 0,21 | 15,0 | 49% |
+| 10,0 | 0,08 | 0,33 | 21,7 | 49% |
+| 11,1 | 0,08 | 0,40 | 25,9 | 51% |
+| 14,8 | 0,06 | 0,60 | 37,4 | 63% |
+| 17,2 | 0,05 | 0,73 | 45,2 | 70% |
+| 19,0 | 0,05 | 0,81 | 49,8 | 77% |
+
+Para las mediciones donde la tensión RMS sobre la carga era 6,5 y 7V se midió la corriente utilizando el display de la fuente de la laboratorio (UNI-T  UTP3315TFL) ya que los multimetros reportaban valores medios de corriente que derivaban en que la eficiencia calculada fuera superior al 80% y 90% en cada caso respectivamente; lo que no tenía sentido ya que la eficiencia máxima que se puede alcanzar en un clase B (que es como se comporta el amplificador al no estar conmutando, como con 6,5V y 7V RMS a la salida) es 78%. El hecho de utilizar el dispay de la fuente incrementó considerablemente la incertidumbre. Sin embargo, sa una noción de commo la eficiencia del amplificador aumenta a medida que la amplitud de salida se acerca hacia el umbral de conmutación (carca de 7V RMS), para luego disminuir por la activación de las fuente de 30V. A continuación, a medida que se sigue aumentando la tenósin de salida, la eficiencia vuelve a aumentar, ya que la corriente que proveen las fuentes de 12V comienza a ser despreciable frente a las de 30V, y la eficiencia se comienza a asemejar a la de un clase B nuevamente.
+
+Finalmente, se ve que la eficiencia máxima que alcanza el amplificandor es 77%, ocurriendo para la máxima excursión de salida como es de esperarse.
+
+
+

@@ -6,30 +6,54 @@ En esta carpeta se incluye un registro de las mediciones realizadas durante el a
 - [5/7/19](Mediciones_supply_5_7_19.md)
 - [15/7/19](Mediciones_supply_15_7_19.md)
 
-
 ## Mediciones finales
-### Imagen del prototipo funcional
 
 ### Regulación de linea
-Se conecta
+Se midió la salida de la fuente para distintos valores de alimentación. Las mediciones fueron realizadas con un multímetro UNI-T UT39B, con una incertidumbre de 0,5% + 3 dígitos.
+Se obtuvieron los siguientes resultados:
 
-| V_in | V_out | 
-| --- |  --- | 
-| 29V | ??V | 
-| 20V |  ??V  |
-| 15V |  ??V | 
-| 13V |  ??V  | 
+| V_in | E(V_in) | V_out | E(V_out) | 
+| --- | --- | --- | --- | 
+| 29,9V | 0,5V | 12,00V | 0,1V  |
+| 24,9V | 0,4V | 11,96V | 0,1V |
+| 19,9V | 0,4V |  11,88V  | 0,1V |
+| 16,9V | 0,4V |  11,83V | 0,1V |
+| 12,98V | 0,1V |  11,83V | 0,1V | 
 
-Se obtiene entonces una regulación de linea de un ??%.
+Donde E(X) denota la incertidumbre del parámetro X.
 
+Realizando el cálculo de la regulación de linea con la primer y la tercer fila de la tabla (ya que si se usara la segunda diferencia de los valores obtenidos caería dentro de la incertidumbre de medición) se obtiene:
+
+![](https://latex.codecogs.com/gif.latex?Reg.&space;linea&space;=&space;\Delta&space;V_o/\Delta&space;V_{in}&space;=&space;1,2\%) 
+
+No se reporta la incertidumbre del porcertaje de ripple ya que este resulta demasiado grande en comparación con el valor medio calculado.
+
+### Regulación de carga
+Se midió la tensión media de salida con una carga de 9,3ohm y con la salida en vacío. Las mediciones se llevaron a cabo con un multímetro UNI-T UT39B, con una incertidumbre de 0,5% + 3 dígitos. 
+Con una tensión de alimentación de 30V se obtuvo:
+
+- Sin carga: ![](https://latex.codecogs.com/gif.latex?\Delta&space;V_{o1}&space;=&space;12,08&space;\pm&space;0,09&space;V) 
+- Con carga:  ![](https://latex.codecogs.com/gif.latex?\Delta&space;V_{o2}&space;=&space;11,99&space;\pm&space;0,09&space;V) 
+
+Se tuvo entonces una diferencia en la tensión media de salida de:
+
+![](https://latex.codecogs.com/gif.latex?\Delta&space;V_o&space;=&space;0,09V) 
+
+No se reporta una incertidumbre ya que esta mayor que el valor medido en sí. Entonces, el resultado obtenido solo representa una impresión de como se comporta la fuente conmutada en cuanto a su regulación de carga.
 
 ### Ripple
-Se realizan dos pruebas: en la primera se mide el ripple a la salida en vació, es decir, sin carga.
+Se realizaron dos pruebas: en la primera se midió el ripple a la salida en vacio, es decir, sin carga. Las mediciones se realizaron con un osciloscopio RIGOL DS1302CA, con punta X10, filtro de 20MHz y modo de adquisición promediador en 8.
 
-Se obtuvo un ripple de ???mVpp.
-Luego se mide el ripple con una carga de 8ohm.
+![](fotos_mediciones_finales/ripple_sin_carga.jpg) 
 
-Se obtuvo un ripple de ??mVpp.
+Se obtuvo un ripple de ![](https://latex.codecogs.com/gif.latex?106&space;\pm&space;4&space;mVpp) .
+
+Luego, se midió el ripple con una carga de 8ohm.
+
+![](fotos_mediciones_finales/ripple_con_carga.jpg) 
+
+Se obtuvo un ripple de ![](https://latex.codecogs.com/gif.latex?40&space;\pm&space;4&space;mVpp) .
+
 
 ### Eficiencia
 Condición de medición: R_out=10.1ohm 25W
@@ -41,3 +65,23 @@ Condición de medición: R_out=10.1ohm 25W
 | 15V | 1.1A  | 12.27V | 1.21A | 90% |
 | 13V | 1.25A | 12.3V  | 1.22A | 92% |
 
+
+### Emisiones
+Se probó medir a simple vista y comparar las emisiones de la fuente cuando se encontraba cargada con 8ohm o sin ella. Para ello se conectó la punta del osciloscopio con si misma para formar una antena y se la acerco a 5cm del transistor de la fuente aproximadamente. Los resultados obtenidos fueron los siguientes:
+
+Para emisiones con carga:
+
+![](fotos_mediciones_finales/emisiones_con_carga.jpg) 
+
+Para emisiones con carga:
+
+![](fotos_mediciones_finales/emisiones_sin_carga.jpg) 
+
+Se ve que las emisiones son mucho mayores en el primer caso ya que el consumo de corriente de la fuente es mucho menor. En consecuencia, el integrado que controla a la switching entra en un modo donde deja intervalos de tiempo en los que no conmuta, ya que no es necesario cargar al capacitor de salida. Por esto es que en la segunda imagen se obvservan pulsos espaciados, y no continuos como en la primer foto.
+
+### Frecuencia de operación
+Se realizaron varias mediciones y se observó que la frecuencia de operación variaba entre aproximadamente 300kHz y 340kHz. Por ejemplo, en las imagenes del ripple que se mostraron anteriormente, este era de 300 y 320kHz para los casos con o sin carga. Sin embargo, se realizaron mediciones donde el ripple poseía una frecuencia de hasta 340kHz, como en la siguiente:
+
+
+
+Los valores fueron obtenidos utilizando el contador interno de un osciloscopio RIGOL DS1302CA 

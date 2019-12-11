@@ -14,6 +14,7 @@ En este archivo se presentan los valores/caracterización de los siguientes par�
 - Tensiones máximas a la salida para cargas de 4 y 8ohm.
 - Corriente máxima a la salida para una carga de 4 ohm.
 - Máxima potencia disipada en los transistores.
+- Eficiencia máxima
 
 En cada sección se incluye una imagen del circuito utilizado en el simulador para obtener los parámetros. Para poder observar los esquema con mayor resolución, puede hacerse clic en ellos y ser redireccionado al archivo en tamaño original alojado en este repositorio. 
 
@@ -338,3 +339,5 @@ Cuando la etapa de salida conmuta se tiene que los transistores alimentados con 
 
 En consecuencia, la potencia máxima disipada en los transistores alimentados con las tensiones más bajas es aproximadamente 3,3 W.
 
+##### Eficiencia a máxima excursión
+Se colocó una señal de entrada tal que se obtuviera la máxima excursión posible a la salida y se realizó la misma medición de las corrientes y tensiones relevantes que en las mediciones realizadas sobre el prototipo construido del amplificador (ver el archivo correspondiente de las mediciones). De esta forma, se obtuvo una eficiencia máxima de 75% a máxima excursión.

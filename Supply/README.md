@@ -16,6 +16,6 @@ A continuación se resumen las especificaciones principales, comparando los valor
 | Corriente máxima        |     5A   |     5.5A       |    5.2A      |
 | Tensión de entrada      |    30V    |      3.5V-60V      |     3.5V-32V     |
 | Eficiencia máxima       |    >80%    |     98%       |     92%     |
-| Ripple con carga (8ohm) |    <100mVpp    |       85mVpp     |          |
-| Ripple sin carga        |    <100mVpp    |            |          |
-| Frecuencia de operación |    >100kHz    |      350kHz      |          |
+| Ripple con carga (8ohm) |    <100mVpp    |       85mVpp     |    40mVpp      |
+| Ripple sin carga        |    <100mVpp    |      (Despreciable)      |     106mVpp     |
+| Frecuencia de operación |    >100kHz    |      350kHz      |     300 - 340kHz     |
