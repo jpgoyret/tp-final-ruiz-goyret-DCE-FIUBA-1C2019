@@ -315,23 +315,25 @@ A continuación se muestran fotos del banco de trabajo con los dos multímetros:
 
 Finalmente, los valores relevados fueron:
 
-| V_carga_rms [V] | I_avg_12V [A] | I_avg_30V [A] | P_fuentes | Eficiencia |
-| ---- | -------- | --------- | --------- | --------- |
-| 3,0 | 0,08 | 0,03 | 3,7 | 26% | 
-| 4,0 | 0,10 | 0,03 | 4,2 | 41% |
-| 5,0 | 0,12 | 0,03 | 4,7 | 57% |
-| 6,5 | 0,32 | 0,03 | 5,4 | 56%  |
-| 7,0 | 0,34 | 0,03 | 5,6 | 55% |
-| 8,3 | 0,10 | 0,21 | 15,0 | 49% |
-| 10,0 | 0,08 | 0,33 | 21,7 | 49% |
-| 11,1 | 0,08 | 0,40 | 25,9 | 51% |
-| 14,8 | 0,06 | 0,60 | 37,4 | 63% |
-| 17,2 | 0,05 | 0,73 | 45,2 | 70% |
-| 19,0 | 0,05 | 0,81 | 49,8 | 77% |
+| V_carga_rms [V] | I_avg_12V [A] | I_avg_30V [A] | P_fuentes [W] | E(P_fuentes) [W] | Eficiencia |
+| ---- | -------- | --------- | --------- | --------- | --------- |
+| 3,0 | 0,08 | 0,03 | 3,7 | 1 | 26% | 
+| 4,0 | 0,10 | 0,03 | 4,2 | 1 | 41% |
+| 5,0 | 0,12 | 0,03 | 4,7 | 1 | 57% |
+| 6,5 | 0,32 | 0,03 | 5,4 | 1 | 56%  |
+| 7,0 | 0,34 | 0,03 | 5,6 | 1 | 55% |
+| 8,3 | 0,10 | 0,21 | 15,0 | 3 | 49% |
+| 10,0 | 0,08 | 0,33 | 21,7 | 3 | 49% |
+| 11,1 | 0,08 | 0,40 | 25,9 | 3 | 51% |
+| 14,8 | 0,06 | 0,60 | 37,4 | 3 | 63% |
+| 17,2 | 0,05 | 0,73 | 45,2 | 3 | 70% |
+| 19,0 | 0,05 | 0,81 | 49,8 | 3 | 77% |
+
+La carga para todas las mediciones fue de 9,3ohm.
+E(x) representa la incertidumbre del parámetro X.
 
 Para las mediciones donde la tensión RMS sobre la carga era 6,5 y 7V se midió la corriente utilizando el display de la fuente de la laboratorio (UNI-T  UTP3315TFL) ya que los multimetros reportaban valores medios de corriente que derivaban en que la eficiencia calculada fuera superior al 80% y 90% en cada caso respectivamente; lo que no tenía sentido ya que la eficiencia máxima que se puede alcanzar en un clase B (que es como se comporta el amplificador al no estar conmutando, como con 6,5V y 7V RMS a la salida) es 78%. El hecho de utilizar el dispay de la fuente incrementó considerablemente la incertidumbre. Sin embargo, sa una noción de commo la eficiencia del amplificador aumenta a medida que la amplitud de salida se acerca hacia el umbral de conmutación (carca de 7V RMS), para luego disminuir por la activación de las fuente de 30V. A continuación, a medida que se sigue aumentando la tenósin de salida, la eficiencia vuelve a aumentar, ya que la corriente que proveen las fuentes de 12V comienza a ser despreciable frente a las de 30V, y la eficiencia se comienza a asemejar a la de un clase B nuevamente.
 
-Finalmente, se ve que la eficiencia máxima que alcanza el amplificandor es 77%, ocurriendo para la máxima excursión de salida como es de esperarse.
+Se ve que la eficiencia máxima que alcanza el amplificandor es 77%, ocurriendo para la máxima excursión de salida como es de esperarse.
 
-
-
+Finalmente, para todas las mediciones de corriente mayores a 0,1A se asumió que la incertidumbre de las mediciones era de 0,05A producto de las incertidumbre de utilizar la escala de 10A del los multímetros. Para menores valores de corriente se despreció la incertdumbre porque predominaba la de la corriente de la otra fuente. Co este criterio se calculó la incertidumbre de la potencia provista por las fuentes.
