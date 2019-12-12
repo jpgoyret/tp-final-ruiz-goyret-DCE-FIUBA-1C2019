@@ -1,3 +1,4 @@
+
 ## Mediciones finales del amplificador
 En este archivo se incluyen las mediciones finales llevadas a cabo para caracterizar el amplificador.
 
@@ -332,8 +333,21 @@ Finalmente, los valores relevados fueron:
 La carga para todas las mediciones fue de 9,3ohm.
 E(x) representa la incertidumbre del parámetro X.
 
-Para las mediciones donde la tensión RMS sobre la carga era 6,5 y 7V se midió la corriente utilizando el display de la fuente de la laboratorio (UNI-T  UTP3315TFL) ya que los multimetros reportaban valores medios de corriente que derivaban en que la eficiencia calculada fuera superior al 80% y 90% en cada caso respectivamente; lo que no tenía sentido ya que la eficiencia máxima que se puede alcanzar en un clase B (que es como se comporta el amplificador al no estar conmutando, como con 6,5V y 7V RMS a la salida) es 78%. El hecho de utilizar el dispay de la fuente incrementó considerablemente la incertidumbre. Sin embargo, sa una noción de commo la eficiencia del amplificador aumenta a medida que la amplitud de salida se acerca hacia el umbral de conmutación (carca de 7V RMS), para luego disminuir por la activación de las fuente de 30V. A continuación, a medida que se sigue aumentando la tenósin de salida, la eficiencia vuelve a aumentar, ya que la corriente que proveen las fuentes de 12V comienza a ser despreciable frente a las de 30V, y la eficiencia se comienza a asemejar a la de un clase B nuevamente.
+Para las mediciones donde la tensión RMS sobre la carga era 6,5 y 7V se midió la corriente utilizando el display de la fuente de la laboratorio (UNI-T  UTP3315TFL) ya que los multímetros reportaban valores medios de corriente que derivaban en que la eficiencia calculada fuera superior al 80% y 90% en cada caso respectivamente; lo que no tenía sentido ya que la eficiencia máxima que se puede alcanzar en un clase B (que es como se comporta el amplificador al no estar conmutando, como con 6,5V y 7V RMS a la salida) es 78%. El hecho de utilizar el display de la fuente incrementó considerablemente la incertidumbre. Sin embargo, sa una noción de como la eficiencia del amplificador aumenta a medida que la amplitud de salida se acerca hacia el umbral de conmutación (carca de 7V RMS), para luego disminuir por la activación de las fuente de 30V. A continuación, a medida que se sigue aumentando la tensión de salida, la eficiencia vuelve a aumentar, ya que la corriente que proveen las fuentes de 12V comienza a ser despreciable frente a las de 30V, y la eficiencia se comienza a asemejar a la de un clase B nuevamente.
 
-Se ve que la eficiencia máxima que alcanza el amplificandor es 77%, ocurriendo para la máxima excursión de salida como es de esperarse.
+Se ve que la eficiencia máxima que alcanza el amplificador es 77%, ocurriendo para la máxima excursión de salida como es de esperarse.
 
-Finalmente, para todas las mediciones de corriente mayores a 0,1A se asumió que la incertidumbre de las mediciones era de 0,05A producto de las incertidumbre de utilizar la escala de 10A del los multímetros. Para menores valores de corriente se despreció la incertdumbre porque predominaba la de la corriente de la otra fuente. Co este criterio se calculó la incertidumbre de la potencia provista por las fuentes.
+Finalmente, para todas las mediciones de corriente mayores a 0,1A se asumió que la incertidumbre de las mediciones era de 0,05A producto de las incertidumbre de utilizar la escala de 10A del los multímetros. Para menores valores de corriente se despreció la incertidumbre porque predominaba la de la corriente de la otra fuente. Con este criterio se calculó la incertidumbre de la potencia provista por las fuentes.
+
+#### PSNR
+Para la medir la PSNR del amplificador se utilizò la documentación recomendada: [Medición de Rechazo de Ruido de la Fuente](mediciones_finales/Medición_de_Rechazo_de_Ruido_de_la_Fuente.pdf). La idea es colocar un generador de _ripple_ y sumarlo a la alimentación positiva del amplificador. El circuito se observa a continuación:
+![](mediciones_finales/circuito_psnr.PNG) 
+De esta manera se tiene una alimentación de +30V con rizado. 
+En la siguiente figura se observa el resultado de la medición:
+![](mediciones_finales/psnr.jpg) 
+Ambos canales son acoplados en alterna. La amplitud de rizado máxima lograda es de 1Vpp a 10Hz, debido a los capacitores de _bypass_ del circuito del amplificador.  Debido a esto, la amplitud en la salida es de menos de 1mVpp. El rango minimo del oscilloscopio usado (Siglent SDS 1102CML) es de 2mV. Por ende, el valor calculado cuanta con mucha dispersión, pero sirve para marcar una cota. 
+Según lo medido, se calcula la PSNR como:
+![](https://latex.codecogs.com/gif.latex?\inline&space;PSNR&space;=&space;20&space;\cdot&space;log&space;\left&space;(&space;\frac{Vo}{Vi}&space;\right&space;))
+Con esto se obtiene:
+![](https://latex.codecogs.com/gif.latex?\inline&space;PSNR&space;=&space;-66dB)
+Esto es màs bien una cota inferior de la PSNR, ya que con mejores instrumentos se podría medir con mas detalle el valor del _ripple_ a la salida.
