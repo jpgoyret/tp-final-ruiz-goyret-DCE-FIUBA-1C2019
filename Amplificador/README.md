@@ -20,11 +20,12 @@ Por otra parte, a continuación se listan las subcarpetas asociadas al diseño d
 
 
 ## Resumen de especificaciones
-En la siguiente tabla se comparan las especificaciones que se habían establecido como objetivos de diseño con los resultados de las simulaciones y las mediciones. En los titulos de cada columna se encuentra un link a los archivos donde se detallan las especificaciones, y la forma en la que fueron realizadas las simulaciones y las mediciones.
+En la siguiente tabla se comparan las especificaciones que se habían establecido como objetivos de diseño con los resultados de las simulaciones y las mediciones. En los títulos de cada columna se encuentra un link a los archivos donde se detallan las especificaciones, y la forma en la que fueron realizadas las simulaciones y las mediciones.
 
 
 | Parámetro| [Diseño](Resumen_y_especificaciones.md) | [Simulación ](simulaciones_amplificador/Mediciones_parametros_simulacion.md)| [Medición](mediciones_amplificador/mediciones_finales.md) |
 |----------------------------|--------|------------|----------|
+| Potencia máxima          |  (No especificado, solo se dio el valor nominal, que es 45W)  |     48W     |    51W      |
 | Eficiencia máxima          |     73%   |     75%       |    77%      |
 | Alimentación               |+-30V/+-12V |  +-30V/+-12V |  +-30V/+-12V  |
 | Resistencia de entrada  @1kHz   |    >20kΩ   |     26kΩ       |    25KΩ      |
