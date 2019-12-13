@@ -84,6 +84,9 @@ Con una armónica de 10kHz:
 
 El piso de distorsión medido con SpectraPLUS-RT conectando el line out de la PC a su propio line in fue de 0,006%.
 
+#### Distorsión por intermodulación
+
+
 #### Linealidad
 Se midió la variación de ganancia del amplificador con la amplitud de la señal de entrada para una frecuencia fija de 1kHz. Las mediciones fueron realizadas con una carga de 8ohm.
 
@@ -333,9 +336,14 @@ Finalmente, los valores relevados fueron:
 La carga para todas las mediciones fue de 9,3ohm.
 E(x) representa la incertidumbre del parámetro X.
 
-Para las mediciones donde la tensión RMS sobre la carga era 6,5 y 7V se midió la corriente utilizando el display de la fuente de la laboratorio (UNI-T  UTP3315TFL) ya que los multímetros reportaban valores medios de corriente que derivaban en que la eficiencia calculada fuera superior al 80% y 90% en cada caso respectivamente; lo que no tenía sentido ya que la eficiencia máxima que se puede alcanzar en un clase B (que es como se comporta el amplificador al no estar conmutando, como con 6,5V y 7V RMS a la salida) es 78%. El hecho de utilizar el display de la fuente incrementó considerablemente la incertidumbre. Sin embargo, sa una noción de como la eficiencia del amplificador aumenta a medida que la amplitud de salida se acerca hacia el umbral de conmutación (carca de 7V RMS), para luego disminuir por la activación de las fuente de 30V. A continuación, a medida que se sigue aumentando la tensión de salida, la eficiencia vuelve a aumentar, ya que la corriente que proveen las fuentes de 12V comienza a ser despreciable frente a las de 30V, y la eficiencia se comienza a asemejar a la de un clase B nuevamente.
+Y el gráfico asociado a la tabla es el siguiente:
+![](mediciones_finales/grafico_eficiencia.png)
+
+Para las mediciones donde la tensión RMS sobre la carga era 6,5 y 7V se midió la corriente utilizando el display de la fuente de la laboratorio (UNI-T  UTP3315TFL) ya que los multímetros reportaban valores medios de corriente que derivaban en que la eficiencia calculada fuera superior al 80% y 90% en cada caso respectivamente; lo que no tenía sentido ya que la eficiencia máxima que se puede alcanzar en un clase B (que es como se comporta el amplificador al no estar conmutando, como con 6,5V y 7V RMS a la salida) es 78%. El hecho de utilizar el display de la fuente incrementó considerablemente la incertidumbre. Sin embargo, da una noción de como la eficiencia del amplificador aumenta a medida que la amplitud de salida se acerca hacia el umbral de conmutación (carca de 7V RMS), para luego disminuir por la activación de las fuente de 30V. A continuación, a medida que se sigue aumentando la tensión de salida, la eficiencia vuelve a aumentar, ya que la corriente que proveen las fuentes de 12V comienza a ser despreciable frente a las de 30V, y la eficiencia se comienza a asemejar a la de un clase B nuevamente.
 
 Se ve que la eficiencia máxima que alcanza el amplificador es 77%, ocurriendo para la máxima excursión de salida como es de esperarse.
+
+La eficiencia por debajo de la conmutación resulta ser menor al 60%, lo cual no es de esperarse dado que en este modo de operacaión el amplificador se asemeja a un clase B. Dos aspectos que podrían haber afectado son, la incertidumbre mencionada anteriormente para este rango de excursión, y la corriente consumida por el circuito de relé, la cual llega hasta 30mA aproxidamente.
 
 Finalmente, para todas las mediciones de corriente mayores a 0,1A se asumió que la incertidumbre de las mediciones era de 0,05A producto de las incertidumbre de utilizar la escala de 10A del los multímetros. Para menores valores de corriente se despreció la incertidumbre porque predominaba la de la corriente de la otra fuente. Con este criterio se calculó la incertidumbre de la potencia provista por las fuentes.
 
