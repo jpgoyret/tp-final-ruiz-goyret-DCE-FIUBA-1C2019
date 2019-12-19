@@ -19,3 +19,9 @@ A continuación se resumen las especificaciones principales, comparando los valor
 | Ripple con carga (8ohm) |    <100mVpp    |       85mVpp     |    40mVpp      |
 | Ripple sin carga        |    <100mVpp    |      (Despreciable)      |     106mVpp     |
 | Frecuencia de operación |    >100kHz    |      350kHz      |     300 - 340kHz     |
+
+## Fotos del prototipo
+
+![](imagenes_supply/foto_prototipo_atras.jpg)
+
+![](imagenes_supply/foto_prototipo_frente.jpg) 
