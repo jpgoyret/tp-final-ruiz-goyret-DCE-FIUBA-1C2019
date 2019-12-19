@@ -1,4 +1,5 @@
 
+
 ## Mediciones finales del amplificador
 En este archivo se incluyen las mediciones finales llevadas a cabo para caracterizar el amplificador.
 
@@ -36,8 +37,8 @@ Se midieron las corrientes y tensiones de polarización con su respectivo error.
 | VbeU3 | -0,5 | -0,54 | -0,54 | 0,003 |
 
 #### Potencia máxima de salida
-Se introdujo una señal armónica de 1kHz a la entrada del amplificador y se la aumentó hasta obvervar en el osciloscopio que la señal de salida sufriera un achatamiento producto de una limitación en la excursión. 
-La tensioń pico fue medida con un tester Proskit MT1707 de incertidumbre 0.8% + 3 dígitos. 
+Se introdujo una señal armónica de 1kHz a la entrada del amplificador y se la aumentó hasta observar en el osciloscopio que la señal de salida sufriera un achatamiento producto de una limitación en la excursión. 
+La tensión pico fue medida con un tester Proskit MT1707 de incertidumbre 0.8% + 3 dígitos. 
 Esto ocurrió para:
 
 ![](https://latex.codecogs.com/gif.latex?V_{o&space;\&space;RMS&space;\&space;max}&space;=&space;20\pm&space;0,2V) 
@@ -62,7 +63,7 @@ Dicho valor transformado a valor eficaz implica que:
 ![](https://latex.codecogs.com/gif.latex?V_{in}&space;=&space;0.8&space;\pm&space;0,03&space;Vrms) 
 
 #### Distorsión armónica
-Esta medición fue realizada utilzando el programa SpectraPLUS-RT para PC. Se generó una señal de salida desde el "line out" de la PC, la cual fue introducida a la entrada del aplificador por medio de un cable allado conconectores de 3.5mm. Por otra parte, se hizo pasar a la señal de salida del amplificador a través de un divisor resistivo variable generado con un preset, el cual permitía que las amplitudes de salida de hasta 28V pudieran ser dirigidas a la entrada "line in" de la PC, con el fin de que la distorsión de las señales fuera calculada por el programa SpectraPLUS.
+Esta medición fue realizada utilizando el programa SpectraPLUS-RT para PC. Se generó una señal de salida desde el "line out" de la PC, la cual fue introducida a la entrada del amplificador por medio de un cable hallado con conectores de 3.5mm. Por otra parte, se hizo pasar a la señal de salida del amplificador a través de un divisor resistivo variable generado con un _preset_, el cual permitía que las amplitudes de salida de hasta 28V pudieran ser dirigidas a la entrada "line in" de la PC, con el fin de que la distorsión de las señales fuera calculada por el programa SpectraPLUS.
 
 Las mediciones se realizaron con una carga de 8ohm en el amplificador.
 
@@ -84,28 +85,22 @@ Con una armónica de 10kHz:
 
 El piso de distorsión medido con SpectraPLUS-RT conectando el line out de la PC a su propio line in fue de 0,006%.
 
-#### Distorsión por intermodulación
-
 
 #### Linealidad
 Se midió la variación de ganancia del amplificador con la amplitud de la señal de entrada para una frecuencia fija de 1kHz. Las mediciones fueron realizadas con una carga de 8ohm.
 
-El equipo utilizado fue un osciloscopio RIGOL DS1302CA.
+La tensiones fueron medidas con un tester Proskit MT1707 de incertidumbre 0.8% + 3 dígitos. 
 
-A constinuación de muestra una tabla con los resultados y su incertidumbre: 
+A continuación de muestra una tabla con los resultados 
 
-E(x) reprenta la incertidumbre del parámetro x.
 
-| Vin[V] | E(Vni) | Vo | E(Vo) | Ganancia | E(ganancia) |
-| ---- | -------- | --------- | --------- | --------- | --------- |
-| 0,13 | 0,004 | 3,1 | 0,04 | 24 | 1 |
-| 0,26 | 0,004 | 6,2 | 0,04 | 24 | 0,5 |
-| 0,39 | 0,008 | 9,4 | 0,04 | 24 | 0,6 |
-| 0,52 | 0,004 | 12,8 | 0,2  | 24,6 | 0,6 |
-| 0,65 | 0,004 | 16 | 0,2 | 24,7 | 0,5 |
-| 0,78 | 0,008 | 19,6 | 0,2 | 25 | 0,5 |
-| 0,92 | 0,02 | 22 | 0,4 | 24 | 1 |
-| 1,1 | 0,1 | 26 | 0,4 | 24 | 2,5 |
+| Vin[V] | Vo[V] | Ganancia | 
+| ---- | --------- | --------- | 
+| 0,033 | 0,778 | 23,56 | 
+| 0,168 |  3,8534 | 22,94 | 
+| 0,338 |  7,778 |  23,01 | 
+| 0,506 |11,625 |  22,97 | 
+| 0,672 |  15,449 | 22,99 | 
 
 #### Ancho de banda
 Se conectó una señal a la entrada del amplificador y se fue variando su frecuencia para observar el cambio en la ganancia. La medición fue realizada con una carga de 8ohm conectada a la salida.
@@ -184,7 +179,7 @@ Medicion del SR- sin conmutando:
 
 ![](mediciones_finales/SR_negativo_conmutacion_tiempo.jpg) 
 
-En las imagenes se ve que la comutación complica la adopción de un criterio para definir cual es el slew rate. Es por esto que resulta complicado adoptar un criterio para determinar la incertidumbre de la medición, por lo que se interpreta a los valores obtenidos solamente como una aproximacioń al verdadero valor del slew rate.
+En las imágenes se ve que la conmutación complica la adopción de un criterio para definir cual es el slew rate. Es por esto que resulta complicado adoptar un criterio para determinar la incertidumbre de la medición, por lo que se interpreta a los valores obtenidos solamente como una aproximación al verdadero valor del _slew rate_.
 
 #### Ancho de banda de potencia
 De los valores medidos del slew rate se extrae, por el mismo método que el utilizado en los cálculos teóricos del amplificador, que el ancho de anda de resolución en conmutación y fuera de conmutación es:
@@ -192,9 +187,9 @@ De los valores medidos del slew rate se extrae, por el mismo método que el util
 - Sin conmutación: ![](https://latex.codecogs.com/gif.latex?PBW&space;=&space;53&space;\pm&space;20&space;kHz) 
 - En conmutación: ![](https://latex.codecogs.com/gif.latex?PBW&space;=&space;37&space;kHz) 
 
-Donde para cada caso se ha utilizado el peor slew rate, que en ambos resultó ser el del flanco ascendente. Además, se ha aproximado a la excursión máxima del amplificador como de 30V (aunque se ha concluido de las mediciones que esta no supera los 28V).
+Donde para cada caso se ha utilizado el peor _slew rate_, que en ambos resultó ser el del flanco ascendente. Además, se ha aproximado a la excursión máxima del amplificador como de 30V (aunque se ha concluido de las mediciones que esta no supera los 28V).
 
-Notar que para el ancho de banda de potencia en conmutación no se ha reportado una incertidumbre por el hecho de que tampoco pudo hacérselo con seguridad en el apartadoa de SR. Finalmente, la incertidumbre para el caso sin conmutación resulta ser elevada y se deriva de la propagación de errores que se realizó. Sin embargo, dado que se llevaron a cabo varias mediciones del slew rate a lo largo del armado y puesta a prueba del amplificador, se confía en que el ancho de banda de potencia sea mayor a 40kHz.
+Notar que para el ancho de banda de potencia en conmutación no se ha reportado una incertidumbre por el hecho de que tampoco pudo hacérselo con seguridad en el apartado de SR. Finalmente, la incertidumbre para el caso sin conmutación resulta ser elevada y se deriva de la propagación de errores que se realizó. Sin embargo, dado que se llevaron a cabo varias mediciones del slew rate a lo largo del armado y puesta a prueba del amplificador, se confía en que el ancho de banda de potencia sea mayor a 40kHz.
 
 #### Impedancia de entrada
 Para medir la impedancia de entrada (que en adelante trataremos como resistencia de entrada debido a que se supondrá para los cálculos que esta es real) del amplificador se conectó en serie entre el generador de señal y la entrada en sí una resistencia de 9,9kohm como se muestra en la siguiente imagen:
@@ -209,7 +204,7 @@ Colocando una armónica dentro del rango de frecuencias audibles como señal de 
 
 La mediciones de las tensiones se realizaron con un multímetro Proskit MT1707 True RMS con una incertidumbre de 0.8% + 3 dígitos. A continuación se muestra una tabla con la resistencia de entrada medida entre 100Hz y 20kHz. No se logró alcanzar valores más bajos en frecuencia debido a que el generador experimentaba problemas para proveer una amplitud constante.
 
-E(X) representa la incertidumbre del paŕametro X.
+E(X) representa la incertidumbre del parámetro X.
 
 | Frecuencia[Hz] | Vin[mV] |  E[Vin][mV] | Vn[mV] | E[Vn][mV] | Rin[kohm] | E(Rin)[kohm] |
 | ---- | -------- | ---- | --------- | ---- | --------- | ---- |
@@ -252,25 +247,21 @@ Colocando una señal armónica de entrada de amplitud determinada en el amplific
 
 Las condiciones de la medición fueron:
 
-- Amplitud de entrada del amplificador 250mV
-- Frecuencia de la señal de entrada: 1kHz.
-- Carga de 9ohm medida con multímetro Proskit MT1707. La incertidumbre del multímetro para esta medición es de 0.8% + 3 dígitos, entonces:
+- Amplitud de entrada del amplificador 100mV
+- Frecuencia de la señal de entrada: 100Hz, 1kHz, 10kHz.
+- Carga de 8,6 ohm medida con multímetro Proskit MT1707. La incertidumbre del multímetro para esta medición es de 0.8% + 3 dígitos, entonces:
 
 ![](http://latex.codecogs.com/gif.latex?\Delta&space;Z_L=0,4\Omega)
 
-El instrumento utilizado para medir las tensiones fue un multímetro Proskit MT1707 y se midieron tensiones RMS. Los resultados fueron, sin considerar en un principio sus incertidumbres:
+El instrumento utilizado para medir las tensiones fue un adquisidor de datos Agilent 34970A  y se midieron tensiones RMS. Los resultados fueron, sin considerar en un principio sus incertidumbres:
 
-Vg = 3,939V
 
-Vo = 3,934V
+| Frecuencia [Hz] | V_open [V] | V_load [V] | Zo [ohm] |
+|-----------------|------------|------------|----------|
+| 100             | 1,536      | 1,533      | 0,017    |
+| 1000            | 1,54       | 1,538      | 0,011    |
+| 10000           | 1,535      | 1,533      | 0,011    |
 
-Los cual, con una carga de 9ohm da un valor de impedancia de salida Zo = 11mohm.
-
-Sin embargo, la incertidumbre del multímetro para el rango utilizado fue de 0.8% + 3 dígitos. Esto implica que la incerteza para Vg y Vo fue aproximadamente de:
-
-![](http://latex.codecogs.com/gif.latex?\Delta&space;V_G\simeq\Delta&space;V_O=0,035V)
-
-Lo cual es un orden mayor a la diferencia obtenida entre Vg y Vo, por lo que el error haría que la medición no fuera representativa. Para suplir esto se calculó el peor caso (la impedancia de salida más grande) de un intervalo de confianza, donde Vg y ZL fueran lo más grande posible dentro de sus rangos de incertidumbre y Vo lo más pequeña posible. De esta forma, se llega a que el peor caso de la impedancia de salida es 0,18ohm = 180mohm.
 
 #### Factor de amortiguamiento
 

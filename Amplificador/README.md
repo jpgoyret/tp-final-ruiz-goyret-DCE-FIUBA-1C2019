@@ -31,7 +31,7 @@ En la siguiente tabla se comparan las especificaciones que se habían establecid
 | Resistencia de entrada  @1kHz   |    >20kΩ   |     26kΩ       |    25KΩ      |
 | Resistencia de salida      |      0,04Ω  	|      0,001Ω      |    0,01Ω      |
 | Máxima tensión de entrada  |    1,2V  |      1,2V  |    1,2V      |
-| Ganancia de lazo cerrado   |   22,8   |     22,8       |   24  |
+| Ganancia de lazo cerrado   |   22,8   |     22,8       |   23  |
 | Consumo sin señal          |    <2W   |      1,8      |    1,9     |
 | Ancho de banda             |    10Hz-400kHz    |    0,8Hz-1,4MHz        |  2Hz-550kHz |
 | Ancho de banda de potencia sin conmutación |    40kHz    |    150kHz        | 53kHz |
