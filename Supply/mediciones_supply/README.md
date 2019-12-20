@@ -12,13 +12,13 @@ En esta carpeta se incluye un registro de las mediciones realizadas durante el a
 Se midió la salida de la fuente para distintos valores de alimentación. Las mediciones fueron realizadas con un multímetro UNI-T UT39B, con una incertidumbre de 0,5% + 3 dígitos.
 Se obtuvieron los siguientes resultados:
 
-| V_in | E(V_in) | V_out | E(V_out) | 
-| --- | --- | --- | --- | 
+| V_in | E(V_in) | V_out | E(V_out) |
+| --- | --- | --- | --- |
 | 29,9V | 0,5V | 12,00V | 0,1V  |
 | 24,9V | 0,4V | 11,96V | 0,1V |
 | 19,9V | 0,4V |  11,88V  | 0,1V |
 | 16,9V | 0,4V |  11,83V | 0,1V |
-| 12,98V | 0,1V |  11,83V | 0,1V | 
+| 12,98V | 0,1V |  11,83V | 0,1V |
 
 Donde E(X) denota la incertidumbre del parámetro X.
 
@@ -80,8 +80,6 @@ Para emisiones con carga:
 Se ve que las emisiones son mucho mayores en el primer caso ya que el consumo de corriente de la fuente es mucho menor. En consecuencia, el integrado que controla a la switching entra en un modo donde deja intervalos de tiempo en los que no conmuta, ya que no es necesario cargar al capacitor de salida. Por esto es que en la segunda imagen se obvservan pulsos espaciados, y no continuos como en la primer foto.
 
 ### Frecuencia de operación
-Se realizaron varias mediciones y se observó que la frecuencia de operación variaba entre aproximadamente 300kHz y 340kHz. Por ejemplo, en las imagenes del ripple que se mostraron anteriormente, este era de 300 y 320kHz para los casos con o sin carga. Sin embargo, se realizaron mediciones donde el ripple poseía una frecuencia de hasta 340kHz, como en la siguiente:
+Se realizaron varias mediciones y se observó que, con carga, la frecuencia de operación variaba entre aproximadamente 300kHz y 350kHz. Por ejemplo, en la imagen del ripple con carga que se mostró anteriormente, este era de 320kHz. Por otra parte, para mediciones sin carga, la fuente disminuye su frecuencia de operación ya que la corriente que se le pide a la salida es muy baja. Como se puede ver en la captura del ripple sin carga, esta frecuencia ronda los 300Hz.
 
-
-
-Los valores fueron obtenidos utilizando el contador interno de un osciloscopio RIGOL DS1302CA 
+Los valores de las frecuencias fueron obtenidos utilizando el contador interno de un osciloscopio RIGOL DS1302CA 
