@@ -94,13 +94,13 @@ La tensiones fueron medidas con un tester Proskit MT1707 de incertidumbre 0.8% +
 A continuación de muestra una tabla con los resultados 
 
 
-| Vin[V] | Vo[V] | Ganancia | 
-| ---- | --------- | --------- | 
-| 0,033 | 0,778 | 23,56 | 
-| 0,168 |  3,8534 | 22,94 | 
-| 0,338 |  7,778 |  23,01 | 
-| 0,506 |11,625 |  22,97 | 
-| 0,672 |  15,449 | 22,99 | 
+| Vin[V] | Vo[V] | Ganancia |
+| ---- | --------- | --------- |
+| 0,033 | 0,778 | 23,56 |
+| 0,168 |  3,8534 | 22,94 |
+| 0,338 |  7,778 |  23,01 |
+| 0,506 |11,625 |  22,97 |
+| 0,672 |  15,449 | 22,99 |
 
 #### Ancho de banda
 Se conectó una señal a la entrada del amplificador y se fue variando su frecuencia para observar el cambio en la ganancia. La medición fue realizada con una carga de 8ohm conectada a la salida.
@@ -269,19 +269,20 @@ El factor de amortiguamiento viene dado por:
 
 ![](http://latex.codecogs.com/gif.latex?F_{amort}=Z_L/Z_o)
 
-Con el valor medio de la impedancia de salida obtenido en el apartado anterior y su cota máxima se llega a los siguientes valores de factor de amortiguamiento para cargas de 4ohm y 8 ohm:
+Con los valores medios de la impedancia de salida obtenidos en el apartado anterior se llega a los siguientes valores medios del factor de amortiguamiento para una carga de 8ohm:
 
-|      |F_amort_med | F_amort_max |
-| ---- | -------- | --------- |
-| 8ohm | 727      | 44        |
-| 4ohm | 364      | 22        |
+| Frecuencia [Hz] |F_amort_med |
+| ---- | -------- |
+| 100 | 471   |
+| 1000 | 727   |
+| 10000 | 727 |
 
 
 #### Overshoot de respuesta al escalón
 Se introdujo una señal cuadrada a la entrada del amplificador tal que a la salida se produjeran escalones de 2V aproximadamente con el fin de observar el overshoot y el ringing ocasionados. A continuación se muestra una captura de la medición:
 
  ![](mediciones_finales/overshoot.jpg)
- 
+
 En la imagen se observa que el sobrepico es de 200mV aproximadamente, lo que denota un overshoot del 10%. A su vez, se llega a observar un poco más de un ciclo y medio de oscilación (ringing) sobre la cuadrada. Esto lleva a concluir que el margen de fase se ha de encontrar cercano a 60° pero algo menor, ya que dicha condición exige un overshoot del 10% y un solo ciclo completo de oscilación.
 
 #### Eficiencia
@@ -312,7 +313,7 @@ Finalmente, los valores relevados fueron:
 
 | V_carga_rms [V] | I_avg_12V [A] | I_avg_30V [A] | P_fuentes [W] | E(P_fuentes) [W] | Eficiencia |
 | ---- | -------- | --------- | --------- | --------- | --------- |
-| 3,0 | 0,08 | 0,03 | 3,7 | 1 | 26% | 
+| 3,0 | 0,08 | 0,03 | 3,7 | 1 | 26% |
 | 4,0 | 0,10 | 0,03 | 4,2 | 1 | 41% |
 | 5,0 | 0,12 | 0,03 | 4,7 | 1 | 57% |
 | 6,5 | 0,32 | 0,03 | 5,4 | 1 | 56%  |
